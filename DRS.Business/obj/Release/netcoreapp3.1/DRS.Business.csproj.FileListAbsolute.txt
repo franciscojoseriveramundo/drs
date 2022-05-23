@@ -15,3 +15,20 @@ C:\Desarrollo\DRS\DRS\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.csproj
 C:\Desarrollo\DRS\DRS\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.csproj.CopyComplete
 C:\Desarrollo\DRS\DRS\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.dll
 C:\Desarrollo\DRS\DRS\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\netcoreapp3.1\DRS.Business.deps.json
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\netcoreapp3.1\DRS.Business.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\netcoreapp3.1\DRS.Business.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\netcoreapp3.1\DRS.Data.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\netcoreapp3.1\DRS.Entities.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\netcoreapp3.1\DRS.PostgreSQL.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\netcoreapp3.1\DRS.Data.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\netcoreapp3.1\DRS.PostgreSQL.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\netcoreapp3.1\DRS.Entities.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.csproj.AssemblyReference.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.AssemblyInfoInputs.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.AssemblyInfo.cs
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.csproj.CoreCompileInputs.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.csproj.CopyComplete
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.pdb

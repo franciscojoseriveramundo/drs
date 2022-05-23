@@ -27,3 +27,18 @@ C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Release\netcoreapp3.1\DRS.PostgreSQL.cs
 C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Release\netcoreapp3.1\DRS.PostgreSQL.dll
 C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Release\netcoreapp3.1\DRS.PostgreSQL.pdb
 C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Release\netcoreapp3.1\DRS.PostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\bin\Release\netcoreapp3.1\DRS.PostgreSQL.deps.json
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\bin\Release\netcoreapp3.1\DRS.PostgreSQL.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\bin\Release\netcoreapp3.1\DRS.PostgreSQL.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\bin\Release\netcoreapp3.1\DRS.Data.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\bin\Release\netcoreapp3.1\DRS.Entities.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\bin\Release\netcoreapp3.1\DRS.Data.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\bin\Release\netcoreapp3.1\DRS.Entities.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\obj\Release\netcoreapp3.1\DRS.PostgreSQL.csproj.AssemblyReference.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\obj\Release\netcoreapp3.1\DRS.PostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\obj\Release\netcoreapp3.1\DRS.PostgreSQL.AssemblyInfoInputs.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\obj\Release\netcoreapp3.1\DRS.PostgreSQL.AssemblyInfo.cs
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\obj\Release\netcoreapp3.1\DRS.PostgreSQL.csproj.CoreCompileInputs.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\obj\Release\netcoreapp3.1\DRS.PostgreSQL.csproj.CopyComplete
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\obj\Release\netcoreapp3.1\DRS.PostgreSQL.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.PostgreSQL\obj\Release\netcoreapp3.1\DRS.PostgreSQL.pdb

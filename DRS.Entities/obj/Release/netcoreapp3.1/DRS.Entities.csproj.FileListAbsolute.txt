@@ -17,3 +17,13 @@ C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Release\netcoreapp3.1\DRS.Entities.csproj
 C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Release\netcoreapp3.1\DRS.Entities.dll
 C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Release\netcoreapp3.1\DRS.Entities.pdb
 C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Release\netcoreapp3.1\DRS.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\bin\Release\netcoreapp3.1\DRS.Entities.deps.json
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\bin\Release\netcoreapp3.1\DRS.Entities.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\bin\Release\netcoreapp3.1\DRS.Entities.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\netcoreapp3.1\DRS.Entities.csproj.AssemblyReference.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\netcoreapp3.1\DRS.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\netcoreapp3.1\DRS.Entities.AssemblyInfoInputs.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\netcoreapp3.1\DRS.Entities.AssemblyInfo.cs
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\netcoreapp3.1\DRS.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\netcoreapp3.1\DRS.Entities.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\netcoreapp3.1\DRS.Entities.pdb

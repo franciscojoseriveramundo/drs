@@ -23,3 +23,16 @@ C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\netcoreapp3.1\DRS.Data.csproj.CopyCom
 C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\netcoreapp3.1\DRS.Data.dll
 C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\netcoreapp3.1\DRS.Data.pdb
 C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\netcoreapp3.1\DRS.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\bin\Release\netcoreapp3.1\DRS.Data.deps.json
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\bin\Release\netcoreapp3.1\DRS.Data.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\bin\Release\netcoreapp3.1\DRS.Data.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\bin\Release\netcoreapp3.1\DRS.Entities.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\bin\Release\netcoreapp3.1\DRS.Entities.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\obj\Release\netcoreapp3.1\DRS.Data.csproj.AssemblyReference.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\obj\Release\netcoreapp3.1\DRS.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\obj\Release\netcoreapp3.1\DRS.Data.AssemblyInfoInputs.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\obj\Release\netcoreapp3.1\DRS.Data.AssemblyInfo.cs
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\obj\Release\netcoreapp3.1\DRS.Data.csproj.CoreCompileInputs.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\obj\Release\netcoreapp3.1\DRS.Data.csproj.CopyComplete
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\obj\Release\netcoreapp3.1\DRS.Data.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Data\obj\Release\netcoreapp3.1\DRS.Data.pdb
