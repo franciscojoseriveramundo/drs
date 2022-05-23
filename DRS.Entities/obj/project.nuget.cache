@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YGerhUJSDymO7o0FhGPq6wOFYpDTBIOS3PPpczAFn68LhYYrtdW52I1RRRXIN4zUP6O7l47Ich56j6/OUctguQ==",
+  "dgSpecHash": "PP5+0n51IQZMEqgJLHntlYfj2WDNXycPjVOB0S1iDUPnJknIEpy54t7sB+Fry8oECypDjKu9ZYmwLA5XvLGF7Q==",
   "success": true,
-  "projectFilePath": "C:\\Desarrollo\\drs\\DRS.Entities\\DRS.Entities.csproj",
+  "projectFilePath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Entities\\DRS.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Francisco Rivera\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Francisco Rivera\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"

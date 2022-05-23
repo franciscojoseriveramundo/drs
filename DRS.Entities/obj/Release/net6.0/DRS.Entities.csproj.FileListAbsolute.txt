@@ -22,3 +22,15 @@ C:\Desarrollo\drs\DRS.Entities\obj\Release\net6.0\DRS.Entities.dll
 C:\Desarrollo\drs\DRS.Entities\obj\Release\net6.0\refint\DRS.Entities.dll
 C:\Desarrollo\drs\DRS.Entities\obj\Release\net6.0\DRS.Entities.pdb
 C:\Desarrollo\drs\DRS.Entities\obj\Release\net6.0\ref\DRS.Entities.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\bin\Release\net6.0\DRS.Entities.deps.json
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\bin\Release\net6.0\DRS.Entities.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\bin\Release\net6.0\DRS.Entities.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\net6.0\DRS.Entities.csproj.AssemblyReference.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\net6.0\DRS.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\net6.0\DRS.Entities.AssemblyInfoInputs.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\net6.0\DRS.Entities.AssemblyInfo.cs
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\net6.0\DRS.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\net6.0\DRS.Entities.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\net6.0\refint\DRS.Entities.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\net6.0\DRS.Entities.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Entities\obj\Release\net6.0\ref\DRS.Entities.dll

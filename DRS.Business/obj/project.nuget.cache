@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1GCFFv5tcU8zsNJW4fa7ZzO4T9/gSRlemBaYqiEHaQs8x7EeIKVgbwSKYIeicHuF9+8fXcXip6ifdr64WCEYbQ==",
+  "dgSpecHash": "7P8m2zBScLi+LaxzSHI/hZBCaZgUoDt0RjVCaeEwuziIaDrKW5niTg4US249+rBUyxk4ocfb99q0Buol/3kseg==",
   "success": true,
-  "projectFilePath": "C:\\Desarrollo\\drs\\DRS.Business\\DRS.Business.csproj",
+  "projectFilePath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Business\\DRS.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Francisco Rivera\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\Francisco Rivera\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Desarrollo\\drs\\DRS.UI\\DRS.UI.csproj": {}
+    "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.UI\\DRS.UI.csproj": {}
   },
   "projects": {
-    "C:\\Desarrollo\\drs\\DRS.Business\\DRS.Business.csproj": {
+    "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Business\\DRS.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desarrollo\\drs\\DRS.Business\\DRS.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Business\\DRS.Business.csproj",
         "projectName": "DRS.Business",
-        "projectPath": "C:\\Desarrollo\\drs\\DRS.Business\\DRS.Business.csproj",
+        "projectPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Business\\DRS.Business.csproj",
         "packagesPath": "C:\\Users\\Francisco Rivera\\.nuget\\packages\\",
-        "outputPath": "C:\\Desarrollo\\drs\\DRS.Business\\obj\\",
+        "outputPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -24,21 +24,21 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Desarrollo\\drs\\DRS.Data\\DRS.Data.csproj": {
-                "projectPath": "C:\\Desarrollo\\drs\\DRS.Data\\DRS.Data.csproj"
+              "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Data\\DRS.Data.csproj": {
+                "projectPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Data\\DRS.Data.csproj"
               },
-              "C:\\Desarrollo\\drs\\DRS.PostgreSQL\\DRS.PostgreSQL.csproj": {
-                "projectPath": "C:\\Desarrollo\\drs\\DRS.PostgreSQL\\DRS.PostgreSQL.csproj"
+              "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.PostgreSQL\\DRS.PostgreSQL.csproj": {
+                "projectPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.PostgreSQL\\DRS.PostgreSQL.csproj"
               }
             }
           }
@@ -50,8 +50,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",
@@ -101,14 +101,14 @@
         }
       }
     },
-    "C:\\Desarrollo\\drs\\DRS.Data\\DRS.Data.csproj": {
+    "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Data\\DRS.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desarrollo\\drs\\DRS.Data\\DRS.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Data\\DRS.Data.csproj",
         "projectName": "DRS.Data",
-        "projectPath": "C:\\Desarrollo\\drs\\DRS.Data\\DRS.Data.csproj",
+        "projectPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Data\\DRS.Data.csproj",
         "packagesPath": "C:\\Users\\Francisco Rivera\\.nuget\\packages\\",
-        "outputPath": "C:\\Desarrollo\\drs\\DRS.Data\\obj\\",
+        "outputPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -121,18 +121,18 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Desarrollo\\drs\\DRS.Entities\\DRS.Entities.csproj": {
-                "projectPath": "C:\\Desarrollo\\drs\\DRS.Entities\\DRS.Entities.csproj"
+              "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Entities\\DRS.Entities.csproj": {
+                "projectPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Entities\\DRS.Entities.csproj"
               }
             }
           }
@@ -144,8 +144,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
@@ -165,14 +165,14 @@
         }
       }
     },
-    "C:\\Desarrollo\\drs\\DRS.Entities\\DRS.Entities.csproj": {
+    "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Entities\\DRS.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desarrollo\\drs\\DRS.Entities\\DRS.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Entities\\DRS.Entities.csproj",
         "projectName": "DRS.Entities",
-        "projectPath": "C:\\Desarrollo\\drs\\DRS.Entities\\DRS.Entities.csproj",
+        "projectPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Entities\\DRS.Entities.csproj",
         "packagesPath": "C:\\Users\\Francisco Rivera\\.nuget\\packages\\",
-        "outputPath": "C:\\Desarrollo\\drs\\DRS.Entities\\obj\\",
+        "outputPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -185,15 +185,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -204,8 +204,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
@@ -231,14 +231,14 @@
         }
       }
     },
-    "C:\\Desarrollo\\drs\\DRS.PostgreSQL\\DRS.PostgreSQL.csproj": {
+    "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.PostgreSQL\\DRS.PostgreSQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desarrollo\\drs\\DRS.PostgreSQL\\DRS.PostgreSQL.csproj",
+        "projectUniqueName": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.PostgreSQL\\DRS.PostgreSQL.csproj",
         "projectName": "DRS.PostgreSQL",
-        "projectPath": "C:\\Desarrollo\\drs\\DRS.PostgreSQL\\DRS.PostgreSQL.csproj",
+        "projectPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.PostgreSQL\\DRS.PostgreSQL.csproj",
         "packagesPath": "C:\\Users\\Francisco Rivera\\.nuget\\packages\\",
-        "outputPath": "C:\\Desarrollo\\drs\\DRS.PostgreSQL\\obj\\",
+        "outputPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.PostgreSQL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -251,21 +251,21 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Desarrollo\\drs\\DRS.Data\\DRS.Data.csproj": {
-                "projectPath": "C:\\Desarrollo\\drs\\DRS.Data\\DRS.Data.csproj"
+              "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Data\\DRS.Data.csproj": {
+                "projectPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Data\\DRS.Data.csproj"
               },
-              "C:\\Desarrollo\\drs\\DRS.Entities\\DRS.Entities.csproj": {
-                "projectPath": "C:\\Desarrollo\\drs\\DRS.Entities\\DRS.Entities.csproj"
+              "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Entities\\DRS.Entities.csproj": {
+                "projectPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Entities\\DRS.Entities.csproj"
               }
             }
           }
@@ -277,8 +277,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -312,14 +312,14 @@
         }
       }
     },
-    "C:\\Desarrollo\\drs\\DRS.UI\\DRS.UI.csproj": {
+    "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.UI\\DRS.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desarrollo\\drs\\DRS.UI\\DRS.UI.csproj",
+        "projectUniqueName": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.UI\\DRS.UI.csproj",
         "projectName": "DRS.UI",
-        "projectPath": "C:\\Desarrollo\\drs\\DRS.UI\\DRS.UI.csproj",
+        "projectPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.UI\\DRS.UI.csproj",
         "packagesPath": "C:\\Users\\Francisco Rivera\\.nuget\\packages\\",
-        "outputPath": "C:\\Desarrollo\\drs\\DRS.UI\\obj\\",
+        "outputPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.UI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -332,21 +332,21 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Desarrollo\\drs\\DRS.Business\\DRS.Business.csproj": {
-                "projectPath": "C:\\Desarrollo\\drs\\DRS.Business\\DRS.Business.csproj"
+              "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Business\\DRS.Business.csproj": {
+                "projectPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Business\\DRS.Business.csproj"
               },
-              "C:\\Desarrollo\\drs\\DRS.Entities\\DRS.Entities.csproj": {
-                "projectPath": "C:\\Desarrollo\\drs\\DRS.Entities\\DRS.Entities.csproj"
+              "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Entities\\DRS.Entities.csproj": {
+                "projectPath": "C:\\Users\\Francisco Rivera\\Desktop\\drs\\DRS.Entities\\DRS.Entities.csproj"
               }
             }
           }
@@ -358,8 +358,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "JavaScriptEngineSwitcher.Extensions.MsDependencyInjection": {
               "target": "Package",

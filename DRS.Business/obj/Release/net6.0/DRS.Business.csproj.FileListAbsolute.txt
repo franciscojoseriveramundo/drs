@@ -38,3 +38,22 @@ C:\Desarrollo\drs\DRS.Business\obj\Release\net6.0\DRS.Business.dll
 C:\Desarrollo\drs\DRS.Business\obj\Release\net6.0\refint\DRS.Business.dll
 C:\Desarrollo\drs\DRS.Business\obj\Release\net6.0\DRS.Business.pdb
 C:\Desarrollo\drs\DRS.Business\obj\Release\net6.0\ref\DRS.Business.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\net6.0\DRS.Business.deps.json
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\net6.0\DRS.Business.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\net6.0\DRS.Business.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\net6.0\DRS.Data.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\net6.0\DRS.Entities.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\net6.0\DRS.PostgreSQL.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\net6.0\DRS.Data.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\net6.0\DRS.PostgreSQL.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\bin\Release\net6.0\DRS.Entities.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\net6.0\DRS.Business.csproj.AssemblyReference.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\net6.0\DRS.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\net6.0\DRS.Business.AssemblyInfoInputs.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\net6.0\DRS.Business.AssemblyInfo.cs
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\net6.0\DRS.Business.csproj.CoreCompileInputs.cache
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\net6.0\DRS.Business.csproj.CopyComplete
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\net6.0\DRS.Business.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\net6.0\refint\DRS.Business.dll
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\net6.0\DRS.Business.pdb
+C:\Users\Francisco Rivera\Desktop\drs\DRS.Business\obj\Release\net6.0\ref\DRS.Business.dll
