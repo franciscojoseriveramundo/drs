@@ -1,0 +1,213 @@
+﻿@model DRS.Entities.StockConfirmationDetails
+
+<div class="row">
+    <div class="alertModalConfirm" style="width: -webkit-fill-available;">
+        <div class="@ViewBag.TypeAlertConfirm" id="alertHeaderConfirm" role="alert">
+            <text>@ViewBag.MessageConfirm</text>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="lblCantidadDiv">
+        <label class="label-form-control" id="lblStockConfirmationQuantity">* Cantidad</label>
+        @Html.TextBoxFor(model => model.StockConfirmationQuantity, new { @class = "form-control", placeholder = "Escribe la cantidad", style = "", @maxlength="10" })
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <label class="label-form-control" id="lblStockConfirmationComments">* Comentarios</label>
+        @Html.TextAreaFor(model => model.StockConfirmationComments, new { @class = "form-control", placeholder = "Escribe sus comentarios", style = "resize: none;", @rows = "5", @maxlength = "255" })
+    </div>
+    @Html.HiddenFor(a => a.StockConfirmationDetailsCreateDate)
+    @Html.HiddenFor(a=> a.StockConfirmationDetailsId)
+    @Html.HiddenFor(a => a.StockConfirmationId)
+    @Html.HiddenFor(a => a.UserId)
+</div>
+
+<div class="row" style="margin-top: 25px;">
+    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div id="previousBtnsConfirm">
+            <div class="pull-right">
+                <button type="button" class="btn btn-success btn-sm" id="btnConfirmProduct"><i class="fa fa-check-circle"></i>  Confirmar</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="btnNotConfirmProduct"><i class="fa fa-close"></i>  No confirmar</button>
+            </div>
+        </div>
+        <div id="btnsConfirm">
+            <div class="pull-right">
+                <button type="button" class="btn btn-danger btn-sm" id="btnCancelConfirm"><i class="fa fa-close"></i>  Cerrar</button>
+                <button type="button" class="btn btn-success btn-sm" id="btnConfirmAction"><i class="fa fa-save"></i>  Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+$(document).ready(function () {
+
+    var isExists = '@ViewBag.IsExists';
+    var isAccesory = '@ViewBag.IsAccesory';
+
+    $("#previousBtnsConfirm").css("display", "block");
+    $("#btnsConfirm").css("display", "none");
+    $("#StockConfirmationQuantity").attr("disabled", true);
+    $("#StockConfirmationComments").attr("disabled", true);
+    document.querySelector('#lblStockConfirmationComments').innerText = '* Comentarios';
+
+    var typeAlertonfirm = '@ViewBag.TypeAlertConfirm';
+
+    if(typeAlertonfirm == "alert alert-success"){
+        $("#previousBtnsConfirm").css("display", "none");
+        $("#btnsConfirm").css("display", "none");
+    }
+
+    if(typeAlertonfirm == "alert alert-danger"){
+        $("#previousBtnsConfirm").css("display", "none");
+        $("#btnsConfirm").css("display", "block");
+        $("#StockConfirmationComments").attr("disabled", false);
+        $("#StockConfirmationQuantity").attr("disabled", false);
+    }
+
+    if(isExists == 'True' && isAccesory == 'False'){
+        $("#btnConfirmProduct").hide();
+    }
+    else{
+        $("#btnConfirmProduct").show();
+    }
+
+    var confirmOrNotConfirm = 0;
+
+    $("#btnConfirmProduct").click(function()
+    {
+        $("#previousBtnsConfirm").css("display", "none");
+        $("#btnsConfirm").css("display", "block");
+
+        $("#lblStockConfirmationComments").hide();
+        $("#StockConfirmationComments").hide();
+
+        $("#StockConfirmationComments").attr("disabled", true);
+        $("#StockConfirmationComments").val('');
+
+
+        if(isExists == 'True' && isAccesory == 'False'){
+            $("#StockConfirmationQuantity").val($("#Cantidad").val());
+        }
+        else{
+            $("#StockConfirmationQuantity").attr("disabled", false);
+            $("#StockConfirmationQuantity").show();
+            $("#lblStockConfirmationQuantity").show();
+
+            $("#Cantidad").val('');
+        }
+
+        document.querySelector('#lblStockConfirmationComments').innerText = 'Comentarios';
+
+        confirmOrNotConfirm = 1;
+
+    });
+
+    $("#btnNotConfirmProduct").click(function()
+    {
+        $("#previousBtnsConfirm").css("display", "none");
+        $("#btnsConfirm").css("display", "block");
+
+        $("#StockConfirmationQuantity").attr("disabled", false);
+        $("#StockConfirmationQuantity").hide();
+        $("#lblStockConfirmationQuantity").hide();
+
+        $("#lblStockConfirmationComments").show();
+        $("#StockConfirmationComments").show();
+
+        $("#StockConfirmationComments").attr("disabled", false);
+        $("#StockConfirmationComments").val('');
+
+        if(isExists == 'True' && isAccesory == 'False'){
+
+            $("#StockConfirmationQuantity").val('0');    
+        }
+        else{
+
+            $("#StockConfirmationQuantity").val('0');
+            
+        }  
+
+        document.querySelector('#lblStockConfirmationComments').innerText = '* Comentarios';
+
+        confirmOrNotConfirm = 0;
+
+    });
+
+    $("#btnCancelConfirm").click(function()
+    {
+        $("#previousBtnsConfirm").css("display", "block");
+        $("#btnsConfirm").css("display", "none");
+
+        $("#StockConfirmationQuantity").attr("disabled", true);
+        $("#StockConfirmationQuantity").show();
+        $("#lblStockConfirmationQuantity").show();
+        $("#StockConfirmationQuantity").val('');
+
+        $("#lblStockConfirmationComments").show();
+        $("#StockConfirmationComments").show();
+
+        $("#StockConfirmationComments").attr("disabled", true);
+        $("#StockConfirmationComments").val('');
+
+        document.querySelector('#lblStockConfirmationComments').innerText = '* Comentarios';
+
+        confirmOrNotConfirm = 0;
+
+    });
+
+    $("#btnConfirmAction").click(function()
+    {
+
+        var data = '@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model) as String)';
+
+        var jsonParse = JSON.parse(data);
+        jsonParse.UserId = '@Model.UserId';
+        jsonParse.StockConfirmationComments = $("#StockConfirmationComments").val();
+        jsonParse.StockConfirmationQuantity = $("#StockConfirmationQuantity").val();
+
+        $.ajax({
+            url: "@Url.Action("ConfirmProductAccesory", "Devoluciones")", // Url
+            data: {
+                details: jsonParse,
+                ProductId: productId,
+                isConfirm : confirmOrNotConfirm,
+                returnId : idReturn
+            },
+            type: "post"  // Verbo HTTP
+        })
+        // Se ejecuta si todo fue bien.
+        .done(function (result) {
+            if (result != null) {
+                $("#divConfirmation").html(result);
+        }
+        else {
+            var divHtlml = '<div class="alert alert-danger" id="alertHeaderConfirm" role="alert"><text>Ocurrió un error al recibir la solicitud. Reintente de nuevo.</text><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+            $("#alertModalConfirm").html(divHtlml);
+        }
+        })
+        // Se ejecuta si se produjo un error.
+        .fail(function (xhr, status, error) {
+            var divHtlml = '<div class="alert alert-danger" id="alertHeaderConfirm" role="alert"><text>Ocurrió un error al recibir la solicitud. Reintente de nuevo.</text><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+            $("#alertModalConfirm").html(divHtlml);
+        })
+
+    });
+
+
+    $("#StockConfirmationQuantity").keypress(function (e) {
+
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+            return false;
+        }
+
+    });
+
+});
+</script>

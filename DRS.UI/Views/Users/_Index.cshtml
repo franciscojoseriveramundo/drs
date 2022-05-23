@@ -1,0 +1,237 @@
+﻿@model IEnumerable<DRS.Entities.UsersViewModel>
+
+<div class="row">
+    <div class="col-md-12 col-lg-12 col-xl-12"> 
+        <div id="divLoadingUsers" style="display: block;">
+            <div class="col-12 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <div align="center">
+                            <img src="~/images/loading-2.gif" style="height: 15%; width: 15%; text-align: center" class="center">
+                            <p style="font-family: 'Rubik', sans-serif; font-size: 14px;" class="center">Cargando...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="row">
+    <div id="divUsers" style="display: none; width: 100%;">
+        <div class="col-md-12 col-lg-12 col-xl-12">
+            <div class="card m-b-30">
+                <div class="card-body">
+
+                    <div class="row">
+                        @if (((List<DRS.Entities.Actions>)ViewBag.Menus).Where(a => a.Actionsid == 9).Count() > 0)
+                        {
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                <div class="pull-right" style="margin-bottom: 15px;">
+                                    <button type="button" id="New" style="float: right; height: 38px;" data-animation="rubberBand" class="btn btn-success btn-rounded btn-sm "><i class="fa fa-plus-circle"></i> Nuevo usuario</button>
+                                </div>
+                            </div>
+                        }                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive" style="width:100%;">
+                                <table id="dtUsers" class="table table-hover">
+                                    <thead>
+                                        <tr class="header-Dt">
+                                            <th>No.</th>
+                                            <th>Nombre</th>
+                                            <th class="d-none d-sm-table-cell">Correo electrónico</th>
+                                            <th class="d-none d-sm-table-cell">Rol de usuario</th>
+                                            <th class="d-none d-sm-table-cell">Estatus</th>
+                                            <th>Opciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr class="rows-Dt">
+                                                <td>@item.UserId</td>
+                                                <td>@item.Username</td>
+                                                <td class="d-none d-sm-table-cell">@item.Useremail</td>
+                                                <td class="d-none d-sm-table-cell">@item.Userrole</td>
+                                                <td class="d-none d-sm-table-cell">@item.Userstatus</td>
+                                                <td>
+                                                    <button type="button" id="Details" class="btn btn-outline-info btn-rounded btn-sm" onclick="Details('@item.UserId')" data-toggle="tooltip" data-placement="top" title="Consultar los detalles del usuario">
+                                                        <i class="fa fa-book"></i>
+                                                    </button>
+
+                                                    @if(item.Userstatusid == 1 || item.Userstatusid == 2)
+                                                    {
+                                                        @if (((List<DRS.Entities.Actions>)ViewBag.Menus).Where(a => a.Actionsid == 10).Count() > 0)
+                                                        {
+                                                            <button type="button" id="Edit" class="btn btn-outline-primary btn-rounded btn-sm" onclick="Modify('@item.UserId')" data-toggle="tooltip" data-placement="top" title="Modificar la devolución con número interno">
+                                                                <i class="fa fa-edit"></i>
+                                                            </button>
+                                                        }
+
+                                                        @if (((List<DRS.Entities.Actions>)ViewBag.Menus).Where(a => a.Actionsid == 11).Count() > 0)
+                                                        {
+                                                            <button type="button" id="Delete" class="btn btn-outline-danger btn-rounded btn-sm" onclick="Delete('@item.UserId')" data-toggle="tooltip" data-placement="top" title="Dar de baja la devolución con número interno">
+                                                                <i class="fa fa-trash"></i>
+                                                            </button>
+                                                        }
+
+                                                    }
+
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    $("#divLoadingUsers").hide();
+    $("#divUsers").show();
+   
+
+    $(document).ready(function () {
+
+        //Tabla de devoluciones
+        var table = $('#dtUsers').on('page.dt', function () { }).DataTable({
+            //"dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+            //    "<'row'<'col-sm-12'tr>>" +
+            //    "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+            "language": {
+                "lengthMenu": "Mostrando _MENU_ registros por página",
+                "sInfo": "Mostrando de _START_ a _END_  de _TOTAL_ registros",
+                "sInfoEmpty": "",
+                "zeroRecords": "No se encontraron resultados.",
+                /*"info": "Página _PAGE_ de _PAGES_",*/
+                "info": "_TOTAL_ resultados encontrados.",
+                "sSearch": "Buscar: ",
+                "sLengthMenu": "Mostrar _MENU_ resultados por página.",
+                "sinfoEmpty": "No se encontraron resultados.",
+                "sZeroRecords": "No se encontraron resultados.",
+                "sInfoFiltered": "(Filtrado de _MAX_ registros totales)",
+                "paginate": {
+                    "previous": "Anterior",
+                    "next": "Siguiente"
+                }
+            },
+            // Setup for responsive datatables helper.
+            bAutoWidth: false,
+            fixedHeader: "true",
+            rowReorder: {
+                selector: 'td:nth-child(2)'
+            },
+            responsive: true,
+            orderable: false,
+            "searching": false,
+            "initComplete": function (settings, json) {
+                 $("#divLoadingUsers").hide();
+                 $("#divUsers").show();
+            },
+            'columns': [
+                { "width": "5%", "targets": 0 },
+                { "width": "25%", "targets": 1 },
+                { "width": "25%", "targets": 2 },
+                { "width": "20%", "targets": 3 },
+                { "width": "15%", "targets": 4 },
+                { "width": "15%", "targets": 5, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+            ],
+            'order': [0, 'asc']
+        });
+
+        //Boton para mostrar el modal de creación de devolución
+        $("#New").click(function () {
+
+            LimpiarModales();
+
+            $.ajaxSetup({ cache: false });
+
+            $('#myModalContentXl').load('@Url.Action("New", "Users")', function () {
+                $('#myModalXl').modal({
+                    backdrop: 'static',
+                    keyboard: true
+                }, 'show');
+                bindFormXl(this);
+            });
+            return false;
+
+        });
+
+        $("#myModalXl").on("hidden.bs.modal", function () {
+            $(".modal-body").html("");
+        });
+    });
+
+    function Delete(UserId) {
+
+        LimpiarModales();
+
+        $.ajaxSetup({ cache: false });
+
+        $('#myModalContentXl').load('@Url.Action("Delete", "Users")' + '?UserId=' + UserId, function () {
+            $('#myModalXl').modal({
+                backdrop: 'static',
+                keyboard: true
+            }, 'show');
+            bindFormXl(this);
+        });
+        return false;
+
+    };
+
+    function Modify(UserId) {
+
+        LimpiarModales();
+
+        $.ajaxSetup({ cache: false });
+
+        $('#myModalContentXl').load('@Url.Action("Modify", "Users")' + '?UserId=' + UserId, function () {
+            $('#myModalXl').modal({
+                backdrop: 'static',
+                keyboard: true
+            }, 'show');
+            bindFormXl(this);
+        });
+        return false;
+
+    };
+
+    function Details(UserId) {
+
+        LimpiarModales();
+
+        $.ajaxSetup({ cache: false });
+
+        $('#myModalContentXl').load('@Url.Action("Details", "Users")' + '?UserId=' + UserId, function () {
+            $('#myModalXl').modal({
+                backdrop: 'static',
+                keyboard: true
+            }, 'show');
+            bindFormXl(this);
+        });
+        return false;
+
+    };
+
+    function LimpiarModales() {
+        $("#myModalContentMd").html('');
+        $("#myModalContentLg").html('');
+        $("#myModalContentSm").html('');
+        $("#myModalContentXl").html('');
+    }
+
+</script>                                                                                                                                                                                                                                                                                                                                                                                                            

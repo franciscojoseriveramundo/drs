@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2a0e898c-a14c-4f13-a9fa-b7fac4e8be44": {
+      "ProjectGuid": "2a0e898c-a14c-4f13-a9fa-b7fac4e8be44",
+      "DisplayName": "DRS.Business",
+      "ColorIndex": 0
+    },
+    "5cb4be40-5f72-4952-b14a-667ad64d97e2": {
+      "ProjectGuid": "5cb4be40-5f72-4952-b14a-667ad64d97e2",
+      "DisplayName": "DRS.Data",
+      "ColorIndex": 1
+    },
+    "dfb2683b-6f7f-4be3-ac2c-abd378bb6b8f": {
+      "ProjectGuid": "dfb2683b-6f7f-4be3-ac2c-abd378bb6b8f",
+      "DisplayName": "DRS.Entities",
+      "ColorIndex": 2
+    },
+    "f57137ae-9e18-47f8-a0e1-8e7ec9d4caf0": {
+      "ProjectGuid": "f57137ae-9e18-47f8-a0e1-8e7ec9d4caf0",
+      "DisplayName": "DRS.PostgreSQL",
+      "ColorIndex": 3
+    },
+    "3e7d4d0d-02b8-40e0-ac07-726e87b0824e": {
+      "ProjectGuid": "3e7d4d0d-02b8-40e0-ac07-726e87b0824e",
+      "DisplayName": "DRS.UI",
+      "ColorIndex": 4
+    },
+    "9d75b6c5-3d5f-4994-bb20-40c71f3ca568": {
+      "ProjectGuid": "9d75b6c5-3d5f-4994-bb20-40c71f3ca568",
+      "DisplayName": "DRS.Updater",
+      "ColorIndex": 5
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 6
+}

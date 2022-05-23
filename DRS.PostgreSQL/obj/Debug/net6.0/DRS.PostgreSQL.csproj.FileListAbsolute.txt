@@ -1,0 +1,17 @@
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net6.0\DRS.PostgreSQL.deps.json
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net6.0\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net6.0\ref\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net6.0\DRS.PostgreSQL.pdb
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net6.0\DRS.Data.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net6.0\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net6.0\DRS.Data.pdb
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net6.0\DRS.Entities.pdb
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net6.0\DRS.PostgreSQL.csproj.AssemblyReference.cache
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net6.0\DRS.PostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net6.0\DRS.PostgreSQL.AssemblyInfoInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net6.0\DRS.PostgreSQL.AssemblyInfo.cs
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net6.0\DRS.PostgreSQL.csproj.CoreCompileInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net6.0\DRS.PostgreSQL.csproj.CopyComplete
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net6.0\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net6.0\ref\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net6.0\DRS.PostgreSQL.pdb

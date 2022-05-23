@@ -1,0 +1,1138 @@
+﻿@model DRS.Entities.DetallesDevolucion
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "" }))
+{
+<div class="row" style="margin-top: -20px;">
+    <div class="alertModalNP" style="width: -webkit-fill-available;">
+        <div class="@ViewBag.AlertNewProduct" id="alertHeaderNP" role="alert">
+            <text>@ViewBag.MessageNewProduct</text>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+@if (Model.MotivoEnvio == 11)
+    {
+<script>
+    $(document).ready(function () {
+
+        $("#divCbxPertenece").show();
+
+    });
+</script>
+    }
+    else
+    {
+<script>
+    $(document).ready(function () {
+
+        $("#divCbxPertenece").hide();
+
+    });
+</script>
+    }
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-bottom: 5px;" id="divCbxPertenece">
+        <div class="form-group">
+            <label class="label-form-control">* Pertenece a Servitron</label>
+            <div class="input-group">
+                <label class="content-input" style="position: relative;">
+                    <input id="cbxIsExistsProduct" type="checkbox" />
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    @Html.HiddenFor(model => model.ExisteProducto, new { @id = "cbxIsExistsProductH" })
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="divIsAccessory">
+        <div class="form-group">
+            <label class="label-form-control">* ¿Solo accesorio?</label>
+            <div class="input-group">
+                <label class="content-input" style="position: relative;">
+                    <input id="cbxIsReturnProduct" type="checkbox" />
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    @Html.HiddenFor(model => model.IdDetallesDevolucion,  new { @id = "IdDetallesDevolucion" })
+    @Html.HiddenFor(model => model.Id,   new { @id = "Id" })
+
+    @Html.HiddenFor(model => model.EsSoloDevolucion, new { @id = "cbxEsSoloDevolucionH" })
+    @Html.HiddenFor(model => model.MotivoEnvio, new { @id = "motivoEnvioHidden" })
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="divTipoProductoTxt">
+        <label class="label-form-control">* Producto/accesorio</label>
+        @Html.DropDownListFor(model => model.TipoProducto, ((SelectList)ViewBag.ProductosM), htmlAttributes: new { @id = "cbxProductosm", @class = "form-control", @maxlength="100" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="divProductoTxt">
+        <label class="label-form-control">* Producto/accesorio:</label>
+        @Html.TextBoxFor(model => model.Producto, new { @class = "form-control", placeholder = "Escribe el producto/accesorio", style = "", @maxlength="100" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="divSerieTxt">
+        <label class="label-form-control">* Serie</label>
+        @Html.DropDownListFor(model => model.Serie, ((SelectList)ViewBag.SerieM), htmlAttributes: new { @id = "Serie", @class = "form-control", @maxlength="50" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="divSerieTxt2">
+        <label class="label-form-control">* Serie:</label>
+        @Html.TextBoxFor(model => model.Serie, new { @class = "form-control", @id = "Serie2", placeholder = "Escribe la serie", style = "", @maxlength="50" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="divSIMSTxt">
+        <label class="label-form-control" id="lblSIM">* SIM <text style="color: red;">(se puede modificar)</text></label>
+        @Html.TextBoxFor(model => model.SIM, new { @class = "form-control", placeholder = "Escribe el número de SIM", style = "", @maxlength="25" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="divDnTxt">
+        <label class="label-form-control" id="lblDn">* Número de teléfono</label>
+        @Html.TextBoxFor(model => model.Dn, new { @class = "form-control", @id = "Dn", placeholder = "Escribe el número de teléfono", style = "", @maxlength="20" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="divCantidadTxt">
+        <label class="label-form-control">* Cantidad</label>
+        @Html.TextBoxFor(model => model.Cantidad, new { @class = "form-control", placeholder = "Escribe el cantidad", style = "", @maxlength="10" })
+    </div>
+
+
+    @* TeamVox *@
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divTeamVox">
+        <label class="label-form-control">* Alías</label>
+        @Html.TextBoxFor(model => model.Alias, new { @class = "form-control", placeholder = "Escribe el alías", style = "", @maxlength="15" })
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divTeamVox">
+        <label class="label-form-control">* Grupo</label>
+        @Html.TextBoxFor(model => model.Grupo, new { @class = "form-control", placeholder = "Escribe el grupo", style = "", @maxlength="15" })
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divTeamVox">
+        <label class="label-form-control">* Carrier</label>
+        @Html.DropDownListFor(model => model.CarrierId, ((SelectList)ViewBag.CarrierM), htmlAttributes: new { @id = "cbxCarrier", @class = "form-control" })
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divTeamVox">
+        <label class="label-form-control">* Plan de datos</label>
+        @Html.DropDownListFor(model => model.PlanId, ((SelectList)ViewBag.PlanDataM), htmlAttributes: new { @id = "cbxPlanDatos", @class = "form-control" })
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divTeamVox" style="margin-bottom: 5px;">
+        <div class="form-group">
+            <label class="label-form-control">* ¿SIM, es de Servitron?</label>
+            <div class="input-group">
+                <label class="content-input" style="position: relative;">
+                    <input id="cbxSimPropiedadServitron" type="checkbox" />
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divTeamVox" style="margin-bottom: 5px;">
+        <div class="form-group">
+            <label class="label-form-control">* TeamVox Lite</label>
+            <div class="input-group">
+                <label class="content-input" style="position: relative;">
+                    <input id="cbxTeamVoxLiteAbierto" type="checkbox" />
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divTeamVox" style="margin-bottom: 5px;">
+        <div class="form-group">
+            <label class="label-form-control">* TeamVox Modo Seguro</label>
+            <div class="input-group">
+                <label class="content-input" style="position: relative;">
+                    <input id="cbxTeamVoxModoSeguro" type="checkbox" />
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divTeamVox" style="margin-bottom: 5px;">
+        <div class="form-group">
+            <label class="label-form-control">* Evidence Lite</label>
+            <div class="input-group">
+                <label class="content-input" style="position: relative;">
+                    <input id="cbxEvidenceLite" type="checkbox" />
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divTeamVox" style="margin-bottom: 5px;">
+        <div class="form-group">
+            <label class="label-form-control">* Evidence Forms</label>
+            <div class="input-group">
+                <label class="content-input" style="position: relative;">
+                    <input id="cbxEvidenceForms" type="checkbox" />
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divTeamVox" style="margin-bottom: 5px;">
+        <div class="form-group">
+            <label class="label-form-control">* Zaypher</label>
+            <div class="input-group">
+                <label class="content-input" style="position: relative;">
+                    <input id="cbxZaypher" type="checkbox" />
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divTeamVox" style="margin-bottom: 5px;">
+        <div class="form-group">
+            <label class="label-form-control">* TeamVox Dispatch</label>
+            <div class="input-group">
+                <label class="content-input" style="position: relative;">
+                    <input id="cbxTeamVoxDispatch" type="checkbox" />
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    @Html.HiddenFor(model => model.SimPropiedadServitron, new { @id = "cbxSimPropiedadServitronH" })
+    @Html.HiddenFor(model => model.TeamVoxLiteAbierto, new { @id = "cbxTeamVoxLiteAbiertoH" })
+    @Html.HiddenFor(model => model.TeamVoxModoSeguro, new { @id = "cbxTeamVoxModoSeguroH" })
+    @Html.HiddenFor(model => model.EvidenceLite, new { @id = "cbxEvidenceLiteH" })
+    @Html.HiddenFor(model => model.EvidenceForms, new { @id = "cbxEvidenceFormsH" })
+    @Html.HiddenFor(model => model.Zaypher, new { @id = "cbxZaypherH" })
+    @Html.HiddenFor(model => model.TeamVoxDispatch, new { @id = "cbxTeamVoxDispatchH" })
+
+    @* Legacy *@
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divLegacy">
+        <label class="label-form-control">* Leyenda</label>
+        @Html.TextBoxFor(model => model.Leyenda, new { @class = "form-control", placeholder = "Escribe la leyenda", style = "", @maxlength="15"})
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divLegacy">
+        <label class="label-form-control">* Nombre de carpeta</label>
+        @Html.TextBoxFor(model => model.NombreCarpeta, new { @class = "form-control", placeholder = "Escribe el nombre de carpeta", style = "", @maxlength="15" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divLegacy" style="margin-bottom: 5px;">
+        <div class="form-group">
+            <label class="label-form-control">* Identificador de llamadas</label>
+            <div class="input-group">
+                <label class="content-input" style="position: relative;">
+                    <input id="cbxIdentificadorLlamadas" type="checkbox" />
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divLegacy" style="margin-bottom: 5px;">
+        <div class="form-group">
+            <label class="label-form-control">* GPS</label>
+            <div class="input-group">
+                <label class="content-input" style="position: relative;">
+                    <input id="cbxGPS" type="checkbox" />
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divLegacy" style="margin-bottom: 5px;">
+        <div class="form-group">
+            <label class="label-form-control">* Llamada privada</label>
+            <div class="input-group">
+                <label class="content-input" style="position: relative;">
+                    <input id="cbxLlamadaPrivada" type="checkbox" />
+                    <i></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    @Html.HiddenFor(model => model.IdentificadorLlamadas, new { @id = "cbxIdentificadorLlamadasH" })
+    @Html.HiddenFor(model => model.GPS, new { @id = "cbxGPSH" })
+    @Html.HiddenFor(model => model.LlamadaPrivada, new { @id = "cbxLlamadaPrivadaH" })
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divLegacy">
+        <label class="label-form-control">* Grupo</label>
+        @Html.TextBoxFor(model => model.Grupos, new { @class = "form-control", placeholder = "Escribe los grupos", style = "", @maxlength="15" })
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 divLegacy">
+        <label class="label-form-control">* Sitios suscritos</label>
+        @Html.TextBoxFor(model => model.SitiosSuscribe, new { @class = "form-control", placeholder = "Escribe los sitios", style = "", @maxlength="15" })
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divObservaciones">
+        <label class="label-form-control">* Observaciones</label>
+        @Html.TextAreaFor(model => model.Observaciones, new { @class = "form-control", placeholder = "Escribe sus observaciones", style = "resize: none;", @rows = "5", @maxlength = "255" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Antena</label>
+        @Html.DropDownListFor(model => model.Antena, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Carcasa</label>
+        @Html.DropDownListFor(model => model.Carcasa, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Display</label>
+        @Html.DropDownListFor(model => model.Display, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <label class="label-form-control">* Teclado</label>
+        @Html.DropDownListFor(model => model.Teclado, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Conector USB</label>
+        @Html.DropDownListFor(model => model.ConectorUSB, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <label class="label-form-control">Otro</label>
+        @Html.TextAreaFor(model => model.Otro, new { @class = "form-control", placeholder = "Escribe si hay algún valor más", style = "resize: none;", @rows = "5", @maxlength = "255" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Tapa</label>
+        @Html.DropDownListFor(model => model.Tapa, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Batería</label>
+        @Html.DropDownListFor(model => model.Bateria, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Cargador (Eliminador)</label>
+        @Html.DropDownListFor(model => model.CargadorEliminador, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Cable USB</label>
+        @Html.DropDownListFor(model => model.CableUSB, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Cable USB Magnético</label>
+        @Html.DropDownListFor(model => model.CableUSBMagnetico, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Base Carga</label>
+        @Html.DropDownListFor(model => model.BaseCarga, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Clip</label>
+        @Html.DropDownListFor(model => model.Clip, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Manual</label>
+        @Html.DropDownListFor(model => model.Manual, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Caja</label>
+        @Html.DropDownListFor(model => model.Caja, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Herramienta de extracción</label>
+        @Html.DropDownListFor(model => model.HerramientaDeExtraccion, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+    </div>
+</div>
+
+@if (ViewBag.AlertNewProduct != "alert alert-info")
+    {
+<div class="row" style="margin-top: 20px;">
+    <div class="alertModalNP" style="width: -webkit-fill-available;">
+        <div class="@ViewBag.AlertNewProduct" id="alertHeaderNP" role="alert">
+            <text>@ViewBag.MessageNewProduct</text>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+</div>
+    }
+
+<div class="row" style="margin-top: 25px;">
+    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="pull-right">
+            <button type="button" style="margin-right: 5px !important;" class="btn btn-danger btn-sm" id="btnProductClose"><i class="fa fa-close"></i>  Cerrar</button>
+            <button type="button" class="btn btn-success btn-sm" id="btnSaveProduct"><i class="fa fa-check-circle"></i>  Guardar</button>
+        </div>
+    </div>
+</div>
+}
+
+<script>
+
+    var EsSoloAccesorio = '@Model.EsSoloDevolucion';
+    var ExisteProducto = '@Model.ExisteProducto';
+    var isTeamVox = 0;
+
+    $(document).ready(function () {
+
+        $("#LoadingStock").hide();
+        $("#divProductDetails").show();
+
+        $('#cbxProductosm').select2();
+        $("#Serie").select2();
+
+        Controls(ExisteProducto, EsSoloAccesorio);
+
+        CbxProductsControls();
+
+        $("#btnProductClose").click(function () {
+
+            $.get('@Url.Action("DetailsNew", "Devoluciones")', function (content) {
+                $("#detailsDiv").html(content);
+                $("#divProductDetails").hide();
+                $("#tblDetails").show();
+                $("#footerBtns").show();
+            });
+
+        });
+
+        var tipoProductoCount = '@(((SelectList)ViewBag.ProductosM).Count())';
+
+        if (tipoProductoCount == '1') {
+            $('#cbxProductosm').attr("disabled", true);
+        }
+
+        var tipoSerialCount = '@(((SelectList)ViewBag.SerieM).Count())';
+
+        if (tipoSerialCount == '1') {
+            $('#Serie').attr("disabled", true);
+            $("#SIM").attr("disabled", true);
+            $("#Dn").attr("disabled", true);
+        }
+
+        var options = [];
+        var options2 = [];
+        
+
+        $("#cbxLlamadaPrivada").change(function () {
+            if ($("#cbxLlamadaPrivada").prop('checked')) {
+                $("#cbxLlamadaPrivadaH").val('True');
+            }
+            else {
+                $("#cbxLlamadaPrivadaH").val('False');
+            }
+        });
+
+        $("#cbxGPS").change(function () {
+            if ($("#cbxGPS").prop('checked')) {
+                $("#cbxGPSH").val('True');
+            }
+            else {
+                $("#cbxGPSH").val('False');
+            }
+        });
+
+        $("#cbxIdentificadorLlamadas").change(function () {
+
+            if ($("#cbxIdentificadorLlamadas").prop('checked')) {
+                $("#cbxIdentificadorLlamadasH").val('True');
+            }
+            else {
+                $("#cbxIdentificadorLlamadasH").val('False');
+            }
+        });
+
+        $("#cbxSimPropiedadServitron").change(function () {
+            if ($("#cbxSimPropiedadServitron").prop('checked')) {
+                $("#cbxSimPropiedadServitronH").val('True');
+            }
+            else {
+                $("#cbxSimPropiedadServitronH").val('False');
+            }
+        });
+
+        $("#cbxTeamVoxLiteAbierto").change(function () {
+            if ($("#cbxTeamVoxLiteAbierto").prop('checked')) {
+                $("#cbxTeamVoxLiteAbiertoH").val('True');
+            }
+            else {
+                $("#cbxTeamVoxLiteAbiertoH").val('False');
+            }
+        });
+
+        $("#cbxTeamVoxModoSeguro").change(function () {
+            if ($("#cbxTeamVoxModoSeguro").prop('checked')) {
+                $("#cbxTeamVoxModoSeguroH").val('True');
+            }
+            else {
+                $("#cbxTeamVoxModoSeguroH").val('False');
+            }
+        });
+
+        $("#cbxEvidenceLite").change(function () {
+            if ($("#cbxEvidenceLite").prop('checked')) {
+                $("#cbxEvidenceLiteH").val('True');
+            }
+            else {
+                $("#cbxEvidenceLiteH").val('False');
+            }
+        });
+
+        $("#cbxEvidenceForms").change(function () {
+            if ($("#cbxEvidenceForms").prop('checked')) {
+                $("#cbxEvidenceFormsH").val('True');
+            }
+            else {
+                $("#cbxEvidenceFormsH").val('False');
+            }
+        });
+
+        $("#cbxZaypher").change(function () {
+            if ($("#cbxZaypher").prop('checked')) {
+                $("#cbxZaypherH").val('True');
+            }
+            else {
+                $("#cbxZaypherH").val('False');
+            }
+        });
+
+        $("#cbxTeamVoxDispatch").change(function () {
+            if ($("#cbxTeamVoxDispatch").prop('checked')) {
+                $("#cbxTeamVoxDispatchH").val('True');
+            }
+            else {
+                $("#cbxTeamVoxDispatchH").val('False');
+            }
+        });
+
+        $("#cbxProductosm").change(function () {
+
+            var ExisteProducto_Cbx = 'False', EsSoloAccesorio_Cbx = 'False';
+
+            //Obtenemos que el producto sea de tecnologia TeamVox//
+            if ($('#cbxIsExistsProduct').prop('checked')) {
+                ExisteProducto_Cbx = 'True';
+            }
+
+            if ($('#cbxIsReturnProduct').prop('checked')) {
+                EsSoloAccesorio_Cbx = 'True';
+            }
+
+            isTeamVoxValidation(ExisteProducto_Cbx, EsSoloAccesorio_Cbx);
+            SerialAutoComplete();
+        });
+
+        $("#Serie").change(function () {
+
+            SimAutocomplete();
+
+            $("#Serie2").val($("#Serie").val());
+
+        });
+
+        $("#Cantidad").keypress(function (e) {
+
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                return false;
+            }
+
+        });
+
+        $("#cbxIsReturnProduct").change(function () {
+
+            $("#cbxIsExistsProductH").val('False');
+            $("#cbxIsReturnProductH").val('False');
+
+            ExisteProducto = 'False'
+            EsSoloAccesorio = 'False';
+
+            if ($('#cbxIsExistsProduct').prop('checked')) {
+                ExisteProducto = 'True';
+                $("#cbxIsExistsProductH").val('True');
+            }
+
+            if ($('#cbxIsReturnProduct').prop('checked')) {
+                EsSoloAccesorio = 'True';
+                $("#cbxIsReturnProductH").val('True');
+            }
+
+            Controls(ExisteProducto, EsSoloAccesorio);
+            CompleteDefaultValues(ExisteProducto, EsSoloAccesorio);
+
+            GetProductOrAccessories();
+
+        });
+
+        $("#cbxIsExistsProduct").change(function () {
+
+            $("#cbxIsExistsProductH").val('False');
+            $("#cbxIsReturnProductH").val('False');
+
+            ExisteProducto = 'False'
+            EsSoloAccesorio = 'False';
+
+            if ($('#cbxIsExistsProduct').prop('checked')) {
+                ExisteProducto = 'True';
+                $("#cbxIsExistsProductH").val('True');
+            }
+
+            if ($('#cbxIsReturnProduct').prop('checked')) {
+                EsSoloAccesorio = 'True';
+                $("#cbxIsReturnProductH").val('True');
+            }
+
+            Controls(ExisteProducto, EsSoloAccesorio);
+            CompleteDefaultValues(ExisteProducto, EsSoloAccesorio);
+
+            GetProductOrAccessories();
+
+        });
+
+        $("#btnSaveProduct").click(function () {
+
+            $("#LoadingStock").show();
+            $("#divProductDetails").hide();
+
+            var data = '@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model) as String)';
+
+            var jsonParse = JSON.parse(data);
+
+            jsonParse.Id = '@Model.Id';
+            jsonParse.IdDetallesDevolucion = '@Model.IdDetallesDevolucion';
+            jsonParse.EsSoloDevolucion = EsSoloAccesorio;
+            jsonParse.ExisteProducto = ExisteProducto;
+            jsonParse.MotivoEnvio = $("#motivoEnvioHidden").val();
+            jsonParse.TipoProducto = $("#cbxProductosm").val();
+            jsonParse.Producto = $("#Producto").val();
+            jsonParse.SIM = $("#SIM").val();
+            jsonParse.Cantidad = $("#Cantidad").val();
+            jsonParse.Serie = $("#Serie2").val();
+            jsonParse.Antena = $("#Antena").val();
+            jsonParse.Carcasa = $("#Carcasa").val();
+            jsonParse.Display = $("#Display").val();
+            jsonParse.ConectorUSB = $("#ConectorUSB").val();
+            jsonParse.Teclado = $("#Teclado").val();
+            jsonParse.Otro = $("#Otro").val();
+            jsonParse.Tapa = $("#Tapa").val();
+            jsonParse.Bateria = $("#Bateria").val();
+            jsonParse.CargadorEliminador = $("#CargadorEliminador").val();
+            jsonParse.CableUSB = $("#CableUSB").val();
+            jsonParse.CableUSBMagnetico = $("#CableUSBMagnetico").val();
+            jsonParse.BaseCarga = $("#BaseCarga").val();
+            jsonParse.Clip = $("#Clip").val();
+            jsonParse.Manual = $("#Manual").val();
+            jsonParse.Caja = $("#Caja").val();
+            jsonParse.HerramientaDeExtraccion = $("#HerramientaDeExtraccion").val();
+            jsonParse.Alias = $("#Alias").val();
+            jsonParse.Grupo = $("#Grupo").val();
+            jsonParse.SimPropiedadServitron = $("#cbxSimPropiedadServitronH").val();
+            jsonParse.TeamVoxLiteAbierto = $("#cbxTeamVoxLiteAbiertoH").val();
+            jsonParse.TeamVoxModoSeguro = $("#cbxTeamVoxModoSeguroH").val();
+            jsonParse.EvidenceLite = $("#cbxEvidenceLiteH").val();
+            jsonParse.EvidenceForms = $("#cbxEvidenceFormsH").val();
+            jsonParse.Zaypher = $("#cbxZaypherH").val();
+            jsonParse.TeamVoxDispatch = $("#cbxTeamVoxDispatchH").val();
+            jsonParse.Dn = $("#Dn").val();
+            jsonParse.CarrierId = $("#cbxCarrier").val();
+            jsonParse.PlanId = $("#cbxPlanDatos").val();
+
+            jsonParse.Leyenda = $("#Leyenda").val();
+            jsonParse.NombreCarpeta = $("#NombreCarpeta").val();
+
+            jsonParse.IdentificadorLlamadas = $("#cbxIdentificadorLlamadasH").val();
+            jsonParse.GPS = $("#cbxGPSH").val();
+            jsonParse.LlamadaPrivada = $("#cbxLlamadaPrivadaH").val();
+
+            jsonParse.Grupos = $("#Grupos").val();
+            jsonParse.SitiosSuscribe = $("#SitiosSuscribe").val();
+            jsonParse.Observaciones = $("#Observaciones").val();
+
+            $.ajax({
+                url: "@Url.Action("ModifyProduct", "Devoluciones")", // Url
+                data: {
+                    detalleDevolucion: jsonParse
+                },
+                type: "post"  // Verbo HTTP
+            })
+            // Se ejecuta si todo fue bien.
+            .done(function (result) {
+                if (result != null) {
+                    $("#divProductDetails").html(result);
+            }
+            else {
+                var divHtlml = '<div class="alert alert-danger" id="alertHeaderNP" role="alert"><text>Ocurrió un error al recibir la solicitud. Reintente de nuevo.</text><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+                $("#alertModalNP").html(divHtlml);
+            }
+            })
+            // Se ejecuta si se produjo un error.
+            .fail(function (xhr, status, error) {
+                var divHtlml = '<div class="alert alert-danger" id="alertHeaderNP" role="alert"><text>Ocurrió un error al recibir la solicitud. Reintente de nuevo.</text><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+                $("#alertModalNP").html(divHtlml);
+            })
+
+        });
+
+        $("#cbxIsExistsProduct").attr("disabled", true);
+        $("#cbxIsReturnProduct").attr("disabled", true);
+        $("#cbxProductosm").attr("disabled", true);
+        $("#Producto").attr("disabled", true);
+
+    });
+
+    function SerialAutoComplete() {
+
+        $('#Serie').attr("disabled", true);
+        $("#SIM").attr("disabled", true);
+        $("#Dn").attr("disabled", true);
+
+        $("#SIM").val("");
+        $("#Dn").val("");
+
+        $.getJSON("@Url.Action("AutoCompleteSerialProduct", "Devoluciones")", { TipoProducto: $('#cbxProductosm').val() }, function (response) {
+
+            var contador = 0;
+
+            options2 = [];
+
+            $.each(response, function (index, item) {
+
+                options2.push('<option value="',
+                    item.value, '">',
+                    item.text, '</option>');
+
+                contador++;
+
+            });
+
+            $("#Serie").html(options2.join(''));
+
+            $('#Serie').val('0');
+
+            $('#Serie').attr("disabled", false);
+
+            if (contador < 2) {
+                $('#Serie').attr("disabled", true);
+                $('#SIM').attr("disabled", true);
+                $("#Dn").attr("disabled", true);
+            }
+
+            ResetValuesProgramming();
+        });
+    }
+
+    function SimAutocomplete() {
+
+        $("#SIM").attr("disabled", false);
+        $("#Dn").attr("disabled", false);
+
+        $.getJSON("@Url.Action("GetSIMForProductAndSerial", "Devoluciones")", { TipoProducto: $('#cbxProductosm').val(), Serial: $("#Serie").val() }, function (response) {
+
+            $("#SIM").val(response.sim);
+
+            var ExisteProducto_Cbx = 'False', EsSoloAccesorio_Cbx = 'False';
+
+            //Obtenemos que el producto sea de tecnologia TeamVox//
+            if ($('#cbxIsExistsProduct').prop('checked')) {
+                ExisteProducto_Cbx = 'True';
+            }
+
+            if ($('#cbxIsReturnProduct').prop('checked')) {
+                EsSoloAccesorio_Cbx = 'True';
+            }
+
+            isTeamVoxValidation(ExisteProducto_Cbx, EsSoloAccesorio_Cbx);
+
+            isTeamVox == 1 ? $("#Dn").val(response.dn) : $("#Dn").val('');
+
+        });
+    }
+
+    function GetProductOrAccessories() {
+
+        $('#cbxProductosm').attr("disabled", true);
+        $("#Serie").attr("disabled", true);
+        $("#Dn").attr("disabled", true);
+
+        options = [];
+        options2 = [];
+
+        $("#cbxProductosm").html(options.join(''));
+        $("#Serie").html(options2.join(''));
+        $("Dn").val('');
+
+        $.getJSON("@Url.Action("GetProduct", "Devoluciones")", { IsOnlyAccessory: EsSoloAccesorio }, function (response) {
+
+            var contador = 0;
+
+            $.each(response, function (index, item) {
+
+                options.push('<option value="',
+                    item.value, '">',
+                    item.text, '</option>');
+
+                contador++;
+
+            });
+
+            $("#cbxProductosm").html(options.join(''));
+
+            $('#cbxProductosm').val('0');
+
+            $('#cbxProductosm').attr("disabled", false);
+
+            if (contador < 2) {
+                $('#cbxProductosm').attr("disabled", true);
+                $("#Serie").attr("disabled", true);
+                $("#Dn").attr("disabled", true);
+            }
+
+            SerialAutoComplete();
+        });
+    }
+
+    function Controls(isServitron, isOnlyAccessory) {
+
+        //Si ambos checks estan encendidos
+        if (isOnlyAccessory == 'True' && isServitron == 'True') {
+
+            $("#cbxIsExistsProduct").attr("checked", true);
+            $("#cbxIsReturnProduct").attr("checked", true);
+
+            $("#divTipoProductoTxt").show();
+            $("#divSerieTxt").hide();
+            $("#divSerieTxt2").hide();
+            $("#divDnTxt").hide();
+            $("#divCantidadTxt").show();
+            $("#divSIMSTxt").hide();
+            $("#divProductoTxt").hide();
+
+            ProgrammingNotTeamVoxLegacy();
+        }
+        //Si es solo accesorio esta INACTIVO y pertenece a Servitron esta ACTIVO
+        else if (isServitron == 'True' && isOnlyAccessory == 'False') {
+
+            $("#cbxIsExistsProduct").attr("checked", true);
+            $("#cbxIsReturnProduct").attr("checked", false);
+
+            $("#divTipoProductoTxt").show();
+            $("#divSerieTxt").show();
+            $("#divDnTxt").show();
+            $("#divSerieTxt2").hide();
+            $("#divCantidadTxt").hide();
+            $("#divSIMSTxt").show();
+            $("#divProductoTxt").hide();
+
+            $.getJSON("@Url.Action("IsTeamVox", "Devoluciones")", { TipoProducto: $('#cbxProductosm').val()}, function (response) {
+
+                isTeamVox = response;
+
+                if (isTeamVox == 1) {
+                    document.querySelector('#lblSIM').innerText = '* Número de SIM';
+                    document.querySelector("#Dn").innerText = '* Número de teléfono';
+
+                    $("#divDnTxt").attr("display", "none");
+
+                    //Habilito los campos de programación.
+                    if ('@Model.MotivoEnvio' == '12') {
+                        if ($('#cbxProductosm').val() != 0) {
+                            ProgrammingTeamVox();
+                        }
+                        else {
+                            ProgrammingNotTeamVoxLegacy();
+                        }
+                    }
+                    else {
+                        ProgrammingNotTeamVoxLegacy();
+                    }
+
+                }
+                else {
+                    document.querySelector('#lblSIM').innerText = 'Número de SIM';
+                    document.querySelector("#Dn").innerText = 'Número de teléfono';
+
+                    $("#Dn").val("");
+                    $("#divDnTxt").attr("display", "none");
+
+                    //Habilito los campos de Legacy.
+                    if ('@Model.MotivoEnvio' == '12') {
+                        if ($('#cbxProductosm').val() != 0) {
+                            ProgrammingLegacy();
+                        }
+                        else {
+                            ProgrammingNotTeamVoxLegacy();
+                        }
+                    }
+                    else {
+                        ProgrammingNotTeamVoxLegacy();
+                    }
+
+                }
+
+            });
+        }
+        //Si es solo accesorio esta ACTIVO y pertenece a Servitron esta INACTIVO
+        else if (isServitron == 'False' && isOnlyAccessory == 'True') {
+
+            $("#cbxIsExistsProduct").attr("checked", false);
+            $("#cbxIsReturnProduct").attr("checked", true);
+
+            $("#divTipoProductoTxt").hide();
+            $("#divSerieTxt").hide();
+            $("#divDnTxt").hide();
+            $("#divSerieTxt2").hide();
+            $("#divCantidadTxt").show();
+            $("#divSIMSTxt").hide();
+            $("#divProductoTxt").show();
+
+            ProgrammingNotTeamVoxLegacy();
+        }
+        //Si es solo accesorio esta INACTIVO y pertenece a Servitron esta INACTIVO
+        else {
+
+            $("#cbxIsExistsProduct").attr("checked", false);
+            $("#cbxIsReturnProduct").attr("checked", false);
+
+            $("#divTipoProductoTxt").hide();
+            $("#divSerieTxt").hide();
+            $("#divSerieTxt2").show();
+            $("#divDnTxt").hide();
+            $("#divCantidadTxt").hide();
+            $("#divSIMSTxt").hide();
+            $("#divProductoTxt").show();
+
+            ProgrammingNotTeamVoxLegacy();
+        }
+
+    }
+
+    function CompleteDefaultValues(isServitron, isOnlyAccessory) {
+       
+        //Si ambos checks estan encendidos
+        if (isOnlyAccessory == 'True' && isServitron == 'True') {
+
+            $("#cbxProductosm").val(0);
+            $("#Serie").val(0);
+            $("#Serie2").val('');
+            $("#Cantidad").val('');
+            $("#Producto").val('');
+            $("#SIM").val('');
+            $("#Dn").val('');
+
+            ResetValuesProgramming();
+        }
+        //Si es solo accesorio esta INACTIVO y pertenece a Servitron esta ACTIVO
+        else if (isServitron == 'True' && isOnlyAccessory == 'False') {
+
+            $("#cbxProductosm").val(0);
+            $("#Serie").val(0);
+            $("#Serie2").val('');
+            $("#Cantidad").val('1');
+            $("#Producto").val('');
+            $("#SIM").val('');
+            $("#Dn").val('');
+
+            if ('@Model.MotivoEnvio' == '12') {
+                if (isTeamVox == 1) {
+                    ResetValuesProgramming();
+                }
+                else {
+                    ResetValuesProgramming();
+                }
+            }
+            else {
+                ResetValuesProgramming();
+            }
+        }
+        //Si es solo accesorio esta ACTIVO y pertenece a Servitron esta INACTIVO
+        else if (isServitron == 'False' && isOnlyAccessory == 'True') {
+
+            $("#cbxProductosm").val(0);
+            $("#Serie").val(0);
+            $("#Serie2").val('');
+            $("#Cantidad").val('');
+            $("#Producto").val('');
+            $("#SIM").val('');
+            $("#Dn").val('');
+
+            ResetValuesProgramming();
+        }
+        //Si es solo accesorio esta INACTIVO y pertenece a Servitron esta INACTIVO
+        else {
+
+            $("#cbxProductosm").val(0);
+            $("#Serie").val(0);
+            $("#Cantidad").val('1');
+            $("#Producto").val('');
+            $("#SIM").val('');
+            $("#Serie2").val('');
+            $("#Dn").val('');
+
+            ResetValuesProgramming();
+        }
+
+    }
+
+    function ProgrammingTeamVox() {
+        $(".divTeamVox").show();
+        $(".divLegacy").hide();
+        $(".divObservaciones").show();
+    }
+
+    function ProgrammingLegacy() {
+        $(".divTeamVox").hide();
+        $(".divLegacy").show();
+        $(".divObservaciones").show();
+    }
+
+    function ProgrammingNotTeamVoxLegacy() {
+        $(".divTeamVox").hide();
+        $(".divLegacy").hide();
+        $(".divObservaciones").hide();
+    }
+
+    function ResetValuesProgramming() {
+        $("#cbxLlamadaPrivadaH").val('False');
+        $("#cbxGPSH").val('False');
+        $("#cbxIdentificadorLlamadasH").val('False');
+        $("#cbxSimPropiedadServitronH").val('False');
+        $("#cbxTeamVoxLiteAbiertoH").val('False');
+        $("#cbxTeamVoxModoSeguroH").val('False');
+        $("#cbxEvidenceLiteH").val('False');
+        $("#cbxEvidenceFormsH").val('False');
+        $("#cbxZaypherH").val('False');
+        $("#cbxTeamVoxDispatchH").val('False');
+        $("#Leyenda").val('');
+        $("#NombreCarpeta").val('');
+        $("#Observaciones").val('');
+        $("#Alias").val('');
+        $("#Grupo").val('');
+        $("#Grupos").val('');
+        $("#SitiosSuscribe").val('');
+        $("#cbxCarrier").val(0);
+        $("#cbxPlanDatos").val(0);
+
+
+        $("#cbxIdentificadorLlamadas").prop("checked", false);
+        $("#cbxGPS").prop("checked", false);
+        $("#cbxLlamadaPrivada").prop("checked", false);
+
+        $("#cbxSimPropiedadServitron").prop("checked", false);
+        $("#cbxTeamVoxLiteAbierto").prop("checked", false);
+        $("#cbxTeamVoxModoSeguro").prop("checked", false);
+        $("#cbxEvidenceLite").prop("checked", false);
+        $("#cbxEvidenceForms").prop("checked", false);
+        $("#cbxZaypher").prop("checked", false);
+        $("#cbxTeamVoxDispatch").prop("checked", false);
+    }
+
+    function isTeamVoxValidation(existeProducto, soloAccesorio) {
+
+ 
+
+            if (existeProducto == 'True' && soloAccesorio == 'False') {
+                $.getJSON("@Url.Action("IsTeamVox", "Devoluciones")", { TipoProducto: $('#cbxProductosm').val()}, function (response) {
+
+                    isTeamVox = response;
+
+                    if (isTeamVox == 1) {
+                        document.querySelector('#lblSIM').innerText = '* SIM (se puede modificar)';
+                        document.querySelector('#lblDn').innerText = '* Número de teléfono';
+
+                        $("#divDnTxt").show();
+
+                        if ($('#cbxProductosm').val() != 0) {
+                            if ('@Model.MotivoEnvio' == '12') {
+                                ProgrammingTeamVox();
+                            }
+                            else {
+                                ProgrammingNotTeamVoxLegacy();
+                            }
+                        }
+                        else {
+                            ProgrammingNotTeamVoxLegacy();
+                        }
+                    }
+                    else {
+                        document.querySelector('#lblSIM').innerText = 'SIM (se puede modificar)';
+                        document.querySelector('#lblDn').innerText = 'Número de teléfono';
+
+                        $("#divDnTxt").hide();
+
+                        if ($('#cbxProductosm').val() != 0) {
+                            if ('@Model.MotivoEnvio' == '12') {
+                                ProgrammingLegacy();
+                            }
+                            else {
+                                ProgrammingNotTeamVoxLegacy();
+                            }
+                        }
+                        else {
+                            ProgrammingNotTeamVoxLegacy();
+                        }
+                    }
+
+                });
+            }
+            else {
+                isTeamVox = 0;
+                ProgrammingNotTeamVoxLegacy();
+            }
+        }
+
+    function CbxProductsControls() {
+        if ('@Model.LlamadaPrivada' == 'True') {
+            $("#cbxLlamadaPrivada").prop('checked', true);
+        }
+
+        if ('@Model.GPS' == 'True') {
+            $("#cbxGPS").prop('checked', true);
+        }
+
+        if ('@Model.IdentificadorLlamadas' == 'True') {
+            $("#cbxIdentificadorLlamadas").prop('checked', true);
+        }
+
+        if ('@Model.SimPropiedadServitron' == 'True') {
+            $("#cbxSimPropiedadServitron").prop('checked', true);
+        }
+
+        if ('@Model.TeamVoxLiteAbierto' == 'True') {
+            $("#cbxTeamVoxLiteAbierto").prop('checked', true);
+        }
+
+        if ('@Model.TeamVoxModoSeguro' == 'True') {
+            $("#cbxTeamVoxModoSeguro").prop('checked', true);
+        }
+
+        if ('@Model.EvidenceLite' == 'True') {
+            $("#cbxEvidenceLite").prop('checked', true);
+        }
+
+        if ('@Model.EvidenceForms' == 'True') {
+            $("#cbxEvidenceForms").prop('checked', true);
+        }
+
+        if ('@Model.Zaypher' == 'True') {
+            $("#cbxZaypher").prop('checked', true);
+        }
+
+        if ('@Model.TeamVoxDispatch' == 'True') {
+            $("#cbxTeamVoxDispatch").prop('checked', true);
+        }
+    }
+</script>

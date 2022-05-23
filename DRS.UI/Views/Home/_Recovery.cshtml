@@ -1,0 +1,98 @@
+﻿@model DRS.Entities.Recovery
+
+@using (Html.BeginForm("Recovery", "Home", FormMethod.Post, new { @class = "form-login", id="form" }))
+{
+    <h3 class="text-center mt-0 m-b-15">
+        <a href="@Url.Action("Index", "Home")" class="logo logo-admin"><img src="~/images/teambox-logo.png" height="58" alt="logo"></a>
+    </h3>
+
+    <div class="col-md-12">
+
+        <div class="alertModalNP" style="width: -webkit-fill-available;">
+            <div class="@ViewBag.TypeAlert" style="margin-top: 5% !important;" role="alert">
+                 <text>@ViewBag.Message</text>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="form-group row first-input-text">
+            <div class="col-12">
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control login-input-text", placeholder = "Introduce tu correo electrónico", style = "font-size: 15px;", required = "required" })
+            </div>
+        </div>
+
+        <div id="loadingLogin">
+
+        </div>
+
+        <div class="form-group text-center row m-t-20" id="btnLoginDiv1">
+            <div class="col-12">
+                <button class="btn btn-primary submit-btn btn-block" type="button" onclick="Recovery()" style="background-color: #F26835 !important; border: 1px solid #F26835 !important;">Recuperar contraseña</button>
+            </div>
+        </div>
+
+
+        <div class="form-group text-center m-t-10 mb-0 row">
+            <div class="col-sm-12 m-t-20">
+                <a href="@Url.Action("Index", "Home")" id="btnRecovery" class="text-muted"><small>Regresar a inicio de sesión</small></a>
+            </div>
+        </div>
+
+    </div>
+
+}
+
+
+<script>
+
+    function Recovery(){
+
+        $("#btnLoginDiv1").attr("disabled", true);
+
+         var divLoading = '<div class="form-group row">'+
+                        '<div class="col-12">'+
+                        '<div align="center">' +
+                        '<img src="/images/loading-2.gif" style="width: 15%;" class="center">' +
+                        '<p style="font-family: "Rubik", sans-serif; font-size: 14px;" class="center">Espere por favor...</p>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
+
+        $("#loadingLogin").html(divLoading);
+
+        var data = '@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model) as String)';
+
+        var jsonParse = JSON.parse(data);
+
+        jsonParse.Email = $("#Email").val();
+
+        $.ajax({
+            url: "@Url.Action("Recovery", "Home")", // Url
+            data: {
+                recovery: jsonParse
+            },
+            type: "post"  // Verbo HTTP
+        })
+        // Se ejecuta si todo fue bien.
+        .done(function (result) {
+            if (result != null) {
+                $("#divRecovery").html('');
+                $("#divRecovery").html(result);
+        }
+        else {
+            
+            var divHtlml = '<div class="alert alert-danger" id="alertHeaderNP" role="alert"><text>Ocurrió un error al recibir la solicitud. Reintente de nuevo.</text><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+            $("#alertModalNP").html(divHtlml);
+        }
+        })
+        // Se ejecuta si se produjo un error.
+        .fail(function (xhr, status, error) {
+            
+            var divHtlml = '<div class="alert alert-danger" id="alertHeaderNP" role="alert"><text>Ocurrió un error al recibir la solicitud. Reintente de nuevo.</text><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+            $("#alertModalNP").html(divHtlml);
+        })
+    }
+
+</script>

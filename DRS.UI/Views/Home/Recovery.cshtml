@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Recuperación de contraseña";
+}
+
+<div id="divRecovery" style="width: 100%;">
+
+</div>
+
+<div id="loadingReco"></div>
+
+<!-- jQuery  -->
+<script src="~/assets/js/jquery.min.js"></script>
+
+<script src="~/assets/js/popper.min.js"></script>
+<script src="~/assets/js/bootstrap.min.js"></script>
+<script src="~/assets/js/modernizr.min.js"></script>
+<script src="~/assets/js/waves.js"></script>
+<script src="~/assets/js/jquery.slimscroll.js"></script>
+<script src="~/assets/js/jquery.nicescroll.js"></script>
+<script src="~/assets/js/jquery.scrollTo.min.js"></script>
+
+<script>
+    $("#divRecovery").hide();
+
+    $(document).ready(function () {
+
+         var divLoading = '<div class="form-group row">'+
+                        '<div class="col-12">'+
+                        '<div align="center">' +
+                        '<img src="/images/loading-2.gif" style="width: 15%;" class="center">' +
+                        '<p style="font-family: "Rubik", sans-serif; font-size: 14px;" class="center">Espere por favor...</p>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
+
+        $("#loadingReco").html(divLoading);
+
+        $("#divRecovery").hide();
+
+        $("#divRecovery").html('');
+
+        $.get('@Url.Action("RecoveryIndex", "Home")', function (content)
+        {
+            $("#loadingReco").hide();
+            $("#divRecovery").show();
+            $("#divRecovery").html(content);
+        });
+
+    });
+
+</script>

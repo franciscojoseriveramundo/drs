@@ -1,0 +1,95 @@
+﻿@model DRS.Entities.SecurityProfile
+
+<div class="row">
+    <div class="col-12">
+        <div class="alertModalSecurity" style="width: -webkit-fill-available;">
+            <div class="@ViewBag.TypeAlertSecurity" id="alertHeaderNPSecurity" role="alert">
+                <text>@ViewBag.MessageSecurity</text>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Contraseña actual:</label>
+        @Html.PasswordFor(model => model.PasswordActual, new { @class = "form-control", placeholder = "Introduce tu contraseña actual", style = "", @maxlength="100" })
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Nueva contraseña:</label>
+        @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Introduce tu nueva contraseña", style = "", @maxlength="100" })
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">* Confirmar contraseña:</label>
+        @Html.PasswordFor(model => model.PasswordConfirm, new { @class = "form-control", placeholder = "Confirma tu nueva contraseña", style = "", @maxlength="100" })
+    </div>
+    @Html.HiddenFor(a => a.UserId)
+</div>
+
+
+<div class="row" style="margin-top: 25px;">
+    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="pull-right">
+            <button type="button" class="btn btn-success btn-sm" id="btnChange"><i class="fa fa-check-circle"></i>  Cambiar contraseña</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+    $(document).ready(function () {
+
+      $("#accordionProduct").show();
+      $("#loading").hide();
+
+        $("#btnChange").click(function(){
+            $("#accordionProduct").hide();
+            $("#loading").show();
+
+            var data = '@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model) as String)';
+
+            var jsonParse = JSON.parse(data);
+
+            jsonParse.UserId = '@Model.UserId';
+            jsonParse.PasswordActual = $("#PasswordActual").val();
+            jsonParse.Password = $("#Password").val();
+            jsonParse.PasswordConfirm = $("#PasswordConfirm").val();
+
+            $.ajax({
+                url: "@Url.Action("ChangePassword", "Profile")", // Url
+                data: {
+                    profile: jsonParse
+                },
+                type: "post"  // Verbo HTTP
+            })
+            // Se ejecuta si todo fue bien.
+            .done(function (result) {
+                if (result != null) {
+                    $("#accordionProduct").show();
+                    $("#loading").hide();
+                    $("#divSecurity").html(result);
+            }
+            else {
+                $("#accordionProduct").show();
+                $("#loading").hide();
+                var divHtlml = '<div class="alert alert-danger" id="alertHeaderNP" role="alert"><text>Ocurrió un error al recibir la solicitud. Reintente de nuevo.</text><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+                $("#alertModalSecurity").html(divHtlml);
+            }
+            })
+            // Se ejecuta si se produjo un error.
+            .fail(function (xhr, status, error) {
+                $("#accordionProduct").show();
+                $("#loading").hide();
+                var divHtlml = '<div class="alert alert-danger" id="alertHeaderNP" role="alert"><text>Ocurrió un error al recibir la solicitud. Reintente de nuevo.</text><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+                $("#alertModalSecurity").html(divHtlml);
+            })
+
+
+        });
+
+    });
+
+</script>

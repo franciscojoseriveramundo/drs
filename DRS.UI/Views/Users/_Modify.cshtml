@@ -1,0 +1,369 @@
+﻿@model DRS.Entities.Person
+
+<div class="modal-header">
+
+    <h5 class="modal-title alt-secondary-head" id="myModalLabel">Editar usuario</h5>
+
+    <button type="button" class="close" id="btnClose" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close"></i></button>
+
+</div>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "NewForm" }))
+{
+<div class="modal-body">
+    <div class="row">
+        <div class="col-12">
+            <div class="alertModal" id = "alertModal" style="width: -webkit-fill-available;">
+                <div class="@ViewBag.TypeAlertNew" id="alertHeader" role="alert">
+                    <text>@ViewBag.MessageNew</text>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+
+            <div id="LoadingModal">
+                <div class="col-md-12 grid-margin">
+                    <div class="card">
+                        <div class="card-body">
+                            <div align="center">
+                                <img src="~/images/loading-2.gif" style="height: 15%; width: 15%; text-align: center" class="center">
+                                <p style="font-family: 'Rubik', sans-serif; font-size: 14px;" class="center">Cargando...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion" id="accordionUser" style="width: 100%; margin-bottom: 50px;">
+                <div class="card">
+                    <div class="card-header-modal" id="headingOneUser">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link btn-link-modal-panel" type="button">
+                                Datos personales
+                            </button>
+                            <button class="btn btn-link btn-link-modal-panel pull-right" type="button">
+                                <span class="pull-right clickable"><i class="fa fa-chevron-up"></i></span>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOneUser" class="show" aria-labelledby="headingOneUser" data-parent="#accordionUser">
+                        <div class="card-body card-Body-OneUser">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Nombre(s)</label>
+                                    @Html.TextBoxFor(model => model.Personname, new { @class = "form-control", placeholder = "Escribe el nombre(s)", style = "", @maxlength="200" })
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Apellido(s)</label>
+                                    @Html.TextBoxFor(model => model.Personlastname, new { @class = "form-control", placeholder = "Escribe el(los) apellido(s)", style = "", @maxlength="200" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header-modal" id="headingTwoUser">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link btn-link-modal-panel" type="button">
+                                Datos de acceso
+                            </button>
+                            <button class="btn btn-link btn-link-modal-panel pull-right" type="button">
+                                <span class="pull-right clickable"><i class="fa fa-chevron-up"></i></span>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwoUser" class="show" aria-labelledby="headingTwoUser" data-parent="#accordionUser">
+                        <div class="card-body card-Body-TwoUser">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Correo electrónico</label>
+                                    @Html.TextBoxFor(model => model.Account.Email, new { @class = "form-control", placeholder = "Escribe un correo electrónico", style = "", @maxlength="255" })
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Teléfono de contacto</label>
+                                    @Html.TextBoxFor(model => model.Account.PhoneNumber, new { @class = "form-control", placeholder = "Escribe un teléfono de contacto", style = "", @maxlength="13" })
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Rol de usuario</label>
+                                    @Html.DropDownListFor(model => model.UserRoleId, ((SelectList)ViewBag.UserRole), htmlAttributes: new { @class = "form-control" })
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Estatus de usuario</label>
+                                    @Html.DropDownListFor(model => model.Users.statusId, ((SelectList)ViewBag.Status), htmlAttributes: new { @class = "form-control" })
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 divEmployee">
+                                    <label class="label-form-control">* Empleado responsable</label>
+                                    <div class="input-group">
+                                        @Html.ListBoxFor(m => m.EmployeeId.SelectedMultiCompanyId, ViewBag.Employee as SelectList, new { id = "cbxEmployees", @class = "selectEmployee show-tick form-control input-md" })
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header-modal" id="headingThreeUser">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link btn-link-modal-panel" type="button">
+                                Datos del representante autorizado
+                            </button>
+                            <button class="btn btn-link btn-link-modal-panel pull-right" type="button">
+                                <span class="pull-right clickable"><i class="fa fa-chevron-up"></i></span>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThreeUser" class="show" aria-labelledby="headingThreeUser" data-parent="#accordionUser">
+                        <div class="card-body card-Body-ThreeUser">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Unidad de venta</label>
+                                    @Html.DropDownListFor(model => model.Raprofile.Unitsalesid, ((SelectList)ViewBag.UnitSales), htmlAttributes: new { @class = "form-control" })
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Residencia fiscal</label>
+                                    @Html.DropDownListFor(model => model.Raprofile.Taxresidenceid, ((SelectList)ViewBag.TaxResidence), htmlAttributes: new { @class = "form-control" })
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Ubicación recepción</label>
+                                    @Html.DropDownListFor(model => model.Raprofile.Locationidresidence, ((SelectList)ViewBag.Location1), htmlAttributes: new { @class = "form-control" })
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Ubicación reparación</label>
+                                    @Html.DropDownListFor(model => model.Raprofile.Locationidrepair, ((SelectList)ViewBag.Location2), htmlAttributes: new { @class = "form-control" })
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Ubicación disponible</label>
+                                    @Html.DropDownListFor(model => model.Raprofile.Locationidavailable, ((SelectList)ViewBag.Location3), htmlAttributes: new { @class = "form-control" })
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Ubicación calidad</label>
+                                    @Html.DropDownListFor(model => model.Raprofile.Locationidquality, ((SelectList)ViewBag.Location4), htmlAttributes: new { @class = "form-control" })
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Canal de distribución</label>
+                                    @Html.DropDownListFor(model => model.Raprofile.Distributionchannelid, ((SelectList)ViewBag.Channel), htmlAttributes: new { @class = "form-control" })
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label class="label-form-control">* Servicio por defecto orden de servicio</label>
+                                    @Html.DropDownListFor(model => model.Raprofile.Defaultserviceorderid, ((SelectList)ViewBag.Default), htmlAttributes: new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="row" id="footerBtns">
+
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <div class="pull-right">
+
+                <button type="button" style="margin-right: 5px !important;" class="btn btn-danger btn-sm" id="btnCloseM" data-dismiss="modal"><i class="fa fa-close"></i>  Cerrar</button>
+
+                @if(ViewBag.IsPossible == "1")
+                {
+                    <button type="button" class="btn btn-success btn-sm" id="btnSave"><i class="fa fa-check"></i>  Modificar</button>
+                }
+
+            </div>
+        </div>
+
+    </div>
+</div>
+}
+
+<script>
+    $(document).ready(function () {
+
+        $('.selectEmployee').select2({
+            placeholder: "Seleccione un empleado (al menos).",
+            allowClear: false,
+            theme: "material"
+        });
+
+        $("#headingOneUser").click(function () {
+
+            var $this = $(this);
+
+            if (!$("#collapseOneUser").hasClass('hide')) {
+                $('.card-Body-OneUser').slideUp();
+                $("#collapseOneUser").removeClass('show');
+                $("#collapseOneUser").addClass('hide');
+                $this.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+
+            } else {
+                $('.card-Body-OneUser').slideDown();
+                $("#collapseOneUser").removeClass('hide');
+                $("#collapseOneUser").addClass('show');
+                $this.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+
+            }
+
+        });
+
+        $("#headingTwoUser").click(function () {
+
+            var $this = $(this);
+
+            if (!$("#collapseTwoUser").hasClass('hide')) {
+                $('.card-Body-TwoUser').slideUp();
+                $("#collapseTwoUser").removeClass('show');
+                $("#collapseTwoUser").addClass('hide');
+                $this.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+
+            } else {
+                $('.card-Body-TwoUser').slideDown();
+                $("#collapseTwoUser").removeClass('hide');
+                $("#collapseTwoUser").addClass('show');
+                $this.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+
+            }
+
+        });
+
+        $("#headingThreeUser").click(function () {
+
+            var $this = $(this);
+
+            if (!$("#collapseThreeUser").hasClass('hide')) {
+                $('.card-Body-ThreeUser').slideUp();
+                $("#collapseThreeUser").removeClass('show');
+                $("#collapseThreeUser").addClass('hide');
+                $this.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+
+            } else {
+                $('.card-Body-ThreeUser').slideDown();
+                $("#collapseThreeUser").removeClass('hide');
+                $("#collapseThreeUser").addClass('show');
+                $this.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+
+            }
+
+        });
+
+        $.get('@Url.Action("GetAllOrNotExployees", "Users")' + '?userRoleId=' + $("#UserRoleId").val(), function (content) {
+          
+            if(content.response == 0){
+                $(".divEmployee").hide();
+            }
+            else{
+                $(".divEmployee").show();
+            }
+
+        });
+
+        $("#UserRoleId").change(function(){
+           
+            $("#cbxEmployees").val(null).trigger('change');
+
+            $.get('@Url.Action("GetAllOrNotExployees", "Users")' + '?userRoleId=' + $("#UserRoleId").val(), function (content) {
+                
+                if(content.response == 0){
+                    $(".divEmployee").hide();
+                }
+                else{
+                    $(".divEmployee").show();
+                }
+
+            });
+
+
+
+        });
+
+        $("#btnSave").click(function () {
+
+            $("#LoadingModal").show();
+            $("#accordionUser").hide();
+            $("#footerBtns").hide();
+
+            var data = '@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model) as String)';
+
+            var jsonParse = JSON.parse(data);
+
+            jsonParse.PersonId = '@Model.Users.personid';
+            jsonParse.Personname = $("#Personname").val();
+            jsonParse.Personlastname = $("#Personlastname").val();
+            jsonParse.UserRoleId = $("#UserRoleId").val();
+            jsonParse.Users.statusId = $("#Users_statusId").val();
+            jsonParse.Users.usersid = '@Model.Users.usersid';
+
+            if ($("#cbxEmployees").val() != null) {
+                jsonParse.EmployeeId.SelectedMultiCompanyId = $("#cbxEmployees").val();
+            }
+
+            jsonParse.Account.Email = $("#Account_Email").val();
+            jsonParse.Account.PhoneNumber = $("#Account_PhoneNumber").val();
+
+            jsonParse.Raprofile.Unitsalesid = $("#Raprofile_Unitsalesid").val();
+            jsonParse.Raprofile.Taxresidenceid = $("#Raprofile_Taxresidenceid").val();
+            jsonParse.Raprofile.Locationidresidence = $("#Raprofile_Locationidresidence").val();
+            jsonParse.Raprofile.Locationidrepair = $("#Raprofile_Locationidrepair").val();
+            jsonParse.Raprofile.Locationidavailable = $("#Raprofile_Locationidavailable").val();
+
+            jsonParse.Raprofile.Locationidquality = $("#Raprofile_Locationidquality").val();
+            jsonParse.Raprofile.Distributionchannelid = $("#Raprofile_Distributionchannelid").val();
+
+            jsonParse.Raprofile.Defaultserviceorderid = $("#Raprofile_Defaultserviceorderid").val();
+
+            $.ajax({
+                url: "@Url.Action("Modify", "Users")", // Url
+                data: {
+                    person: jsonParse
+                },
+                type: "post"  // Verbo HTTP
+            })
+            // Se ejecuta si todo fue bien.
+                .done(function (result) {
+                    if (result != null) {
+                        $("#myModalContentXl").html(result);
+                }
+                else {
+                }
+            })
+            // Se ejecuta si se produjo un error.
+            .fail(function (xhr, status, error) {
+                var divHtlml = '<div class="alert alert-danger" id="alertHeader" role="alert"><text>Ocurrió un error al recibir la solicitud. Reintente de nuevo.</text><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+                $("#alertModal").html(divHtlml);
+            });
+
+
+        });
+
+        $("#btnCloseM").click(function () {
+
+            $("#divLoading").show();
+            $("#divReturns").hide();
+
+            $.get('@Url.Action("IndexIni", "Users")', function (content)
+            {
+                $("#replacetarget").html(content);
+            });
+        });
+
+        $("#btnClose").click(function () {
+
+            $("#divLoading").show();
+            $("#divReturns").hide();
+
+            $.get('@Url.Action("IndexIni", "Users")', function (content)
+            {
+                $("#replacetarget").html(content);
+            });
+        });
+
+        $("#LoadingModal").hide();
+        $("#accordionUser").show();
+        $("#footerBtns").show();
+
+    });
+</script>

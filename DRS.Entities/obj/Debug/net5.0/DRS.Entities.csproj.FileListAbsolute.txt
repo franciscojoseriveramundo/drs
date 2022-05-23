@@ -1,0 +1,60 @@
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Entities\bin\Debug\net5.0\DRS.Entities.deps.json
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Entities\bin\Debug\net5.0\DRS.Entities.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Entities\bin\Debug\net5.0\ref\DRS.Entities.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Entities\bin\Debug\net5.0\DRS.Entities.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.csproj.AssemblyReference.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.AssemblyInfoInputs.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.AssemblyInfo.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Entities\obj\Debug\net5.0\ref\DRS.Entities.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\DRS\DRS\DRS.Entities\bin\Debug\net5.0\DRS.Entities.deps.json
+C:\Desarrollo\DRS\DRS\DRS.Entities\bin\Debug\net5.0\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.Entities\bin\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.csproj.AssemblyReference.cache
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.AssemblyInfoInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.AssemblyInfo.cs
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.csproj.CoreCompileInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net5.0\ref\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Entities\bin\Debug\net5.0\DRS.Entities.deps.json
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Entities\bin\Debug\net5.0\DRS.Entities.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Entities\bin\Debug\net5.0\ref\DRS.Entities.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Entities\bin\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.csproj.AssemblyReference.cache
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.AssemblyInfoInputs.cache
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.AssemblyInfo.cs
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.csproj.CoreCompileInputs.cache
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\ref\DRS.Entities.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\drs\drs\DRS\DRS.Entities\bin\Debug\net5.0\DRS.Entities.deps.json
+C:\Desarrollo\drs\drs\DRS\DRS.Entities\bin\Debug\net5.0\DRS.Entities.dll
+C:\Desarrollo\drs\drs\DRS\DRS.Entities\bin\Debug\net5.0\ref\DRS.Entities.dll
+C:\Desarrollo\drs\drs\DRS\DRS.Entities\bin\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.csproj.AssemblyReference.cache
+C:\Desarrollo\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.AssemblyInfoInputs.cache
+C:\Desarrollo\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.AssemblyInfo.cs
+C:\Desarrollo\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.csproj.CoreCompileInputs.cache
+C:\Desarrollo\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.dll
+C:\Desarrollo\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\ref\DRS.Entities.dll
+C:\Desarrollo\drs\drs\DRS\DRS.Entities\obj\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\drs\DRS\DRS.Entities\obj\Debug\net5.0\refint\DRS.Entities.dll
+C:\Desarrollo\drs\DRS.Entities\bin\Debug\net5.0\DRS.Entities.deps.json
+C:\Desarrollo\drs\DRS.Entities\bin\Debug\net5.0\DRS.Entities.dll
+C:\Desarrollo\drs\DRS.Entities\bin\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\drs\DRS.Entities\obj\Debug\net5.0\DRS.Entities.csproj.AssemblyReference.cache
+C:\Desarrollo\drs\DRS.Entities\obj\Debug\net5.0\DRS.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\drs\DRS.Entities\obj\Debug\net5.0\DRS.Entities.AssemblyInfoInputs.cache
+C:\Desarrollo\drs\DRS.Entities\obj\Debug\net5.0\DRS.Entities.AssemblyInfo.cs
+C:\Desarrollo\drs\DRS.Entities\obj\Debug\net5.0\DRS.Entities.csproj.CoreCompileInputs.cache
+C:\Desarrollo\drs\DRS.Entities\obj\Debug\net5.0\DRS.Entities.dll
+C:\Desarrollo\drs\DRS.Entities\obj\Debug\net5.0\refint\DRS.Entities.dll
+C:\Desarrollo\drs\DRS.Entities\obj\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\drs\DRS.Entities\obj\Debug\net5.0\ref\DRS.Entities.dll

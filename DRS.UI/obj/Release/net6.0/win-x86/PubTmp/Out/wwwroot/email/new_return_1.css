@@ -1,0 +1,119 @@
+body{
+    background-color: whitesmoke;
+    margin:0;
+}
+
+.body-email{
+    width: 80%;
+    margin: 5% 10%;
+}
+
+.header-email{
+    display: grid;
+    background-color: #f0f0f0;
+    grid-template-rows: 105px auto;
+    width: 100%;
+}
+
+.header-email .header-img{
+    padding: 0;
+    height: 150px;
+}
+
+.header-email .header-img > img{
+    max-width: 35%;
+    max-height: 35%;
+    padding: 25px 25px 25px 25px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.header-email .header-title-email > h4 {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: black;
+    padding-left: 26px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.header-email .header-title-email > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 33px;
+    line-height: 38px;
+    font-weight: bold;
+    color: black;
+    padding-left: 26px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.email-body-message{
+    background-color: transparent;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.email-body-message .message-email{
+    margin-top: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.email-body-message .message-email .estimate-message{
+    font-size: 15px;
+    font-stretch: expanded;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+.email-body-message .message-email .estimate-message-text{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+.body-email footer{
+    position: fixed;
+    background-color: #44525f;
+    width: 100%;
+    height: 50px;
+    width: inherit;
+}
+
+.body-email footer > p{
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.email-btns{
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 0 30px 0 30px;
+}
+
+.email-btns > a
+{
+    width: 150px;
+    height: 50px;
+    background-color: #F26835;
+    font-size: 18px;
+    color: #f0f0f0;
+    border-radius: 5px;
+    border: 0;
+    text-decoration: none;
+    line-height: 45px;
+}

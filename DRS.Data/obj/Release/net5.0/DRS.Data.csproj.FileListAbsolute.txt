@@ -1,0 +1,75 @@
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\bin\Release\net5.0\DRS.Data.deps.json
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\bin\Release\net5.0\DRS.Data.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\bin\Release\net5.0\ref\DRS.Data.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\bin\Release\net5.0\DRS.Data.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\bin\Release\net5.0\DRS.Entities.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\bin\Release\net5.0\DRS.Entities.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.AssemblyReference.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.AssemblyInfoInputs.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.AssemblyInfo.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.CoreCompileInputs.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.CopyComplete
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\obj\Release\net5.0\ref\DRS.Data.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.pdb
+C:\Desarrollo\DRS\DRS\DRS.Data\bin\Release\net5.0\DRS.Data.deps.json
+C:\Desarrollo\DRS\DRS\DRS.Data\bin\Release\net5.0\DRS.Data.dll
+C:\Desarrollo\DRS\DRS\DRS.Data\bin\Release\net5.0\DRS.Data.pdb
+C:\Desarrollo\DRS\DRS\DRS.Data\bin\Release\net5.0\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.Data\bin\Release\net5.0\DRS.Entities.pdb
+C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.AssemblyReference.cache
+C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.AssemblyInfoInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.AssemblyInfo.cs
+C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.CoreCompileInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.CopyComplete
+C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.dll
+C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\net5.0\ref\DRS.Data.dll
+C:\Desarrollo\DRS\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.pdb
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\bin\Release\net5.0\DRS.Data.deps.json
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\bin\Release\net5.0\DRS.Data.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\bin\Release\net5.0\ref\DRS.Data.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\bin\Release\net5.0\DRS.Data.pdb
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\bin\Release\net5.0\DRS.Entities.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\bin\Release\net5.0\DRS.Entities.pdb
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.AssemblyReference.cache
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.AssemblyInfoInputs.cache
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.AssemblyInfo.cs
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.CoreCompileInputs.cache
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.CopyComplete
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\obj\Release\net5.0\ref\DRS.Data.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.pdb
+C:\Desarrollo\drs\drs\DRS\DRS.Data\bin\Release\net5.0\DRS.Data.deps.json
+C:\Desarrollo\drs\drs\DRS\DRS.Data\bin\Release\net5.0\DRS.Data.dll
+C:\Desarrollo\drs\drs\DRS\DRS.Data\bin\Release\net5.0\ref\DRS.Data.dll
+C:\Desarrollo\drs\drs\DRS\DRS.Data\bin\Release\net5.0\DRS.Data.pdb
+C:\Desarrollo\drs\drs\DRS\DRS.Data\bin\Release\net5.0\DRS.Entities.dll
+C:\Desarrollo\drs\drs\DRS\DRS.Data\bin\Release\net5.0\DRS.Entities.pdb
+C:\Desarrollo\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.AssemblyReference.cache
+C:\Desarrollo\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.AssemblyInfoInputs.cache
+C:\Desarrollo\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.AssemblyInfo.cs
+C:\Desarrollo\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.CoreCompileInputs.cache
+C:\Desarrollo\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.CopyComplete
+C:\Desarrollo\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.dll
+C:\Desarrollo\drs\drs\DRS\DRS.Data\obj\Release\net5.0\ref\DRS.Data.dll
+C:\Desarrollo\drs\drs\DRS\DRS.Data\obj\Release\net5.0\DRS.Data.pdb
+C:\Desarrollo\drs\DRS\DRS.Data\obj\Release\net5.0\refint\DRS.Data.dll
+C:\Desarrollo\drs\DRS.Data\bin\Release\net5.0\DRS.Data.deps.json
+C:\Desarrollo\drs\DRS.Data\bin\Release\net5.0\DRS.Data.dll
+C:\Desarrollo\drs\DRS.Data\bin\Release\net5.0\DRS.Data.pdb
+C:\Desarrollo\drs\DRS.Data\bin\Release\net5.0\DRS.Entities.dll
+C:\Desarrollo\drs\DRS.Data\bin\Release\net5.0\DRS.Entities.pdb
+C:\Desarrollo\drs\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.AssemblyReference.cache
+C:\Desarrollo\drs\DRS.Data\obj\Release\net5.0\DRS.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\drs\DRS.Data\obj\Release\net5.0\DRS.Data.AssemblyInfoInputs.cache
+C:\Desarrollo\drs\DRS.Data\obj\Release\net5.0\DRS.Data.AssemblyInfo.cs
+C:\Desarrollo\drs\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.CoreCompileInputs.cache
+C:\Desarrollo\drs\DRS.Data\obj\Release\net5.0\DRS.Data.csproj.CopyComplete
+C:\Desarrollo\drs\DRS.Data\obj\Release\net5.0\DRS.Data.dll
+C:\Desarrollo\drs\DRS.Data\obj\Release\net5.0\refint\DRS.Data.dll
+C:\Desarrollo\drs\DRS.Data\obj\Release\net5.0\DRS.Data.pdb
+C:\Desarrollo\drs\DRS.Data\obj\Release\net5.0\ref\DRS.Data.dll

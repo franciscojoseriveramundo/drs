@@ -1,0 +1,219 @@
+﻿@model IEnumerable<Comentarios>
+
+<style>
+    .HistorialDiv {
+        margin: 2rem auto;
+        border: 1px solid #aaa;
+        height: 300px;
+        width: 90%;
+        max-width: 400px;
+        background: #f1f2f3;
+        overflow: auto;
+        box-sizing: border-box;
+        padding: 0 1rem;
+    }
+
+        /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+        .HistorialDiv::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+
+            .HistorialDiv::-webkit-scrollbar:vertical {
+                width: 10px;
+            }
+
+    #tblHistorial .sorting_disabled {
+        display: none;
+    }
+</style>
+
+
+
+@if (Model.Count() == 0)
+{
+    @if (!string.IsNullOrEmpty(ViewBag.MessageComments))
+    {
+         <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+                <div class="alertModal">
+                    <div class="@ViewBag.MessageAlertComments" id="alertHeader" role="alert">
+                        <text>@ViewBag.MessageComments</text>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    }
+
+
+    <ul class="list-unstyled mb-0 pr-3" id="boxscroll2" tabindex="1" style="height: 425px !IMPORTANT;">
+        <li class="p-3">
+            <div class="media-body">
+                <p class="media-heading mb-0">Sin comentarios previos.</p>
+            </div>
+        </li>
+
+        <style>
+            #crdHst {
+                height: 365px !IMPORTANT;
+            }
+
+            #crdHst2 {
+                height: 365px !IMPORTANT;
+            }
+        </style>
+    </ul>
+}
+else
+{
+    <style>
+        #tblHistorial_wrapper {
+        overflow-x: hidden;
+        }
+    </style>
+
+    @if (!string.IsNullOrEmpty(ViewBag.MessageComments))
+    {
+         <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+                <div class="alertModal">
+                    <div class="@ViewBag.MessageAlertComments" id="alertHeader" role="alert">
+                        <text>@ViewBag.MessageComments</text>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    }
+
+   
+
+
+    <div class="table-responsive">
+        <table class="table table-hover tblHistorialDiv" id="tblHistorial">
+            <thead>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @if (item.PersonName == "Sin asignar")
+                                    {
+                                        <p class="media-heading mb-0" style="font-weight: bold; color: #000">Sin asignar</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="media-heading mb-0" style="font-weight: bold; color: #000">@item.PersonName</p>
+                                    }
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <small class="text-muted">@item.Descripcion</small>
+                                </div>
+                                <div class="col-md-3">
+                                    <small class="pull-right text-muted">@item.FechaCreación.ToLocalTime().ToString("dd-MM-yyyy")<br>@string.Concat(item.FechaCreación.ToLocalTime().ToString("HH:mm:ss"), "")</small>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+}
+
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#LoadingH").hide();
+
+
+    });
+</script>
+
+@if (Model.Count() == 0)
+{
+    <script>
+        $("#boxscroll2").css("height", "60px");
+        $(".media-body").css("font-weight", "500");
+        $(".media-body").css("text-align", "center");
+    </script>
+}
+else
+{
+    <script>
+
+        $(document).ready(function () {
+
+            var tableHst = $('#tblHistorial').DataTable({
+                "dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+                    "<'row'<'col-sm-12'tr>>" +
+                    "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+                "language": {
+                    "lengthMenu": "Mostrando _MENU_ registros por página",
+                    "sInfo": "Mostrando de _START_ a _END_  de _TOTAL_ registros",
+                    "sInfoEmpty": "",
+                    "zeroRecords": "Sin resultados.",
+                    "info": "_PAGE_ de _PAGES_",
+                    "bLengthChange": false,
+                    "sSearch": "Buscar: ",
+                    "sLengthMenu": "Mostrar _MENU_ resultados por página.",
+                    "sinfoEmpty": "Sin resultados.",
+                    "sZeroRecords": "Sin resultados.",
+                    "sInfoFiltered": "(Filtrado de _MAX_ registros totales)",
+                    "paginate": {
+                        "previous": "Anterior",
+                        "next": "Siguiente"
+                    }
+                },
+                "initComplete": function (settings, json) {
+                    $('.dataTables_filter input').on('keypress', function (e) {
+                        Tooltip();
+                        $(".sorting_disabled").css("display", "none");
+                    });
+                },
+                // Setup for responsive datatables helper.
+                bAutoWidth: false,
+                fixedHeader: false,
+                orderable: false,
+                responsive: true,
+                searching: false,
+                "info": false,
+                "ordering": false,
+                "lengthChange": false,
+                "pageLength": 5,
+                'columns': [
+                    { "width": "100%", "targets": 0, 'orderable': false, 'searchable': true},
+                ],
+
+            });
+        });
+
+        
+    </script>
+}

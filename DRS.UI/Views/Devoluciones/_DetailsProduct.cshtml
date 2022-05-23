@@ -1,0 +1,570 @@
+﻿@model DRS.Entities.DetallesDevolucion
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "" }))
+{
+    <div class="row" style="margin-top: -20px;">
+        <div class="alertModalNP" style="width: -webkit-fill-available;">
+            <div class="@ViewBag.AlertNewProduct" id="alertHeaderNP" role="alert">
+                <text>@ViewBag.MessageNewProduct</text>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        @if (Model.MotivoEnvio == 11 || Model.MotivoEnvio == 12)
+        {
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 5px;" id="divCbxCotizar">
+                <div class="form-group">
+                    <label class="label-form-control">* Pertenece a Servitron</label>
+                    <div class="input-group">
+                        <label class="content-input" style="position: relative;">
+                            <input id="cbxIsExistsProduct" type="checkbox" />
+                            <i></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+
+                $(document).ready(function () {
+
+                    var ExisteProducto = '@Model.ExisteProducto';
+
+                    var isOnlyAccessory = '@Model.EsSoloDevolucion';
+
+                    if (ExisteProducto == 'False') {
+
+                        $("#cbxIsExistsProduct").attr("checked", false);
+
+                        $("#cbxIsExistsProductH").val('False');
+                        $("#divTipoProductoTxt").hide();
+                        $("#divSerieTxt").hide();
+                        $("#divSIMSTxt").hide();
+                        $("#divProductoTxt").show();
+                        $("#divCantidadTxt").show();
+
+                    }
+                    else {
+
+                        $('#cbxIsExistsProduct').attr("checked", true);
+
+                        $("#cbxIsExistsProductH").val('True');
+                        $("#divTipoProductoTxt").show();
+                        $("#divSerieTxt").show();
+                        $("#divSIMSTxt").show();
+                        $("#divProductoTxt").hide();
+                        $("#divCantidadTxt").hide();
+
+
+                    }
+
+
+                    if (isOnlyAccessory == 'False') {
+                        $("#cbxIsReturnProduct").attr("checked", false);
+                        IsOnlyAccessoriesNotCheckedExistsLoadingPage();
+                    }
+                    else {
+                        $("#cbxIsReturnProduct").attr("checked", true);
+
+                        if (ExisteProducto == "True") {
+
+                            IsOnlyAccessoriesCheckedExistsLoadingPage();
+
+                        }
+
+
+                    }
+
+                    //$("#cbxIsExistsProduct").change(function () {
+
+                    //    isOnlyAccessory = $("#cbxEsSoloDevolucionH").val();
+
+                    //    if ($('#cbxIsExistsProduct').prop('checked')) {
+
+                    //        $("#cbxIsExistsProductH").val('True');
+                    //        $("#divTipoProductoTxt").show();
+                    //        $("#divSerieTxt").show();
+                    //        $("#divSIMSTxt").show();
+                    //        $("#divProductoTxt").hide();
+                    //        $("#Cantidad").val('1');
+                    //        $("#divCantidadTxt").hide();
+                    //        $("#cbxProductosm").val(0);
+                    //        $("#Serie").val('0');
+                    //        $("#Producto").val('');
+
+                    //        if (isOnlyAccessory == "True") {
+                    //            IsOnlyAccessoriesCheckedExists();
+                    //            GetProductOrAccessories();
+                    //        }
+
+                    //    }
+                    //    else {
+
+                    //        $("#cbxIsExistsProductH").val('False');
+                    //        $("#divTipoProductoTxt").hide();
+                    //        $("#divSerieTxt").hide();
+                    //        $("#divSIMSTxt").hide();
+                    //        $("#divProductoTxt").show();
+                    //        $("#divCantidadTxt").show();
+                    //        $("#Cantidad").val('');
+
+                    //        if (isOnlyAccessory == "True") {
+                    //            IsOnlyAccessoriesNotCheckedExists();
+                    //            GetProductOrAccessories();
+                    //        }
+
+                    //        $("#cbxProductosm").val(0);
+                    //        $("#Serie").val('0');
+                    //        $("#Producto").val('');
+                    //        $("#SIM").val('');
+                    //    }
+
+                    //});
+                });
+
+            </script>
+
+
+        }
+        else
+        {
+            <script>
+
+                var ExisteProducto = '@Model.ExisteProducto';
+
+                var isOnlyAccessory = '@Model.EsSoloDevolucion';
+
+                if (ExisteProducto == 'False') {
+
+                    $("#cbxIsExistsProduct").attr("checked", false);
+
+                    $("#cbxIsExistsProductH").val('False');
+                    $("#divTipoProductoTxt").hide();
+                    $("#divSerieTxt").hide();
+                    $("#divSIMSTxt").hide();
+                    $("#divProductoTxt").show();
+                    $("#divCantidadTxt").show();
+
+                }
+                else {
+
+                    $('#cbxIsExistsProduct').attr("checked", true);
+
+                    $("#cbxIsExistsProductH").val('True');
+                    $("#divTipoProductoTxt").show();
+                    $("#divSerieTxt").show();
+                    $("#divSIMSTxt").show();
+                    $("#divProductoTxt").hide();
+                    $("#divCantidadTxt").hide();
+
+
+                }
+
+                if (isOnlyAccessory == 'False') {
+                    $("#cbxIsReturnProduct").attr("checked", false);
+                    $("#divTipoProductoTxt").show();
+                    $("#divSerieTxt").show();
+                    $("#divSIMSTxt").show();
+                    $("#divProductoTxt").hide();
+                    $("#divCantidadTxt").hide();
+                }
+                else {
+                    $("#cbxIsReturnProduct").attr("checked", true);
+
+                    if (ExisteProducto == 'True') {
+                        IsOnlyAccessoriesCheckedExists();
+                    }
+
+
+                }
+
+
+
+            </script>
+        }
+
+        @Html.HiddenFor(model => model.ExisteProducto, new { @id = "cbxIsExistsProductH" })
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="form-group">
+                <label class="label-form-control">* ¿Devolución de solo accesorio?</label>
+                <div class="input-group">
+                    <label class="content-input" style="position: relative;">
+                        <input id="cbxIsReturnProduct" type="checkbox" />
+                        <i></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        @Html.HiddenFor(model => model.EsSoloDevolucion, new { @id = "cbxEsSoloDevolucionH" })
+        @Html.HiddenFor(model => model.MotivoEnvio, new { @id = "motivoEnvioHidden" })
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="divTipoProductoTxt">
+            <label class="label-form-control">* Producto/accesorio</label>
+            @Html.DropDownListFor(model => model.TipoProducto, ((SelectList)ViewBag.ProductosM), htmlAttributes: new { @id = "cbxProductosm", @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="divSerieTxt">
+            <label class="label-form-control">* Serie</label>
+            @Html.DropDownListFor(model => model.Serie, ((SelectList)ViewBag.SerieM), htmlAttributes: new { @id = "Serie", @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="divSIMSTxt">
+            <label class="label-form-control">Número de SIM:</label>
+            @Html.TextBoxFor(model => model.SIM, new { @class = "form-control", placeholder = "Escribe el número de SIM", style = "" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="divProductoTxt">
+            <label class="label-form-control">* Producto/accesorio:</label>
+            @Html.TextBoxFor(model => model.Producto, new { @class = "form-control", placeholder = "Escribe el producto/accesorio", style = "" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="divCantidadTxt">
+            <label class="label-form-control">* Cantidad</label>
+            @Html.TextBoxFor(model => model.Cantidad, new { @class = "form-control", placeholder = "Escribe el cantidad", style = "" })
+        </div>
+
+        @* Pendientes Producto, Serie, Producto a mano*@
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Antena</label>
+            @Html.DropDownListFor(model => model.Antena, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Carcasa</label>
+            @Html.DropDownListFor(model => model.Carcasa, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Display</label>
+            @Html.DropDownListFor(model => model.Display, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Teclado</label>
+            @Html.DropDownListFor(model => model.Teclado, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Conector USB</label>
+            @Html.DropDownListFor(model => model.ConectorUSB, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <label class="label-form-control">Otro</label>
+            @Html.TextAreaFor(model => model.Otro, new { @class = "form-control", placeholder = "Escribe si hay algún valor más", style = "resize: none;", @rows = "5", @maxlength = "255" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Tapa</label>
+            @Html.DropDownListFor(model => model.Tapa, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Batería</label>
+            @Html.DropDownListFor(model => model.Bateria, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Cargador (Eliminador)</label>
+            @Html.DropDownListFor(model => model.CargadorEliminador, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Cable USB</label>
+            @Html.DropDownListFor(model => model.CableUSB, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Cable USB Magnético</label>
+            @Html.DropDownListFor(model => model.CableUSBMagnetico, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Base Carga</label>
+            @Html.DropDownListFor(model => model.BaseCarga, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Clip</label>
+            @Html.DropDownListFor(model => model.Clip, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Manual</label>
+            @Html.DropDownListFor(model => model.Manual, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Caja</label>
+            @Html.DropDownListFor(model => model.Caja, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <label class="label-form-control">* Herramienta de extracción</label>
+            @Html.DropDownListFor(model => model.HerramientaDeExtraccion, ((SelectList)ViewBag.StatusPza), htmlAttributes: new { @class = "form-control" })
+        </div>
+
+
+    </div>
+
+    @if (ViewBag.AlertNewProduct != "alert alert-info")
+    {
+        <div class="row" style="margin-top: 20px;">
+            <div class="alertModalNP" style="width: -webkit-fill-available;">
+                <div class="@ViewBag.AlertNewProduct" id="alertHeaderNP" role="alert">
+                    <text>@ViewBag.MessageNewProduct</text>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="row" style="margin-top: 25px;">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <div class="pull-right">
+                <button type="button" style="margin-right: 5px !important;" class="btn btn-danger btn-sm" id="btnNewProductClose"><i class="fa fa-close"></i>  Cerrar</button>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+
+    var EsSoloAccesorio = '@Model.EsSoloDevolucion';
+    var first = 0;
+
+    $(document).ready(function () {
+
+        $('#cbxProductosm').select2();
+        $("#Serie").select2();
+
+
+        $("#btnNewProductClose").click(function () {
+
+            $.get('@Url.Action("DetailsNew", "Devoluciones")', function (content) {
+                $("#divDetailsProduct").hide();
+                $("#tblDetails").show();
+                $("#footerBtns").show();
+            });
+
+        });
+
+        var tipoProductoCount = '@(((SelectList)ViewBag.ProductosM).Count())';
+
+        if (tipoProductoCount == '1') {
+            $('#cbxProductosm').attr("disabled", true);
+        }
+
+        var tipoSerialCount = '@(((SelectList)ViewBag.SerieM).Count())';
+
+        if (tipoSerialCount == '1') {
+            $('#Serie').attr("disabled", true);
+        }
+
+        var options = [];
+
+        //$("#cbxProductosm").change(function () {
+        //    SerialAutoComplete();
+        //});
+
+        //$("#Serie").change(function () {
+        //    SimAutocomplete();
+        //});
+
+        $("#Cantidad").keypress(function (e) {
+
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                return false;
+            }
+
+        });
+
+        //$("#cbxIsReturnProduct").change(function () {
+
+        //    ExisteProducto = $("#cbxIsExistsProductH").val();
+
+        //    if ($('#cbxIsReturnProduct').prop('checked')) {
+
+        //        $("#cbxEsSoloDevolucionH").val('True');
+
+        //        if (ExisteProducto == "True") {
+        //            IsOnlyAccessoriesCheckedExists();
+        //        }
+        //        else {
+        //            IsOnlyAccessoriesNotCheckedExists();
+        //        }
+        //    }
+        //    else {
+        //        $("#cbxEsSoloDevolucionH").val('False');
+
+        //        IsOnlyAccessoriesNotCheckedExists();
+        //    }
+
+        //    GetProductOrAccessories();
+
+        //});
+    });
+
+    @*function SerialAutoComplete() {
+
+        $.getJSON("@Url.Action("AutoCompleteSerialProduct", "Devoluciones")", { TipoProducto: $('#cbxProductosm').val() }, function (response) {
+
+            var contador = 0;
+
+            options = [];
+
+            $.each(response, function (index, item) {
+
+                options.push('<option value="',
+                    item.value, '">',
+                    item.text, '</option>');
+
+                contador++;
+
+            });
+
+            $("#Serie").html(options.join(''));
+
+            $('#Serie').val('0');
+
+            $('#Serie').attr("disabled", false);
+
+            if (contador < 2) {
+                $('#Serie').attr("disabled", true);
+            }
+        });
+    }*@
+
+    function SimAutocomplete() {
+
+        $.getJSON("@Url.Action("GetSIMForProductAndSerial", "Devoluciones")", { TipoProducto: $('#cbxProductosm').val(), Serial: $("#Serie").val() }, function (response) {
+
+            $("#SIM").val(response.sim);
+
+        });
+    }
+
+    function GetProductOrAccessories() {
+       
+        $('#cbxProductosm').attr("disabled", true);
+
+        $.getJSON("@Url.Action("GetProduct", "Devoluciones")", { IsOnlyAccessory: $("#cbxEsSoloDevolucionH").val() }, function (response) {
+
+            var contador = 0;
+
+            options = [];
+
+            $.each(response, function (index, item) {
+
+                options.push('<option value="',
+                    item.value, '">',
+                    item.text, '</option>');
+
+                contador++;
+
+            });
+
+            $("#cbxProductosm").html(options.join(''));
+
+            $('#cbxProductosm').val('0');
+
+            $('#cbxProductosm').attr("disabled", false);
+
+            if (contador < 2) {
+                $('#cbxProductosm').attr("disabled", true);
+            }
+        });
+    }
+
+    function IsOnlyAccessoriesNotCheckedExists(){
+
+        if ($("#cbxIsExistsProductH").val() == 'True') {
+
+            $("#divTipoProductoTxt").show();
+            $("#divSerieTxt").show();
+            $("#divSIMSTxt").show();
+            $("#divProductoTxt").hide();
+            $("#Cantidad").val('1');
+            $("#divCantidadTxt").hide();
+            $("#cbxProductosm").val(0);
+            $("#Serie").val('0');
+            $("#Producto").val('');
+        }
+        else {
+
+            $("#divTipoProductoTxt").hide();
+            $("#divSerieTxt").hide();
+            $("#divSIMSTxt").hide();
+            $("#divProductoTxt").show();
+            $("#Cantidad").val('');
+            $("#divCantidadTxt").show();
+            $("#cbxProductosm").val(0);
+            $("#Serie").val('0');
+            $("#Producto").val('');
+        }
+
+
+    }
+
+    function IsOnlyAccessoriesCheckedExists() {
+
+        $("#divSerieTxt").hide();
+        $("#divProductoTxt").hide();
+        $("#divSIMSTxt").hide();
+        $("#divTipoProductoTxt").show();
+        $("#divCantidadTxt").show();
+        $("#Cantidad").val('');
+
+    }
+
+    function IsOnlyAccessoriesNotCheckedExistsLoadingPage() {
+
+        if ('@Model.ExisteProducto' == 'True') {
+            $("#cbxIsReturnProduct").attr("checked", false);
+            $("#divTipoProductoTxt").show();
+            $("#divSerieTxt").show();
+            $("#divProductoTxt").hide();
+            $("#divCantidadTxt").hide();
+            $("#divSIMSTxt").show();
+        }
+        else {
+            $("#cbxIsReturnProduct").attr("checked", false);
+            $("#divTipoProductoTxt").hide();
+            $("#divSerieTxt").hide();
+            $("#divProductoTxt").show();
+            $("#divCantidadTxt").show();
+            $("#divSIMSTxt").hide();
+        }
+    }
+
+    function IsOnlyAccessoriesCheckedExistsLoadingPage() {
+
+        if ('@Model.ExisteProducto' == 'True') {
+            $("#cbxIsReturnProduct").attr("checked", true);
+            $("#divTipoProductoTxt").show();
+            $("#divSerieTxt").hide();
+            $("#divSIMSTxt").hide();
+            $("#divProductoTxt").hide();
+            $("#divCantidadTxt").show();
+        }
+        else {
+            $("#cbxIsReturnProduct").attr("checked", true);
+            $("#divTipoProductoTxt").show();
+            $("#divSerieTxt").hide();
+            $("#divProductoTxt").hide();
+            $("#divCantidadTxt").show();
+            $("#divSIMSTxt").hide();
+
+        }
+    }
+
+</script>

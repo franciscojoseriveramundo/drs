@@ -1,0 +1,373 @@
+﻿@model IEnumerable<DetallesDevolucion>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div id="LoadingStock" style="display: none;">
+            <div class="col-md-12 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <div align="center">
+                            <img src="~/images/loading-2.gif" style="height: 15%; width: 15%; text-align: center" class="center">
+                            <p style="font-family: 'Rubik', sans-serif; font-size: 14px;" class="center">Cargando...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="divNewProduct" style="margin-top: -3%;">
+        </div>
+
+        <div id="divProductDetails">
+
+            <div class="row" style="margin-top: -20px;">
+                <div class="alertModalDP" style="width: -webkit-fill-available;">
+                    <div class="@ViewBag.TypeAlertDetailsNew" id="alertHeaderNP" role="alert">
+                        <text>@ViewBag.MessageDetailsNew</text>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="pull-right">
+                        <button type="button" id="NewProduct" style="float: right; height: 38px; margin-bottom: 20px;" data-animation="rubberBand" class="btn btn-success btn-rounded btn-sm "><i class="fa fa-plus-circle"></i> Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive" style="width:100%;">
+                        <table id="dtDetailsDevoluciones" class="table table-hover">
+                            <thead>
+                                <tr class="header-Dt">
+                                    <th>Id</th>
+                                    <th style="display: none;">IdDetails</th>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Serie</th>
+                                    <th>¿es accesorio?</th>
+                                    <th>¿pertenece a Servitron?</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr class="rows-Dt">
+                                        <td>@item.Id</td>
+                                        <td style="display: none;">@item.IdDetallesDevolucion</td>
+                                        <td>
+                                            @item.Producto
+                                        </td>
+                                        <td>@item.Cantidad</td>
+                                        <td>
+                                            @if (string.IsNullOrEmpty(item.Serie))
+                                            {
+                                                <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                            }
+                                            else
+                                            {
+                                                @item.Serie
+                                            }
+                                        </td>
+                                        <td>
+                                            @if (item.EsSoloDevolucion == true)
+                                            {
+                                                <i class="fa fa-check center" aria-hidden="true"></i>
+                                            }
+                                            else
+                                            {
+                                                <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                            }
+                                        </td>
+                                        <td>
+                                            @if (item.ExisteProducto == false)
+                                            {
+                                                <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                            }
+                                            else
+                                            {
+                                                <i class="fa fa-check center" aria-hidden="true"></i>
+                                            }
+                                        </td>
+                                        <td>
+                                            @if(item.StockConfirmation == null)
+                                            {
+                                                <button type="button" id="Edit" class="btn btn-outline-primary btn-rounded btn-sm" onclick="ModifyProduct(@item.Id)" data-toggle="tooltip" data-placement="top" title="Modificar el producto/accesorio">
+                                                    <i class="fa fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-danger btn-rounded btn-sm" onclick="GetValue(@item.Id)" data-toggle="popover" id="showPopover">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            }
+                                            else
+                                            {
+                                                if(item.StockConfirmation.StatusId == 0 || item.StockConfirmation.StatusId == 2 || item.StockConfirmation.StatusId == 3)
+                                                {
+                                                    <button type="button" id="Edit" class="btn btn-outline-primary btn-rounded btn-sm" onclick="ModifyProduct(@item.Id)" data-toggle="tooltip" data-placement="top" title="Modificar el producto/accesorio">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <div id="@String.Concat("divshowPopover", @item.IdDetallesDevolucion)">
+                                                        <button type="button" class="btn btn-outline-danger btn-rounded btn-sm" onclick="GetValue(@item.Id)" data-toggle="popover" id="@String.Concat("showPopover", item.IdDetallesDevolucion)"><i class="fa fa-trash"></i></button>
+                                                    </div>
+                                                    
+                                                    <script>
+
+                                                        var IdProductDel = 0;
+
+                                                        var popover1;
+                                                        
+                                                        var divName = '@String.Concat("divshowPopover", @item.IdDetallesDevolucion)';
+
+                                                        var nameBtn = "showPopover" + '@item.IdDetallesDevolucion';
+                                                        //$("#" + divName).html('<button type="button" class="btn btn-outline-danger btn-rounded btn-sm" onclick="GetValue(@item.Id)" data-toggle="popover" id="'+nameBtn+'"><i class="fa fa-trash"></i></button>');
+
+                                                        var createPopover = function (item, title) {
+                       
+                                                                var $pop = $(item);
+        
+                                                                $pop.popover({
+                                                                    placement: 'right',
+                                                                    title: ( title || '&nbsp;' ) + ' <a class="close" href="#">&times;</a>',
+                                                                    trigger: 'click',
+                                                                    container: $('body'), 
+                                                                    html: true,
+                                                                    content: function () {
+                                                                        return $('#popup-content' + @string.Concat(item.IdDetallesDevolucion) ).html();
+                                                                    }
+                                                                })
+                                                                .on('shown.bs.popover', function(e) {
+                                                                    //console.log('shown triggered');
+                                                                    // 'aria-describedby' is the id of the current popover
+                                                                    var current_popover = '#' + $(e.target).attr('aria-describedby');
+                                                                    var $cur_pop = $(current_popover);
+          
+                                                                    $cur_pop.find('.close').click(function(){
+                                                                        //console.log('close triggered');
+                                                                        $pop.popover('hide');
+                                                                    });
+
+                                                                    popover1 = $pop;
+          
+                                                                    $cur_pop.find('.OK').click(function(){
+                                                                        //console.log('OK triggered');
+                                                                        $pop.popover('hide');
+                                                                        DeleteProduct();
+                                                                    });
+                                                                });
+
+                                                                return $pop;
+                                                            };
+
+                                                          // create popover
+                                                          createPopover('#' + nameBtn, 'Eliminar el producto/accesorio');
+
+                                                        function GetValue(Id) {
+                                                            IdProductDel = Id;
+                                                        }
+                                                    </script>
+
+                                                    <div id="@string.Concat("popup-content",item.IdDetallesDevolucion)" class="hide">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p>¿Confirma la eliminación de listado?</p>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <a href="#" class="btn btn-sm btn-danger pull-right OK" role="button">Eliminar</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            }
+
+                                            @if(item.StockConfirmation.StatusId != 0)
+                                            {
+                                                <button type="button" id="btnSee" class="btn btn-outline-info btn-rounded btn-sm" onclick="CheckProductHistorial(@item.IdDetallesDevolucion)" data-toggle="tooltip" data-placement="top" title="Ver historial de confirmaciones o rechazos del producto">
+                                                    <i class="fa fa-eye"></i>
+                                                </button>
+
+                                            }
+                                            
+                                           
+                                        </td>
+
+                                    </tr>
+                                }
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            @*<!-- PopoverX content -->
+            <div id="confirmDeleteProduct" class="popover popover-x popover-default">
+                
+            </div>*@
+
+            
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    
+
+    //var contentDeleteProduct = '<div class="popover-body popover-content">¿Confirma la eliminación de listado?</div><div class="popover-footer"><button type="submit" class="btn btn-sm btn-danger" onclick="DeleteProduct()">Eliminar</button></div>';
+
+    
+
+    $(document).ready(function () {
+        $("#DetailsReturn").show();
+
+        $(".hide").hide();
+
+        var tableDetailsDevoluciones = $('#dtDetailsDevoluciones').on('page.dt', function () { }).DataTable({
+            //"dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+            //    "<'row'<'col-sm-12'tr>>" +
+            //    "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+            "language": {
+                "lengthMenu": "Mostrando _MENU_ registros por página",
+                "sInfo": "Mostrando de _START_ a _END_  de _TOTAL_ registros",
+                "sInfoEmpty": "",
+                "zeroRecords": "No se encontraron resultados.",
+                /*"info": "Página _PAGE_ de _PAGES_",*/
+                "info": "_TOTAL_ registros dados de alta.",
+                "sSearch": "Buscar: ",
+                "sLengthMenu": "Mostrar _MENU_ resultados por página.",
+                "sinfoEmpty": "No se encontraron resultados.",
+                "sZeroRecords": "No se encontraron resultados.",
+                "sInfoFiltered": "(Filtrado de _MAX_ registros totales)",
+                "paginate": {
+                    "previous": "Anterior",
+                    "next": "Siguiente"
+                }
+            },
+            // Setup for responsive datatables helper.
+            bAutoWidth: false,
+            fixedHeader: "true",
+            rowReorder: {
+                selector: 'td:nth-child(2)'
+            },
+            responsive: true,
+            orderable: false,
+            "searching": false,
+            "initComplete": function (settings, json) {
+                //$('.dataTables_filter input').on('keypress', function (e) {
+                //    Tooltip();
+                //});
+            },
+            'columns': [
+                { "width": "5%", "targets": 0, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "0%", "targets": 1, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "25%", "targets": 2, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "15%", "targets": 3, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "15%", "targets": 4, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "12.5%", "targets": 5, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "12.5%", "targets": 6, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "15%", "targets": 7, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' }
+            ],
+            'order': [0, 'asc']
+        });
+
+        $("#divNewProduct").hide();
+
+        $("#NewProduct").click(function () {
+
+            $("#footerBtns").hide();
+
+            NewProduct();
+        });
+
+        //var contentDeleteProduct = '<div class="arrow"></div><h3 class="popover-header popover-title"><span class="close pull-right" data-dismiss="popover-x">&times;</span>Confirmar</h3><div class="popover-body popover-content">¿Confirma la eliminación de listado?</div><div class="popover-footer"><button type="submit" class="btn btn-sm btn-danger" onclick="DeleteProduct()">Eliminar</button></div>';
+
+        //$("#confirmDeleteProduct").html('');
+        //$("#confirmDeleteProduct").html(contentDeleteProduct);
+
+        //var $targ = $('.delete-product');
+        //$targ.popoverButton({ target: '#confirmDeleteProduct', placement: 'top' });
+        //$('#confirmDeleteProduct').popover('hide');
+    });
+
+    function NewProduct() {
+        $("#LoadingStock").show();
+        $("#divProductDetails").hide();
+
+        $(".popover").hide();
+
+        $.get('@Url.Action("AddProduct", "Devoluciones")', function (content)
+        {
+            $("#divNewProduct").html('');
+            $("#divNewProduct").html(content);
+            $("#divNewProduct").show();
+
+        });
+    }
+
+    function CheckProductHistorial(Id){
+        if(popover1 != null){
+            popover1.popover('hide');
+        }
+
+        $(".popover").hide();
+
+        IdProductDel = Id;
+
+        $.get('@Url.Action("HistorialStockModify", "Devoluciones")' + "?ProductId=" + Id + "&&ReturnId=" + idReturn, function (content)
+        {
+            $("#divNewProduct").html('');
+            $("#divNewProduct").html(content);
+            $("#divNewProduct").show();
+            $("#divProductDetails").hide();
+            $("#footerBtns").hide();
+        });
+    }
+
+    
+
+    function DeleteProduct() {
+
+        $("#footerBtns").hide();
+        //$('#confirmDeleteProduct').popover('hide');
+        $(".popover").hide();
+
+        $.post('@Url.Action("RemoveProduct", "Devoluciones")' + "?ProductId=" + IdProductDel, function (content)
+        {
+            $("#divProductDetails").html(content);
+            $("#divProductDetails").show();
+            $("#footerBtns").show();
+
+        });
+    }
+
+    function ModifyProduct(Id) {
+
+        $("#LoadingStock").show();
+        $("#divProductDetails").hide();
+
+        $(".popover").hide();
+
+        $.get('@Url.Action("EditProduct", "Devoluciones")' + "?ProductId=" + Id, function (content)
+        {
+            $("#divNewProduct").html('');
+            $("#divNewProduct").html(content);
+            $("#divNewProduct").show();
+            $("#divProductDetails").hide();
+            $("#footerBtns").hide();
+        });
+
+    }
+
+</script>

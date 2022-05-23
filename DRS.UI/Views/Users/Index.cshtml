@@ -1,0 +1,101 @@
+﻿@model DRS.Entities.Devolucion
+
+@{
+    ViewData["Title"] = "Administración de usuarios";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<style>
+
+    .form-control:read-only{
+       background-color: white;
+    }
+
+</style>
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <h4 class="page-title">@ViewData["Title"]</h4>
+        </div>
+    </div>
+</div>
+
+<div id="replacetarget">
+    
+</div>
+
+@* Modales *@
+<!-- modal Principal placeholder-->
+<div id='myModalXl' class='modal fade'>
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div id='myModalContentXl'></div>
+        </div>
+    </div>
+</div>
+
+<div id='myModalLg' class='modal fade'>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div id='myModalContentLg'></div>
+        </div>
+    </div>
+</div>
+
+<div id='myModalMd' class='modal fade'>
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div id='myModalContentMd'></div>
+        </div>
+    </div>
+</div>
+
+<div id='myModalSm' class='modal fade'>
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div id='myModalContentSm'></div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        $(function () {
+            LimpiarModales();
+            $.ajaxSetup({ cache: false });
+            $("a[data-modal]").on("click", function (e) {
+
+                // hide dropdown if any (this is used wehen invoking modal from link in bootstrap dropdown )
+                //$(e.target).closest('.btn-group').children('.dropdown-toggle').dropdown('toggle');
+                $('#myModalContentLg').load(this.href, function () {
+                    $('#myModalLg').modal({
+                        backdrop: 'static',
+                        keyboard: true
+                    }, 'show');
+                    bindFormLg(this);
+                });
+                return false;
+            });
+        });
+
+        function LimpiarModales() {
+            $("#myModalContentMd").html('');
+            $("#myModalContentLg").html('');
+            $("#myModalContentSm").html('');
+            $("#myModalContentXl").html('');
+        }
+
+        $.get('@Url.Action("IndexIni", "Users")', function (content)
+        {
+            $("#replacetarget").html(content);
+        });
+
+
+    });
+
+</script>
+

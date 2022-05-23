@@ -1,0 +1,289 @@
+﻿@model IEnumerable<DRS.Entities.Devoluciones>
+
+
+<div class="row">
+    <div style="width: 100%">
+        <div class="col-md-12 col-lg-12 col-xl-12">
+            <div class="card m-b-30">
+                <div class="card-body">
+
+                    <div class="row">
+                        @if (((List<DRS.Entities.Actions>)ViewBag.Menus).Where(a => a.Actionsid == 4).Count() > 0)
+                        {
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                <div class="pull-right" style="margin-bottom: 15px;">
+                                    <button type="button" id="New" style="float: right; height: 38px;" data-animation="rubberBand" class="btn btn-success btn-rounded btn-sm "><i class="fa fa-plus-circle"></i> Nueva devolución</button>
+                                </div>
+                            </div>
+                        }                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive" style="width:100%;">
+                                <table id="dtDevoluciones" class="table table-hover">
+                                    <thead>
+                                        <tr class="header-Dt">
+                                            <th>Clave</th>
+                                            <th>Cliente</th>
+                                            @*<th>Contrato</th>*@
+                                            <th class="d-none d-sm-table-cell">Empleado responsable</th>
+                                            <th class="d-none d-sm-table-cell">Enviado por</th>
+                                            <th>Motivo del envío</th>
+                                            <th class="d-none d-sm-table-cell">Estatus</th>
+                                            <th>Opciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr class="rows-Dt">
+                                                <td>@item.NoInterno</td>
+                                                <td>@item.Cliente</td>
+                                                @*<td>@item.Contrato</td>*@
+                                                <td class="d-none d-sm-table-cell">@item.EmpleadoResponsable</td>
+                                                <td class="d-none d-sm-table-cell">@item.EnviadoPor</td>
+                                                <td class="d-none d-sm-table-cell">@item.MotivoEnvio</td>
+                                                <td>@item.Estatus</td>
+                                                <td>
+                                                    <button type="button" id="Details" class="btn btn-outline-info btn-rounded btn-sm" onclick="Details('@item.NoInterno')" data-toggle="tooltip" data-placement="top" title="Consultar los detalles de la devolución">
+                                                        <i class="fa fa-book"></i>
+                                                    </button>
+
+                                                    @if(item.Estatus == "Abierta" || item.Estatus == "Proceso" || item.Estatus == "Rechazado por almacén" || item.Estatus == "Aceptado parcialmente por almacén")
+                                                    {
+                                                        if(item.Estatus != "Rechazado por almacén")
+                                                        {
+                                                            @if (((List<DRS.Entities.Actions>)ViewBag.Menus).Where(a => a.Actionsid == 7).Count() > 0)
+                                                            {
+                                                                <button type="button" id="Stock" class="btn btn-outline-primary btn-rounded btn-sm" onclick="Stock('@item.NoInterno')" data-toggle="tooltip" data-placement="top" title="Confirmar el stock a entregar de la devolución">
+                                                                    <i class="fa fa-calculator"></i>
+                                                                </button>
+                                                            }
+                                                        }
+                                                        
+                                                        @if (((List<DRS.Entities.Actions>)ViewBag.Menus).Where(a => a.Actionsid == 5).Count() > 0)
+                                                        {
+                                                            <button type="button" id="Edit" class="btn btn-outline-primary btn-rounded btn-sm" onclick="Modify('@item.NoInterno')" data-toggle="tooltip" data-placement="top" title="Modificar la devolución con número interno">
+                                                                <i class="fa fa-edit"></i>
+                                                            </button>
+                                                        }
+
+                                                        if(item.Estatus == "Abierta")
+                                                        {
+                                                            @if (((List<DRS.Entities.Actions>)ViewBag.Menus).Where(a => a.Actionsid == 6).Count() > 0)
+                                                            {
+                                                                <button type="button" id="Delete" class="btn btn-outline-danger btn-rounded btn-sm" onclick="Delete('@item.NoInterno')" data-toggle="tooltip" data-placement="top" title="Dar de baja la devolución con número interno">
+                                                                    <i class="fa fa-trash"></i>
+                                                                </button>
+                                                            }
+                                                            
+                                                        }
+
+                                                    }
+
+                                                    @if(item.Estatus == "Aceptado por almacén" || item.Estatus == "Aceptado parcialmente por almacén")
+                                                    {
+                                                        @if (((List<DRS.Entities.Actions>)ViewBag.Menus).Where(a => a.Actionsid == 16).Count() > 0)
+                                                        {
+                                                            <button type="button" id="ServiceOrder" class="btn btn-outline-primary btn-rounded btn-sm" onclick="ServiceOrder('@item.NoInterno')" data-toggle="tooltip" data-placement="top" title="Transpaso a CDR">
+                                                                <i class="fa fa-check-circle-o"></i>
+                                                            </button>
+                                                        }
+                                                    }
+
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+   
+    
+
+    $(document).ready(function () {
+
+        //Tabla de devoluciones
+        var table = $('#dtDevoluciones').on('page.dt', function () { }).DataTable({
+            //"dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+            //    "<'row'<'col-sm-12'tr>>" +
+            //    "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+            "language": {
+                "lengthMenu": "Mostrando _MENU_ registros por página",
+                "sInfo": "Mostrando de _START_ a _END_  de _TOTAL_ registros",
+                "sInfoEmpty": "",
+                "zeroRecords": "No se encontraron resultados.",
+                /*"info": "Página _PAGE_ de _PAGES_",*/
+                "info": "_TOTAL_ resultados encontrados.",
+                "sSearch": "Buscar: ",
+                "sLengthMenu": "Mostrar _MENU_ resultados por página.",
+                "sinfoEmpty": "No se encontraron resultados.",
+                "sZeroRecords": "No se encontraron resultados.",
+                "sInfoFiltered": "(Filtrado de _MAX_ registros totales)",
+                "paginate": {
+                    "previous": "Anterior",
+                    "next": "Siguiente"
+                }
+            },
+            // Setup for responsive datatables helper.
+            bAutoWidth: false,
+            fixedHeader: "true",
+            rowReorder: {
+                selector: 'td:nth-child(2)'
+            },
+            responsive: true,
+            orderable: false,
+            "searching": false,
+            "initComplete": function (settings, json) {
+                //$('.dataTables_filter input').on('keypress', function (e) {
+                //    Tooltip();
+                //});
+                 $("#divLoadingReturns").hide();
+                 $("#replacetarget").show();
+            },
+            'columns': [
+                //{
+                //    'targets': 0,
+                //    'searchable': false,
+                //    'orderable': false,
+                //    'className': 'dt-body-center',
+                //    "width": "2%"
+                //},
+                { "width": "5%", "targets": 0 },
+                { "width": "20%", "targets": 1 },
+                { "width": "20%", "targets": 2 },
+                { "width": "15%", "targets": 3 },
+                { "width": "20%", "targets": 4 },
+                { "width": "10%", "targets": 5 },
+                { "width": "10%", "targets": 6, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+
+                /*{ "width": "15%", "targets": 7,  }*/
+            ],
+            'order': [0, 'asc']
+        });
+
+        //Boton para mostrar el modal de creación de devolución
+        $("#New").click(function () {
+
+            LimpiarModales();
+
+            $.ajaxSetup({ cache: false });
+
+            $('#myModalContentXl').load('@Url.Action("New", "Devoluciones")', function () {
+                $('#myModalXl').modal({
+                    backdrop: 'static',
+                    keyboard: true
+                }, 'show');
+                bindFormXl(this);
+            });
+            return false;
+
+        });
+
+        $("#myModalXl").on("hidden.bs.modal", function () {
+            $(".modal-body").html("");
+        });
+    });
+
+    function Delete(ReturnId) {
+
+        LimpiarModales();
+
+        $.ajaxSetup({ cache: false });
+
+        $('#myModalContentXl').load('@Url.Action("Delete", "Devoluciones")' + '?ReturnId=' + ReturnId, function () {
+            $('#myModalXl').modal({
+                backdrop: 'static',
+                keyboard: true
+            }, 'show');
+            bindFormXl(this);
+        });
+        return false;
+
+    };
+
+    function Stock(ReturnId){
+        LimpiarModales();
+
+        $.ajaxSetup({ cache: false });
+
+        $('#myModalContentXl').load('@Url.Action("Stock", "Devoluciones")' + '?ReturnId=' + ReturnId, function () {
+            $('#myModalXl').modal({
+                backdrop: 'static',
+                keyboard: true
+            }, 'show');
+            bindFormXl(this);
+        });
+        return false;
+    }
+
+    function ServiceOrder(ReturnId){
+        LimpiarModales();
+
+        $.ajaxSetup({ cache: false });
+
+        $('#myModalContentXl').load('@Url.Action("ServiceOrder", "Devoluciones")' + '?ReturnId=' + ReturnId, function () {
+            $('#myModalXl').modal({
+                backdrop: 'static',
+                keyboard: true
+            }, 'show');
+            bindFormXl(this);
+        });
+        return false;
+    }
+
+    function Modify(ReturnId) {
+
+        LimpiarModales();
+
+        $.ajaxSetup({ cache: false });
+
+        $('#myModalContentXl').load('@Url.Action("Modify", "Devoluciones")' + '?ReturnId=' + ReturnId, function () {
+            $('#myModalXl').modal({
+                backdrop: 'static',
+                keyboard: true
+            }, 'show');
+            bindFormXl(this);
+        });
+        return false;
+
+    };
+
+    function Details(ReturnId) {
+
+        LimpiarModales();
+
+        $.ajaxSetup({ cache: false });
+
+        $('#myModalContentXl').load('@Url.Action("Details", "Devoluciones")' + '?ReturnId=' + ReturnId, function () {
+            $('#myModalXl').modal({
+                backdrop: 'static',
+                keyboard: true
+            }, 'show');
+            bindFormXl(this);
+        });
+        return false;
+
+    };
+
+    function LimpiarModales() {
+        $("#myModalContentMd").html('');
+        $("#myModalContentLg").html('');
+        $("#myModalContentSm").html('');
+        $("#myModalContentXl").html('');
+    }
+
+</script>                                                                                                                                                                                                                                                                                                                                                                                                            

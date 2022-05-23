@@ -1,0 +1,10 @@
+{
+  "ConnectionStrings": {
+    "ConnectionString": "Host=34.134.250.232;port=5432;Username=franciscorivera;Password=FrRi010;Database=DRS"
+  },
+  "Tokens": {
+    "key": "qwienoqidniqnwdoiqwoidqio11",
+    "Issuer": "http://localhost:8888",
+    "Audience": "users"
+  }
+}

@@ -1,0 +1,391 @@
+﻿@model DRS.Entities.Devolucion
+
+<div class="modal-header">
+
+    <h5 class="modal-title alt-secondary-head" id="myModalLabel">Confirmación de mercancía</h5>
+
+    <button type="button" class="close" id="btnClose" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close"></i></button>
+
+</div>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "" }))
+{
+
+    <div class="modal-body">
+
+        <div class="alertModal">
+            <div class="@ViewBag.AlertModal" id="alertHeader" role="alert">
+                <text>@ViewBag.MessageModal</text>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="LoadingModal">
+            <div class="col-md-12 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <div align="center">
+                            <img src="~/images/loading-2.gif" style="height: 15%; width: 15%; text-align: center" class="center">
+                            <p style="font-family: 'Rubik', sans-serif; font-size: 14px;" class="center">Cargando...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion" id="accordionDevoluciones">
+            <div class="card">
+                <div class="card-header-modal" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link btn-link-modal-panel" type="button">
+                            Información general de la devolución
+                        </button>
+                        <button class="btn btn-link btn-link-modal-panel pull-right" type="button">
+                            <span class="pull-right clickable"><i class="fa fa-chevron-up"></i></span>
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="show" aria-labelledby="headingOne" data-parent="#accordionDevoluciones">
+                    <div class="card-body card-Body-One">
+
+                        <div class="row" style="margin-top: -20px;">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="label-form-control">* Código del cliente</label>
+                                    @Html.DropDownListFor(model => model.Cliente, (List<SelectListItem>)ViewBag.ClientesM, htmlAttributes: new { @id = "cbxClientesm", @class = "form-control" })
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="divCbxEmpleadoResponsable">
+                                <div class="form-group">
+                                    <label class="label-form-control">* Empleado responsable</label>
+                                    @Html.DropDownListFor(model => model.EmpleadoResponsable, (List<SelectListItem>)ViewBag.EmpleadosM, htmlAttributes: new { @id = "cbxEmpleadosm", @class = "form-control" })
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="divCbxEmpleadoResponsable">
+                                <div class="form-group">
+                                    <label class="label-form-control">* Empleado responsable</label>
+                                    <input type="text" class="form-control" id="txtEmpleadoResponsable" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="label-form-control">* Enviado por</label>
+                                    @Html.TextBoxFor(model => model.Envio, new { @class = "form-control", placeholder = "Escribe la persona que lo envia", style = "", @maxlength = "100" })
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="label-form-control">* Motivo del envío</label>
+                                    @Html.DropDownListFor(model => model.MotivoEnvio, (List<SelectListItem>)ViewBag.MotivoEnvioM, htmlAttributes: new { @id = "cbxMotivoEnviom", @class = "form-control" })
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 5px;" id="divCbxCotizar">
+                                <div class="form-group">
+                                    <label class="label-form-control">* Cotizar reparación</label>
+                                    <div class="input-group">
+                                        <label class="content-input" style="position: relative;">
+                                            <input id="cbxCotizacion" type="checkbox" />
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            @Html.HiddenFor(model => model.Cotizar, new { @id = "cbxCotizarH" })
+
+                            @Html.HiddenFor(model => model.IsBtnContinueEnabled, new { @id = "btnContinueValue" })
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="divDescripcion">
+                                <div class="form-group">
+                                    <label class="label-form-control">* Descripción de la falla</label>
+                                    @Html.TextAreaFor(model => model.Descripcion, new { @class = "form-control", placeholder = "Escribe tus descripción de la falla (255 carácteres)", style = "resize: none;", @rows = "5", @maxlength = "255" })
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="label-form-control">* Número de guía</label>
+                                    @Html.TextBoxFor(model => model.NumeroGuia, new { @class = "form-control", placeholder = "Escribe el número de guía", style = "", @maxlength = "100" })
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="label-form-control">* Nombre de mensajería</label>
+                                    @Html.TextBoxFor(model => model.NombreMensajeria, new { @class = "form-control", placeholder = "Escribe el nombre de la mensajería", style = "", @maxlength = "150" })
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="CCDiv">
+                                <div class="form-group">
+                                    <label class="label-form-control">* Destino CC</label>
+                                    @Html.TextBoxFor(model => model.DestinoCC, new { @class = "form-control", placeholder = "Escribe el destino CC", style = "", @maxlength = "150" })
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label class="label-form-control">Comentarios</label>
+                                    @Html.TextAreaFor(model => model.Comentario, new { @class = "form-control", placeholder = "Escribe tus comentarios (255 carácteres)", style = "resize: none;", @rows = "5", @maxlength = "255" })
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <button type="button" class="btn btn-success btn-sm pull-right" id="btnSaveComment"><i class="fa fa-check-circle"></i>  Confirmar comentario</button>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <label class="label-form-control">Comentarios históricos</label>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div id="HistorialDiv" style="margin-top: 15px;">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="DetailsReturn">
+                <div class="card-header-modal" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link btn-link-modal-panel" type="button">
+                            Detalles
+                        </button>
+                        <button class="btn btn-link btn-link-modal-panel pull-right" type="button">
+                            <span class="pull-right clickable"><i class="fa fa-chevron-up"></i></span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="show" aria-labelledby="headingTwo" data-parent="#accordionDevoluciones">
+                    <div class="card-body card-Body-Two">
+                        <div class="card-body">
+
+                            <div id="divDetailsReservation">
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <div class="row" id="footerBtns">
+
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="pull-right">
+                    <button type="button" style="margin-right: 5px !important;" class="btn btn-danger btn-sm" id="btnCloseStock" data-dismiss="modal"><i class="fa fa-close"></i>  Cerrar</button>
+                </div>
+            </div>
+
+        </div>
+
+       
+
+    </div>
+}
+
+<script>
+
+    $("#cbxClientesm").attr("disabled", true);
+    $("#Envio").attr("disabled", true);
+    $("#cbxMotivoEnviom").attr("disabled", true);
+    $("#Descripcion").attr("disabled", true);
+    $("#cbxCotizarH").attr("disabled", true);
+    $("#NumeroGuia").attr("disabled", true);
+    $("#NombreMensajeria").attr("disabled", true);
+    $("#DestinoCC").attr("disabled", true);
+    $("#Comentarios").attr("disabled", true);
+    $("#cbxCotizacion").attr("disabled", true);
+
+    $(document).ready(function () {
+
+    });
+
+</script>
+
+@if (ViewBag.EnableCC == true)
+{
+    <script>
+        $(document).ready(function () {
+            $("#CCDiv").show();
+        });
+    </script>
+}
+else
+{
+    <script>
+        $(document).ready(function () {
+            $("#CCDiv").hide();
+        });
+    </script>
+}
+
+<script>
+
+    var cotizar = '@Model.Cotizar';
+    var idReturn = '@Model.ClaveDevolucion';
+
+    $('#LoadingModal').hide();
+
+    $(document).ready(function () {
+        //$("#headingTwo").attr("disabled", "disabled");
+        //$("#collapseTwo").hide();
+
+        $("#divCbxEmpleadoResponsable").hide();
+        $("#txtEmpleadoResponsable").val($("#cbxEmpleadosm option:selected").text());
+        $("#txtEmpleadoResponsable").attr("disabled", true);
+
+        if ($("#cbxEmpleadosm").val() == "0") {
+            $("#txtEmpleadoResponsable").val('Empleado no encontrado');
+        }
+
+
+        if (cotizar == 'True') {
+            $("#cbxCotizarH").val('True');
+            $("#cbxCotizacion").attr("checked", true);
+            //$("#User").css("display", "block");
+        }
+        else {
+            $("#cbxCotizarH").val('False');
+        }
+
+        $("#HistorialDiv").html('<div align="center" style="margin-top: 15px;"><img src="/../../images/loading.gif" style="width: 3%;" class="center"><p style="font-family: "Rubik", sans-serif; font-size: 14px;" class="center">Cargando...</p></div>');
+
+        $.get('@Url.Action("HistorialComments", "Devoluciones")' + "?ReturnId=" + @Model.ClaveDevolucion, function (content)
+        {
+            $("#HistorialDiv").html('');
+            $("#HistorialDiv").html(content);
+        });
+
+        $("#btnSaveComment").click(function(){
+            $("#HistorialDiv").html('');
+            $("#HistorialDiv").html('<div align="center" style="margin-top: 15px;"><img src="/../../images/loading.gif" style="width: 3%;" class="center"><p style="font-family: "Rubik", sans-serif; font-size: 14px;" class="center">Cargando...</p></div>');
+
+            $.post('@Url.Action("AddComments", "Devoluciones")' + "?ReturnId=" + @Model.ClaveDevolucion + "&&comment=" +  $("#Comentario").val(), function (content)
+            {
+                $("#HistorialDiv").html('');
+                $("#Comentario").val('');
+                $("#HistorialDiv").html(content);
+
+            });
+
+        });
+
+        $('#cbxMotivoEnviom').on('change', function () {
+
+            if (this.value == 11) {
+                $("#divCbxCotizar").show();
+                $("#divDescripcion").show();
+
+            }
+            else {
+                $("#divCbxCotizar").hide();
+                $("#divDescripcion").hide();
+                $("#Descripcion").val('');
+                $("#cbxCotizarH").val('False');
+                $("#cbxCotizacion").prop('checked', false);
+            }
+
+        });
+
+        if ($("#cbxMotivoEnviom").val() == 11) {
+            $("#divCbxCotizar").show();
+            $("#divDescripcion").show();
+        }
+        else {
+            $("#divCbxCotizar").hide();
+            $("#divDescripcion").hide();
+            $("#Descripcion").val('');
+            $("#cbxCotizarH").val('False');
+            $("#cbxCotizacion").prop("checked", false);
+        }
+
+        $("#headingOne").click(function () {
+
+            var $this = $(this);
+
+            if (!$("#collapseOne").hasClass('hide')) {
+                $('.card-Body-One').slideUp();
+                $("#collapseOne").removeClass('show');
+                $("#collapseOne").addClass('hide');
+                $this.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+
+            } else {
+                $('.card-Body-One').slideDown();
+                $("#collapseOne").removeClass('hide');
+                $("#collapseOne").addClass('show');
+                $this.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+
+            }
+
+        });
+
+        $("#headingTwo").click(function () {
+
+            var $this = $(this);
+
+            if (!$("#collapseTwo").hasClass('hide')) {
+                $('.card-Body-Two').slideUp();
+                $("#collapseTwo").removeClass('show');
+                $("#collapseTwo").addClass('hide');
+                $this.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+
+            } else {
+                $('.card-Body-Two').slideDown();
+                $("#collapseTwo").removeClass('hide');
+                $("#collapseTwo").addClass('show');
+                $this.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+
+            }
+
+        });
+
+        $("#btnCloseStock").click(function () {
+
+            $("#divLoadingReturns").show();
+            $("#replacetarget").hide();
+
+            $.get('@Url.Action("IndexIni", "Devoluciones")', function (content)
+            {
+                $("#replacetarget").html(content);
+            });
+        });
+
+        $("#btnClose").click(function () {
+
+            $("#divLoadingReturns").show();
+            $("#replacetarget").hide();
+
+            $.get('@Url.Action("IndexIni", "Devoluciones")', function (content)
+            {
+                $("#replacetarget").html(content);
+            });
+        });
+
+        $.get('@Url.Action("DetailsReservationStock", "Devoluciones")'+ "?ReturnId=" + @Model.ClaveDevolucion, function (content)
+        {
+            $("#divDetailsReservation").html(content);
+        });
+
+        
+
+    });
+
+</script>

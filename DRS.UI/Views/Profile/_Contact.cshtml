@@ -1,0 +1,13 @@
+﻿@model DRS.Entities.ContactProfile
+
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">Correo electrónico:</label>
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "", style = "", @maxlength="100", @readonly = "readonly" })
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">Teléfono:</label>
+        @Html.TextBoxFor(model => model.Phone, new { @class = "form-control", placeholder = "", style = "", @maxlength="100", @readonly = "readonly" })
+    </div>
+    @Html.HiddenFor(a => a.UserId)
+</div>

@@ -1,0 +1,29 @@
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.PostgreSQL.deps.json
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.PostgreSQL.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.PostgreSQL.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.Data.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.Entities.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.Data.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.Entities.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.csproj.AssemblyReference.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.AssemblyInfoInputs.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.AssemblyInfo.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.csproj.CoreCompileInputs.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.csproj.CopyComplete
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.pdb
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.csproj.AssemblyReference.cache
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.AssemblyInfoInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.AssemblyInfo.cs
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.csproj.CoreCompileInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.PostgreSQL.deps.json
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.PostgreSQL.pdb
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.Data.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.Data.pdb
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\netcoreapp3.1\DRS.Entities.pdb
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.csproj.CopyComplete
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\netcoreapp3.1\DRS.PostgreSQL.pdb

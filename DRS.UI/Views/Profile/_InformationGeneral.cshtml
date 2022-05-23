@@ -1,0 +1,42 @@
+﻿@model DRS.Entities.InformationProfile
+
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">Nombre:</label>
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control", placeholder = "", style = "", @maxlength="100", @readonly = "readonly" })
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">Apellidos:</label>
+        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", placeholder = "", style = "", @maxlength="100", @readonly = "readonly" })
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <label class="label-form-control">Cliente(s) asignados:</label>
+        @Html.DropDownListFor(model => model.ClientName, (List<SelectListItem>)ViewBag.ClientesM, htmlAttributes: new { @id = "cbxClientesm", @class = "form-control" })
+    </div>
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <label class="label-form-control">Dirección</label>
+        @Html.TextAreaFor(model => model.Address, new { @class = "form-control", placeholder = "", style = "resize: none;", @rows = "5", @maxlength = "255", @readonly = "readonly" })
+    </div>
+    @Html.HiddenFor(a => a.UserId)
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $("#cbxClientesm").change(function(){
+
+            if ($("#cbxClientesm").val() == "0") {
+                $("#Address").val('Seleccione un cliente para mostrar la dirección.');
+            }
+            else{
+                $.get('@Url.Action("GetAddress", "Profile")'+'?clientId='+ $("#cbxClientesm").val(), function (content)
+                {
+                    $("#Address").val(content.address);
+                });
+            
+            }
+
+        });
+
+    });
+</script>

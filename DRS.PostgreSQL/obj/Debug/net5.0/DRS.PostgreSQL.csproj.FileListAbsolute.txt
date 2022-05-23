@@ -1,0 +1,85 @@
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.deps.json
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\net5.0\ref\DRS.PostgreSQL.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Data.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Entities.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Data.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Entities.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.AssemblyReference.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.AssemblyInfoInputs.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.AssemblyInfo.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.CoreCompileInputs.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.CopyComplete
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\net5.0\ref\DRS.PostgreSQL.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.pdb
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.deps.json
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.pdb
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Data.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Data.pdb
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.AssemblyReference.cache
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.AssemblyInfoInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.AssemblyInfo.cs
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.CoreCompileInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.CopyComplete
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net5.0\ref\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.pdb
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.deps.json
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\ref\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.pdb
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Data.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Entities.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Data.pdb
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.AssemblyReference.cache
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.AssemblyInfoInputs.cache
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.AssemblyInfo.cs
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.CoreCompileInputs.cache
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.CopyComplete
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\ref\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.pdb
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.deps.json
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.dll
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\ref\DRS.PostgreSQL.dll
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.pdb
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Data.dll
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Entities.dll
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Data.pdb
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.AssemblyReference.cache
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.AssemblyInfoInputs.cache
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.AssemblyInfo.cs
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.CoreCompileInputs.cache
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.CopyComplete
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.dll
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\ref\DRS.PostgreSQL.dll
+C:\Desarrollo\drs\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.pdb
+C:\Desarrollo\drs\DRS\DRS.PostgreSQL\obj\Debug\net5.0\refint\DRS.PostgreSQL.dll
+C:\Desarrollo\drs\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.deps.json
+C:\Desarrollo\drs\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.dll
+C:\Desarrollo\drs\DRS.PostgreSQL\bin\Debug\net5.0\DRS.PostgreSQL.pdb
+C:\Desarrollo\drs\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Data.dll
+C:\Desarrollo\drs\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Entities.dll
+C:\Desarrollo\drs\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Data.pdb
+C:\Desarrollo\drs\DRS.PostgreSQL\bin\Debug\net5.0\DRS.Entities.pdb
+C:\Desarrollo\drs\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.AssemblyReference.cache
+C:\Desarrollo\drs\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\drs\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.AssemblyInfoInputs.cache
+C:\Desarrollo\drs\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.AssemblyInfo.cs
+C:\Desarrollo\drs\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.CoreCompileInputs.cache
+C:\Desarrollo\drs\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.csproj.CopyComplete
+C:\Desarrollo\drs\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.dll
+C:\Desarrollo\drs\DRS.PostgreSQL\obj\Debug\net5.0\refint\DRS.PostgreSQL.dll
+C:\Desarrollo\drs\DRS.PostgreSQL\obj\Debug\net5.0\DRS.PostgreSQL.pdb
+C:\Desarrollo\drs\DRS.PostgreSQL\obj\Debug\net5.0\ref\DRS.PostgreSQL.dll

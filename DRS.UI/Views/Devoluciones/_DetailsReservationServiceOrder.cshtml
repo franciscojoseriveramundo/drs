@@ -1,0 +1,314 @@
+﻿@model IEnumerable<DetallesDevolucion>
+
+<script>
+
+    var confirmIdRapid = 0;
+    var popover;
+    var popppo;
+
+    function RapidConfirm(Id){
+        
+        $("#LoadingStock").show();
+        $("#divNewProduct").hide();
+        $("#divProductDetails").hide();
+
+        if(popover1 != null){
+            popover1.popover('hide');
+        }
+
+        if(popover2 != null){
+            popover2.popover('hide');
+        }
+
+        if(popover3 != null){
+            popover3.popover('hide');
+        }
+
+        var btn = $(".btnConfirmsRapid");
+        
+        for(var i = 0; i < btn.length; i++){
+
+            var btnName = btn[i];
+
+            var valor = btnName.id.toString().replace("ConfirmRapid", "popup-content");
+
+            $("#" + valor).popover('hide');
+            
+        }
+        
+
+        if(popover != null){
+            popover.popover('hide');
+        }
+
+        $.ajax({
+            url: "@Url.Action("ConfirmRapid", "Devoluciones")", // Url
+            data: {
+                ProductId: Id,
+                returnId : idReturn
+            },
+            type: "post"  // Verbo HTTP
+        })
+        // Se ejecuta si todo fue bien.
+        .done(function (result) {
+            if (result != null) {
+
+                $("#LoadingStock").hide();
+                $("#divNewProduct").hide();
+                $("#divProductDetails").show();
+
+                $("#divProductDetails").html(result);
+
+                
+        }
+        else {
+
+            $("#LoadingStock").hide();
+            $("#divNewProduct").hide();
+            $("#divProductDetails").show();
+
+            var divHtlml = '<div class="alert alert-danger" id="alertHeaderNP" role="alert"><text>Ocurrió un error al recibir la solicitud. Reintente de nuevo.</text><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+            $("#alertModalDP").html(divHtlml);
+        }
+        })
+        // Se ejecuta si se produjo un error.
+        .fail(function (xhr, status, error) {
+
+            $("#LoadingStock").hide();
+            $("#divNewProduct").hide();
+            $("#divProductDetails").show();
+
+            var divHtlml = '<div class="alert alert-danger" id="alertHeaderNP" role="alert"><text>Ocurrió un error al recibir la solicitud. Reintente de nuevo.</text><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+            $("#alertModalConfirm").html(divHtlml);
+        })
+    }
+
+</script>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div id="LoadingStock" style="display: none;">
+            <div class="col-md-12 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <div align="center">
+                            <img src="~/images/loading-2.gif" style="height: 15%; width: 15%; text-align: center" class="center">
+                            <p style="font-family: 'Rubik', sans-serif; font-size: 14px;" class="center">Cargando...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="divNewProduct" style="margin-top: -3%;">
+        </div>
+
+        <div id="divProductDetails">
+
+            <div class="row" style="margin-top: -20px;">
+                <div class="alertModalDP" style="width: -webkit-fill-available;">
+                    <div class="@ViewBag.TypeAlertDetailsNew" id="alertHeaderNP" role="alert">
+                        <text>@ViewBag.MessageDetailsNew</text>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="pull-right">
+                        @*<button type="button" id="btnConfirmAll" style="float: right; height: 38px; margin-bottom: 20px;" class="btn btn-success btn-rounded btn-sm" data-toggle="tooltip" data-placement="top" title="Confirmar todos los productos/accesorios">
+                            <i class="fa fa-check-circle-o"></i> Confirmar todo
+                        </button>*@
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive" style="width:100%;">
+                        <table id="dtDetailsDevoluciones" class="table table-hover">
+                            <thead>
+                                <tr class="header-Dt">
+                                    <th>Id</th>
+                                    <th style="display: none;">IdDetails</th>
+                                    <th>Producto</th>
+                                    <th>Serie</th>
+                                    <th>Cantidad</th>
+                                    <th>Cantidad reportada</th>
+                                    <th>Cantidad por reportar</th>
+                                    <th>Último comentario</th>
+                                    <th>Estatus</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr class="rows-Dt">
+                                        <td>@item.Id</td>
+                                        <td style="display: none;">@item.IdDetallesDevolucion</td>
+                                        <td>
+                                            @item.Producto
+                                        </td>
+                                        <td>
+                                            @if (string.IsNullOrEmpty(item.Serie))
+                                            {
+                                                <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                            }
+                                            else
+                                            {
+                                                @item.Serie
+                                            }
+                                        </td>
+                                        <td>@item.Cantidad</td>
+                                        <td>
+                                            @if (string.IsNullOrEmpty(item.DetailsReservationStock.lastquantityreported))
+                                            {
+                                                <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                            }
+                                            else
+                                            {
+                                                if(item.DetailsReservationStock.lastquantityreported == "0")
+                                                {
+                                                    <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                                }
+                                                else
+                                                {
+                                                    @item.DetailsReservationStock.lastquantityreported
+                                                }
+                                                
+                                            }
+                                        </td>
+                                        <td>
+                                            @item.QuantityRestante
+                                        </td>
+                                        <td>
+                                            @if (string.IsNullOrEmpty(item.DetailsReservationStock.lastcommentreported))
+                                            {
+                                                <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                            }
+                                            else
+                                            {
+                                                @item.DetailsReservationStock.lastcommentreported
+                                            }
+
+                                        </td>
+                                        <td>
+                                            @item.DetailsReservationStock.status
+                                        </td>
+                                        <td>
+                                            @if(item.StockConfirmation.StatusId != 0)
+                                            {
+                                                <button type="button" id="btnSee" class="btn btn-outline-info btn-rounded btn-sm btnDetailsStock" onclick="CheckProductHistorial(@item.IdDetallesDevolucion, this)" data-toggle="tooltip" data-placement="top" title="Ver historial de confirmaciones o rechazos del producto">
+                                                    <i class="fa fa-eye"></i>
+                                                </button>
+                                            }
+
+                                        </td>
+
+                                    </tr>
+                                }
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="divConfirmarRechazar" style="margin-top: 5%;">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="pull-right">
+                        @*<button type="button" class="btn btn-success btn-sm" id="btnAccept"><i class="fa fa-check-circle"></i>  Confirmar</button>*@
+                        @*<button type="button" class="btn btn-secondary btn-sm" id="btnRejected"><i class="fa fa-close"></i>  Rechazar</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#DetailsReturn").show();
+        $("#LoadingStock").hide();
+
+        var divConfirmRechazado = "@ViewBag.ConfirmRechazado";
+
+        $(".hide").hide();
+
+        var tableDetailsDevoluciones = $('#dtDetailsDevoluciones').on('page.dt', function () { }).DataTable({
+            //"dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+            //    "<'row'<'col-sm-12'tr>>" +
+            //    "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+            "language": {
+                "lengthMenu": "Mostrando _MENU_ registros por página",
+                "sInfo": "Mostrando de _START_ a _END_  de _TOTAL_ registros",
+                "sInfoEmpty": "",
+                "zeroRecords": "No se encontraron resultados.",
+                /*"info": "Página _PAGE_ de _PAGES_",*/
+                "info": "_TOTAL_ registros dados de alta.",
+                "sSearch": "Buscar: ",
+                "sLengthMenu": "Mostrar _MENU_ resultados por página.",
+                "sinfoEmpty": "No se encontraron resultados.",
+                "sZeroRecords": "No se encontraron resultados.",
+                "sInfoFiltered": "(Filtrado de _MAX_ registros totales)",
+                "paginate": {
+                    "previous": "Anterior",
+                    "next": "Siguiente"
+                }
+            },
+            // Setup for responsive datatables helper.
+            bAutoWidth: false,
+            fixedHeader: "true",
+            rowReorder: {
+                selector: 'td:nth-child(2)'
+            },
+            responsive: true,
+            orderable: false,
+            "searching": false,
+            "initComplete": function (settings, json) {
+                //$('.dataTables_filter input').on('keypress', function (e) {
+                //    Tooltip();
+                //});
+            },
+            'columns': [
+                { "width": "5%", "targets": 0, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "0%", "targets": 1, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "20%", "targets": 2, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "15%", "targets": 3, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "10%", "targets": 4, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "10%", "targets": 5, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "10%", "targets": 6, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "10%", "targets": 7, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "10%", "targets": 8, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "10%", "targets": 9, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' }
+            ],
+            'order': [0, 'asc']
+        });
+    });
+
+    var productId = 0;
+
+    function CheckProductHistorial(Id, btnp){
+
+        productId = Id;
+
+        $.get('@Url.Action("HistorialStock", "Devoluciones")' + "?ProductId=" + Id + "&&ReturnId=" + idReturn, function (content)
+        {
+            $("#divNewProduct").html('');
+            $("#divNewProduct").html(content);
+            $("#divNewProduct").show();
+            $("#divProductDetails").hide();
+            $("#footerBtns").hide();
+        });
+    }
+
+</script>

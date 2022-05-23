@@ -1,0 +1,17 @@
+C:\Desarrollo\DRS\DRS\DRS.Business\bin\Release\netcoreapp3.1\DRS.Business.deps.json
+C:\Desarrollo\DRS\DRS\DRS.Business\bin\Release\netcoreapp3.1\DRS.Business.dll
+C:\Desarrollo\DRS\DRS\DRS.Business\bin\Release\netcoreapp3.1\DRS.Business.pdb
+C:\Desarrollo\DRS\DRS\DRS.Business\bin\Release\netcoreapp3.1\DRS.Data.dll
+C:\Desarrollo\DRS\DRS\DRS.Business\bin\Release\netcoreapp3.1\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.Business\bin\Release\netcoreapp3.1\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\DRS\DRS.Business\bin\Release\netcoreapp3.1\DRS.Data.pdb
+C:\Desarrollo\DRS\DRS\DRS.Business\bin\Release\netcoreapp3.1\DRS.PostgreSQL.pdb
+C:\Desarrollo\DRS\DRS\DRS.Business\bin\Release\netcoreapp3.1\DRS.Entities.pdb
+C:\Desarrollo\DRS\DRS\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.csproj.AssemblyReference.cache
+C:\Desarrollo\DRS\DRS\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\DRS\DRS\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.AssemblyInfoInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.AssemblyInfo.cs
+C:\Desarrollo\DRS\DRS\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.csproj.CoreCompileInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.csproj.CopyComplete
+C:\Desarrollo\DRS\DRS\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.dll
+C:\Desarrollo\DRS\DRS\DRS.Business\obj\Release\netcoreapp3.1\DRS.Business.pdb

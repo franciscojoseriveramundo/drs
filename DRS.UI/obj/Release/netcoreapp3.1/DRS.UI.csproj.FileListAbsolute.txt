@@ -1,0 +1,276 @@
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.csproj.AssemblyReference.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.AssemblyInfoInputs.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.AssemblyInfo.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.csproj.CoreCompileInputs.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.RazorAssemblyInfo.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.RazorAssemblyInfo.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\appsettings.Development.json
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\appsettings.json
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\config.json
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.exe
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.deps.json
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.runtimeconfig.json
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.runtimeconfig.dev.json
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.Views.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.Views.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\AdvancedStringBuilder.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\EntityFramework.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Humanizer.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\JavaScriptEngineSwitcher.Core.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\JavaScriptEngineSwitcher.V8.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\JSPool.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\ClearScript.Core.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\ClearScript.V8.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Npgsql.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\React.AspNet.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\React.AspNet.Middleware.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\React.Core.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\SimpleInjector.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Private.ServiceModel.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Reflection.DispatchProxy.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.ServiceModel.Primitives.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.ServiceModel.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\ru-ru\JavaScriptEngineSwitcher.Core.resources.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\ru-ru\JavaScriptEngineSwitcher.V8.resources.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-x64\native\ClearScriptV8.win-x64.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.Business.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.Data.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.Entities.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.PostgreSQL.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.Business.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.Entities.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.Data.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.PostgreSQL.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\staticwebassets\DRS.UI.StaticWebAssets.Manifest.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\staticwebassets\DRS.UI.StaticWebAssets.xml
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\scopedcss\bundle\DRS.UI.styles.css
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.TagHelpers.input.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.TagHelpers.output.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.RazorCoreGenerate.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Devoluciones\Index.cshtml.g.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LayoutPage.cshtml.g.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.RazorTargetAssemblyInfo.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.RazorTargetAssemblyInfo.cs
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.Views.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.csproj.CopyComplete
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.dll
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.pdb
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.genruntimeconfig.cache
+C:\Users\Francisco Rivera\source\repos\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\appsettings.Development.json
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\appsettings.json
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\config.json
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.exe
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.deps.json
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.runtimeconfig.json
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.runtimeconfig.dev.json
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.pdb
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.Views.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.UI.Views.pdb
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\AdvancedStringBuilder.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Humanizer.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\JavaScriptEngineSwitcher.Core.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\JavaScriptEngineSwitcher.V8.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\JSPool.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\ClearScript.Core.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\ClearScript.V8.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Npgsql.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\React.AspNet.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\React.AspNet.Middleware.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\React.Core.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\SimpleInjector.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Private.ServiceModel.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.ServiceModel.Primitives.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.ServiceModel.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\ru-ru\JavaScriptEngineSwitcher.Core.resources.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\ru-ru\JavaScriptEngineSwitcher.V8.resources.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-x64\native\ClearScriptV8.win-x64.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.Business.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.Data.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.PostgreSQL.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.Business.pdb
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.Entities.pdb
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.Data.pdb
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\DRS.PostgreSQL.pdb
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.csproj.AssemblyReference.cache
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.AssemblyInfoInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.AssemblyInfo.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.csproj.CoreCompileInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.MvcApplicationPartsAssemblyInfo.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.RazorAssemblyInfo.cache
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.RazorAssemblyInfo.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\staticwebassets\DRS.UI.StaticWebAssets.Manifest.cache
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\staticwebassets\DRS.UI.StaticWebAssets.xml
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\scopedcss\bundle\DRS.UI.styles.css
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.TagHelpers.input.cache
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.TagHelpers.output.cache
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.RazorCoreGenerate.cache
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Devoluciones\Index.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LayoutPage.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.RazorTargetAssemblyInfo.cache
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.RazorTargetAssemblyInfo.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.Views.pdb
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.csproj.CopyComplete
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.pdb
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.genruntimeconfig.cache
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\DRS.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Devoluciones\_DetailsNew.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Devoluciones\_Index.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Devoluciones\_New.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\RestSharp.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.ServiceModel.Duplex.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.ServiceModel.Http.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.ServiceModel.NetTcp.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\bin\Release\netcoreapp3.1\System.ServiceModel.Security.dll
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Devoluciones\_NewProduct.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Devoluciones\_Delete.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Devoluciones\_DetailsProduct.cshtml.g.cs
+C:\Desarrollo\DRS\DRS\DRS.UI\obj\Release\netcoreapp3.1\Razor\Views\Devoluciones\_ModifyProduct.cshtml.g.cs

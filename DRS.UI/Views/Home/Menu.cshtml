@@ -1,0 +1,50 @@
+﻿@model IEnumerable<DRS.Entities.Menu>
+
+<ul class="navigation-menu">
+    
+    @foreach (var item in Model.Where(a => a.Menuparentid == 0).OrderBy(a => a.Menuorder).ToList())
+    {
+        <li class="has-submenu">
+
+            @if (string.IsNullOrEmpty(item.Menucontroller))
+            {
+                if (Model.Where(a => a.Menuparentid == item.Menuid).ToList().Count() > 0)
+                {
+                    <a><i class="@item.Menuicon"></i>@item.Menuname</a>
+                    <ul class="submenu">
+                        @foreach (var itemSub in (Model.Where(a => a.Menuparentid == item.Menuid).ToList()))
+                        {
+                            <li><a href="@Url.Action(itemSub.Menuaction, itemSub.Menucontroller)">@itemSub.Menuname</a></li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <a><i class="@item.Menuicon"></i>@item.Menuname</a>
+                }
+            }
+            else
+            {
+                if ((Model.Where(a => a.Menuparentid == item.Menuid).ToList().Count() > 0))
+                {
+                    <a><i class="@item.Menuicon"></i>@item.Menuname</a>
+
+                    <ul class="submenu">
+
+                        @foreach (var itemSub in (Model.Where(a => a.Menuparentid == item.Menuid).ToList()))
+                        {
+                            <li><a href="@Url.Action(itemSub.Menuaction, itemSub.Menucontroller)">@itemSub.Menuname</a></li>
+                        }
+
+                    </ul>
+                }
+                else
+                {
+                    <a href="@Url.Action(item.Menuaction, item.Menucontroller)"><i class="@item.Menuicon"></i>@item.Menuname</a>
+                }
+            }
+
+        </li>
+    }
+
+</ul>

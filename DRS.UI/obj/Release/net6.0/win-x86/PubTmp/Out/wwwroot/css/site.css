@@ -1,0 +1,568 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.form-login{
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .lineOrange {
+        display: none;
+    }
+
+    .wrapper-page {
+        margin: 25% auto;
+        max-width: 100%;
+        position: relative;
+    }
+
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: none;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .lineOrange {
+        height: 158px;
+        width: 100%;
+        background-color: #F26835 !important;
+    }
+
+    .wrapper-page .card {
+        border-radius: 10px;
+        border-color: orange;
+    }
+
+    .wrapper-page {
+        margin: 7.5% auto;
+        max-width: 460px;
+        position: relative;
+    }
+
+}
+
+
+.jss54 {
+    display: flex;
+    min-height: 92vh;
+    flex-direction: column;
+}
+
+.jss58 {
+    text-align: right;
+    padding-top: 24px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.jss62 {
+    width: 100%;
+    height: 200px;
+    z-index: -50;
+    position: absolute;
+    text-align: right;
+    background-color: #f26835;
+}
+
+.jss55 {
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+.MuiContainer-disableGutters {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (min-width: 600px) {
+    .MuiContainer-root {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+.MuiContainer-root {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+@media (min-width: 0px) and (orientation: landscape) {
+    .MuiToolbar-regular {
+        min-height: 48px;
+    }
+}
+
+
+.MuiToolbar-regular {
+    min-height: 56px;
+}
+
+@media (min-width: 600px) {
+    .MuiToolbar-gutters {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+.MuiToolbar-gutters {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+.MuiToolbar-root {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.MuiContainer-disableGutters {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (max-width: 600px) {
+    .MuiContainer-root {
+        width: 100% !important;
+        height: 100% !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        
+    }
+
+    .jss48 {
+        border: none !important;
+    }
+
+    .jss62 {
+        height: 65px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 724px) {
+    .MuiContainer-root {
+        width: 85% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .jss48 {
+        border: none !important;
+    }
+
+    .jss62 {
+        height: 75px;
+    }
+}
+
+@media (min-width: 725px) and (max-width: 1024px) {
+    .MuiContainer-root {
+        width: 90% !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+}
+
+.MuiContainer-root {
+    width: 65% ;
+    display: block;
+    box-sizing: border-box ;
+    margin-left: auto ;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px ;
+}
+
+.jss48 {
+    border: 1px solid #bbb;
+    display: flex;
+    padding: 2em 1em 2em 1em;
+    margin-top: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-direction: column;
+    background-color: white;
+}
+
+.jss50 {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.MuiFormControl-fullWidth {
+    width: 100%;
+}
+
+
+.MuiFormControl-marginNormal {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+
+.MuiFormControl-root {
+    border: 0;
+    margin: 0;
+    display: inline-flex;
+    padding: 0;
+    position: relative;
+    min-width: 0;
+    flex-direction: column;
+    vertical-align: top;
+}
+
+.MuiInputLabel-outlined {
+    z-index: 1;
+    transform: translate(14px, 20px) scale(1);
+    pointer-events: none;
+}
+
+
+.MuiInputLabel-animated {
+    transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+}
+
+
+.MuiInputLabel-formControl {
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translate(0, 24px) scale(1);
+}
+
+
+.MuiInputLabel-root {
+    display: block;
+    transform-origin: top left;
+}
+
+
+.MuiFormLabel-root {
+    color: rgba(0, 0, 0, 0.54);
+    padding: 0;
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.00938em;
+}
+
+.MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.23);
+}
+
+
+.jss63 {
+    top: -5px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0 8px;
+    overflow: hidden;
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.MuiFormControl-fullWidth {
+    width: 100%;
+}
+
+
+.MuiFormControl-marginNormal {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+
+.MuiFormControl-root {
+    border: 0;
+    margin: 0;
+    display: inline-flex;
+    padding: 0;
+    position: relative;
+    min-width: 0;
+    flex-direction: column;
+    vertical-align: top;
+}
+
+.jss51 {
+    margin: 24px 0px 16px;
+}
+
+
+.MuiButton-fullWidth {
+    width: 100%;
+}
+
+
+.MuiButton-containedPrimary {
+    color: #fff;
+    background-color: #f26835;
+}
+
+
+.MuiButton-contained {
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    background-color: #e0e0e0;
+}
+
+
+.MuiButton-root {
+    color: rgba(0, 0, 0, 0.87);
+    padding: 6px 16px;
+    font-size: 0.875rem;
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    border-radius: 0;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+}
+
+
+.MuiButtonBase-root {
+    color: inherit;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    display: inline-flex;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    border-radius: 0;
+    vertical-align: middle;
+    -moz-appearance: none;
+    justify-content: center;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.MuiGrid-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.jss51 {
+    margin: 24px 0px 16px;
+}
+
+
+.login-input-text {
+    height: calc(2.5em + 0.75rem + 2px) !important;
+}
+
+.first-input-text{
+    margin-top: 5% !important;
+}
+
+
+.jss41 {
+    color: #000000;
+    padding: 24px 16px;
+    border-top: 1px solid #000000;
+    margin-top: auto;
+    background-color: #f4f4f4;
+    /* color: #FFF; */
+    /* background: #000; */
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    /* height: 50px; */
+    z-index: 0;
+}
+
+@media (min-width: 600px) {
+    .MuiContainer-maxWidthSm {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 600px) {
+    .MuiContainer-foot {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+.MuiContainer-foot {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+/*@media (min-width: 600px) {
+    .MuiToolbar-regular {
+        min-height: 64px;
+    }
+}
+
+
+@media (min-width: 0px) and (orientation: landscape) {
+    .MuiToolbar-regular {
+        min-height: 48px;
+    }
+}
+
+.MuiToolbar-regular {
+    min-height: 56px;
+}
+
+@media (min-width: 600px) {
+    .MuiToolbar-gutters {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+.MuiToolbar-gutters {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.MuiToolbar-root {
+    display: flex;
+    position: relative;
+    align-items: center;
+}*/
+
+/*Inicio de sesion externo (estilos)*/
+.MuiButton-outlined {
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    float: unset;
+    padding: 5px 15px;
+}
+
+.MuiButton-label {
+    width: 100%;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+}
+
+.MuiTouchRipple-root {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+    position: absolute;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.jss56 {
+    margin: 5px;
+    font-weight: 500;
+}
+
+#btnGoogleTxtStyle {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 500;
+}

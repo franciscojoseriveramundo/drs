@@ -1,0 +1,203 @@
+﻿@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "" }))
+{
+    <div class="row">
+
+        <div class="alertModalConfirm" style="width: -webkit-fill-available;">
+            <div class="@ViewBag.TypeAlert" id="alertHeaderNP" role="alert">
+                <text>@ViewBag.Message</text>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div id="loading" style="width: 100%"></div>
+
+        <div class="accordion" id="accordionProduct" style="width: 100%; margin-bottom: 50px;">
+            <div class="card">
+                <div class="card-header-modal" id="headingOneProduct">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link btn-link-modal-panel" type="button">
+                            Información general de la cuenta
+                        </button>
+                        <button class="btn btn-link btn-link-modal-panel pull-right" type="button">
+                            <span class="pull-right clickable"><i class="fa fa-chevron-up"></i></span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOneProduct" class="show" aria-labelledby="headingOneProduct" data-parent="#accordionProduct">
+                    <div class="card-body card-Body-OneProduct">
+                        <div id="divInformation">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header-modal" id="headingTwoProduct">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link btn-link-modal-panel" type="button">
+                            Información de contacto
+                        </button>
+                        <button class="btn btn-link btn-link-modal-panel pull-right" type="button">
+                            <span class="pull-right clickable"><i class="fa fa-chevron-up"></i></span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwoProduct" class="show" aria-labelledby="headingTwoProduct" data-parent="#accordionDevolucionesProduct">
+                    <div class="card-body card-Body-TwoProduct">
+                         <div id="divContact">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header-modal" id="headingThreeProduct">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link btn-link-modal-panel" type="button">
+                            Seguridad de la cuenta
+                        </button>
+                        <button class="btn btn-link btn-link-modal-panel pull-right" type="button">
+                            <span class="pull-right clickable"><i class="fa fa-chevron-up"></i></span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThreeProduct" class="show" aria-labelledby="headingThreeProduct" data-parent="#accordionDevolucionesProduct">
+                    <div class="card-body card-Body-ThreeProduct">
+                         <div id="divSecurity">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+
+    $("#accordionProduct").hide();
+
+    var divLoading = '<div class="card"><div class="form-group row">'+
+                        '<div class="col-12">'+
+                        '<div align="center">' +
+                        '<img src="/images/loading-2.gif" style="width: 15%;" class="center">' +
+                        '<p style="font-family: "Rubik", sans-serif; font-size: 14px;" class="center">Espere por favor...</p>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div></div>';
+
+    $("#loading").html(divLoading);
+    $("#loading").show();
+
+    $(document).ready(function () {
+
+        $("#headingOneProduct").click(function () {
+
+            var $this = $(this);
+
+            if (!$("#collapseOneProduct").hasClass('hide')) {
+                $('.card-Body-OneProduct').slideUp();
+                $("#collapseOneProduct").removeClass('show');
+                $("#collapseOneProduct").addClass('hide');
+                $this.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+
+            } else {
+                $('.card-Body-OneProduct').slideDown();
+                $("#collapseOneProduct").removeClass('hide');
+                $("#collapseOneProduct").addClass('show');
+                $this.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+
+            }
+
+        });
+
+        $("#headingTwoProduct").click(function () {
+
+            var $this = $(this);
+
+            if (!$("#collapseTwoProduct").hasClass('hide')) {
+                $('.card-Body-TwoProduct').slideUp();
+                $("#collapseTwoProduct").removeClass('show');
+                $("#collapseTwoProduct").addClass('hide');
+                $this.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+
+            } else {
+                $('.card-Body-TwoProduct').slideDown();
+                $("#collapseTwoProduct").removeClass('hide');
+                $("#collapseTwoProduct").addClass('show');
+                $this.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+
+            }
+
+        });
+
+        $("#headingThreeProduct").click(function () {
+
+            var $this = $(this);
+
+            if (!$("#collapseThreeProduct").hasClass('hide')) {
+                $('.card-Body-ThreeProduct').slideUp();
+                $("#collapseThreeProduct").removeClass('show');
+                $("#collapseThreeProduct").addClass('hide');
+                $this.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+
+            } else {
+                $('.card-Body-ThreeProduct').slideDown();
+                $("#collapseThreeProduct").removeClass('hide');
+                $("#collapseThreeProduct").addClass('show');
+                $this.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+
+            }
+
+        });
+
+        ChargeInformation();
+
+    });
+
+    async function ChargeInformation() {
+
+      await InformationGeneral();
+      await ContactInformation();
+      await SecurityInformation();
+
+     
+
+    }
+
+    async function InformationGeneral(){
+        
+        $.get('@Url.Action("InformationGeneral", "Profile")', function (content)
+        {
+            $("#divInformation").html(content);
+        });
+
+    }
+
+    async function ContactInformation(){
+        
+        $.get('@Url.Action("Contact", "Profile")', function (content)
+        {
+            $("#divContact").html(content);
+        });
+
+    }
+
+    async function SecurityInformation(){
+        
+        $.get('@Url.Action("Security", "Profile")', function (content)
+        {
+            $("#divSecurity").html(content);
+        });
+        
+    }
+    
+
+</script>
+

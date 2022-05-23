@@ -1,0 +1,319 @@
+﻿@model IEnumerable<DetallesDevolucion>
+
+<div class="card-body">
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div id="divProductDetails">
+
+            </div>
+
+            <div id="LoadingStock" style="display: none;">
+                <div class="col-md-12 grid-margin">
+                    <div class="card">
+                        <div class="card-body">
+                            <div align="center">
+                                <img src="~/images/loading-2.gif" style="height: 15%; width: 15%; text-align: center" class="center">
+                                <p style="font-family: 'Rubik', sans-serif; font-size: 14px;" class="center">Cargando...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tblDetails">
+
+                <div class="row" style="margin-top: -20px;">
+                    <div class="alertModalDP" style="width: -webkit-fill-available;">
+                        <div class="@ViewBag.TypeAlertDetailsNew" id="alertHeaderNP" role="alert">
+                            <text>@ViewBag.MessageDetailsNew</text>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="pull-right">
+                            <button type="button" id="NewProduct" style="float: right; height: 38px; margin-bottom: 20px;" data-animation="rubberBand" class="btn btn-success btn-rounded btn-sm "><i class="fa fa-plus-circle"></i> Añadir</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="table-responsive" style="width:100%;">
+                            <table id="dtDetailsDevoluciones" class="table table-hover">
+                                <thead>
+                                    <tr class="header-Dt">
+                                        <th>Id</th>
+                                        <th>Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Serie</th>
+                                        <th>¿es accesorio?</th>
+                                        <th>¿pertenece a Servitron?</th>
+                                        <th>Opciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                    <tr class="rows-Dt">
+                                        <td>@item.Id</td>
+                                        <td>
+                                            @item.Producto
+                                        </td>
+                                        <td>@item.Cantidad</td>
+                                        <td>
+                                            @if (string.IsNullOrEmpty(item.Serie))
+                                                {
+                                            <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                                }
+                                                else
+                                                {
+                                            @item.Serie
+                                                }
+                                        </td>
+                                        <td>
+                                            @if (item.EsSoloDevolucion == true)
+                                                {
+                                            <i class="fa fa-check center" aria-hidden="true"></i>
+                                                }
+                                                else
+                                                {
+                                            <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                                }
+                                        </td>
+                                        <td>
+                                            @if (item.ExisteProducto == false)
+                                                {
+                                            <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                                }
+                                                else
+                                                {
+                                            <i class="fa fa-check center" aria-hidden="true"></i>
+                                                }
+                                        </td>
+                                        <td>
+                                            
+                                            <button type="button" id="Edit" class="btn btn-outline-primary btn-rounded btn-sm" onclick="ModifyProduct(@item.Id)" data-toggle="tooltip" data-placement="top" title="Modificar el producto/accesorio">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-danger btn-rounded btn-sm" onclick="GetValue(@item.Id)" data-toggle="popover" id="showPopover">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    }
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                @*<!-- PopoverX content -->
+                <div id="confirmDeleteProduct" class="popover popover-x popover-default">
+                    <div class="arrow"></div>
+                    <h3 class="popover-header popover-title"><span class="close pull-right" data-dismiss="popover-x">&times;</span>Confirmar</h3>
+                    <div class="popover-body popover-content">
+                        ¿Confirma la eliminación de listado?
+                    </div>
+                    <div class="popover-footer">
+                        <button type="submit" class="btn btn-sm btn-danger" onclick="DeleteProduct()">Eliminar</button>
+                    </div>
+                </div>*@
+
+                <div id="popup-content" class="hide">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>¿Confirma la eliminación de listado?</p>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="btn btn-sm btn-danger pull-right OK" role="button">Eliminar</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@if (Model.Count() > 0)
+{
+    <script>
+
+        var IdProductDel = 0;
+
+        $(function() {
+  
+          var createPopover = function (item, title) {
+                       
+                var $pop = $(item);
+        
+                $pop.popover({
+                    placement: 'right',
+                    title: ( title || '&nbsp;' ) + ' <a class="close" href="#">&times;</a>',
+                    trigger: 'click',
+                    container: $('body'), 
+                    html: true,
+                    content: function () {
+                        return $('#popup-content').html();
+                    }
+                })
+                .on('shown.bs.popover', function(e) {
+                    //console.log('shown triggered');
+                    // 'aria-describedby' is the id of the current popover
+                    var current_popover = '#' + $(e.target).attr('aria-describedby');
+                    var $cur_pop = $(current_popover);
+          
+                    $cur_pop.find('.close').click(function(){
+                        //console.log('close triggered');
+                        $pop.popover('hide');
+                    });
+          
+                    $cur_pop.find('.OK').click(function(){
+                        //console.log('OK triggered');
+                        $pop.popover('hide');
+                        DeleteProduct();
+                    });
+                });
+
+                return $pop;
+            };
+
+          // create popover
+          createPopover('#showPopover', 'Eliminar el producto/accesorio');
+
+  
+        });
+
+    </script>
+}
+
+
+<script>
+    $(document).ready(function () {
+
+        $(".hide").hide();
+
+        ////Tabla de devoluciones
+        var tableDetailsDevoluciones = $('#dtDetailsDevoluciones').on('page.dt', function () { }).DataTable({
+            //"dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+            //    "<'row'<'col-sm-12'tr>>" +
+            //    "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+            "language": {
+                "lengthMenu": "Mostrando _MENU_ registros por página",
+                "sInfo": "Mostrando de _START_ a _END_  de _TOTAL_ registros",
+                "sInfoEmpty": "",
+                "zeroRecords": "No se encontraron resultados.",
+                /*"info": "Página _PAGE_ de _PAGES_",*/
+                "info": "_TOTAL_ registros dados de alta.",
+                "sSearch": "Buscar: ",
+                "sLengthMenu": "Mostrar _MENU_ resultados por página.",
+                "sinfoEmpty": "No se encontraron resultados.",
+                "sZeroRecords": "No se encontraron resultados.",
+                "sInfoFiltered": "(Filtrado de _MAX_ registros totales)",
+                "paginate": {
+                    "previous": "Anterior",
+                    "next": "Siguiente"
+                }
+            },
+            // Setup for responsive datatables helper.
+            bAutoWidth: false,
+            fixedHeader: "true",
+            rowReorder: {
+                selector: 'td:nth-child(2)'
+            },
+            responsive: true,
+            orderable: false,
+            "searching": false,
+            "initComplete": function (settings, json) {
+                //$('.dataTables_filter input').on('keypress', function (e) {
+                //    Tooltip();
+                //});
+            },
+            'columns': [
+                { "width": "5%", "targets": 0, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "25%", "targets": 1, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "15%", "targets": 2, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "15%", "targets": 3, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "12.5%", "targets": 4, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "12.5%", "targets": 5, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "15%", "targets": 6, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' }
+            ],
+            'order': [0, 'asc']
+        });
+
+        $("#divNewProduct").hide();
+        $("#LoadingStock").hide();
+
+        $("#NewProduct").click(function () {
+            $("#tblDetails").hide();
+
+            NewProduct();
+        });
+
+
+
+    });
+
+    function NewProduct() {
+
+        $("#LoadingStock").show();
+        $("#tblDetails").hide();
+
+        $.get('@Url.Action("NewProduct", "Devoluciones")', function (content)
+        {
+            $("#LoadingStock").hide();
+            $("#divProductDetails").html('');
+            $("#divProductDetails").html(content);
+            $("#divProductDetails").show();
+            $("#footerBtns").hide();
+            $("#tblDetails").hide();
+        });
+    }
+
+    function GetValue(Id) {
+        IdProductDel = Id;
+    }
+
+    function DeleteProduct() {
+
+        $("#footerBtns").hide();
+
+        $.post('@Url.Action("DeleteProduct", "Devoluciones")' + "?ProductId=" + IdProductDel, function (content)
+        {
+            $("#detailsDiv").html(content);
+            $("#detailsDiv").show();
+            $("#footerBtns").show();
+
+        });
+    }
+
+    function ModifyProduct(Id) {
+        $("#LoadingStock").show();
+        $("#tblDetails").hide();
+
+        $.get('@Url.Action("ModifyProduct", "Devoluciones")' + "?ProductId=" + Id, function (content)
+        {
+            $("#LoadingStock").hide();
+            $("#divProductDetails").html('');
+            $("#divProductDetails").html(content);
+            $("#divProductDetails").show();
+            $("#footerBtns").hide();
+            $("#tblDetails").hide();
+        });
+
+    }
+</script>

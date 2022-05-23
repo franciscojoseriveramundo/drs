@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="google-signin-client_id" content="780466152055-gj9qvj0s8enknsdtvepjr32pd1rig3ov.apps.googleusercontent.com">
+    <title>Sistema de devoluciones - @ViewBag.Title</title>
+
+    <link rel="shortcut icon" href="/images/teambox-logo-mini.ico">
+
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="~/css/site.css" rel="stylesheet" type="text/css">
+    @*<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">*@
+    <script src="https://apis.google.com/js/api:client.js"></script>
+
+    <style type="text/css">
+        #customBtn {
+            display: inline-block;
+            background: white;
+            color: #444;
+            width: 150px;
+            border-radius: 5px;
+            border: thin solid #888;
+            box-shadow: 1px 1px 1px grey;
+            white-space: nowrap;
+        }
+
+            #customBtn:hover {
+                cursor: pointer;
+            }
+
+        span.label {
+            font-family: serif;
+            font-weight: normal;
+        }
+
+        span.icon {
+            background: url('/images/Google_G_Logo.svg') transparent 5px 50% no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            width: 42px;
+            height: 42px;
+        }
+
+        span.buttonText {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 15px;
+            padding-right: 42px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-VDPMZCTKQ1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VDPMZCTKQ1');
+    </script>-->
+
+
+
+</head>
+
+
+<body>
+
+    <div class="jss54">
+        <div class="jss58">
+        </div>
+
+        <div class="jss62"></div>
+        <div class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters" id="back-to-top-anchor"></div>
+        <main class="MuiContainer-root jss55 MuiContainer-disableGutters MuiContainer-maxWidthXl">
+            <main class="MuiContainer-root MuiContainer-disableGutters MuiContainer-maxWidthXs">
+                <div class="jss48">
+                    @RenderBody()
+                </div>
+            </main>
+        </main>
+
+        <footer class="jss41">
+            <div class="MuiContainer-foot MuiContainer-maxWidthSm">
+                <div>
+                    <p style="margin-top: 0; margin-bottom: 0rem; font-weight: 500;" class="MuiTypography-root text-center">&nbsp;&nbsp;Todos los derechos reservados. Servicios Troncalizados S.A. de C.V. @DateTime.UtcNow.Year.ToString()</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+    <!-- jQuery  -->
+    <script src="~/assets/js/jquery.min.js"></script>
+
+    <script src="~/assets/js/popper.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/modernizr.min.js"></script>
+    <script src="~/assets/js/waves.js"></script>
+    <script src="~/assets/js/jquery.slimscroll.js"></script>
+    <script src="~/assets/js/jquery.nicescroll.js"></script>
+    <script src="~/assets/js/jquery.scrollTo.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#form").submit(function () {
+                loginClick();
+            });
+        });
+
+        $("#btnLoginDiv2").hide();
+
+        function loginClick() {
+
+            var divLoading = '<div class="form-group row">' +
+                '<div class="col-12">' +
+                '<div align="center">' +
+                '<img src="/images/loading-2.gif" style="width: 15%;" class="center">' +
+                '<p style="font-family: "Rubik", sans-serif; font-size: 14px;" class="center">Espere por favor...</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+
+            $("#Username").attr("readonly", true);
+            $("#Password").attr("readonly", true);
+            $("#btnLoginDiv1").hide();
+            $("#btnLoginDiv2").show();
+            $("#btnLogin2").attr("disabled", true);
+            $("#Password").attr("readonly", true);
+            $("#btnRecovery").attr("readonly", true);
+            $("#loadingLogin").html(divLoading);
+
+        }
+
+    </script>
+
+    <!-- App js -->
+    @*<script src="~/assets/js/app.js"></script>*@
+    @*<script src="https://apis.google.com/js/platform.js" async defer></script>*@
+
+</body>
+</html>
+

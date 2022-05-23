@@ -1,0 +1,144 @@
+﻿@model DRS.Entities.HistorialStockConfirmation
+
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="lblCantidadDiv">
+        <label class="label-form-control" id="lblEstatusProducto">* Estatus del producto/accesorio:</label>
+        @Html.TextBoxFor(model => model.StatusId, new { @class = "form-control", placeholder = "", style = "", @maxlength="100" })
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="table-responsive" style="width:100%; margin-top: 5%;">
+            <table id="dtDetailsConfirmaciones" class="table table-hover">
+                <thead>
+                    <tr class="header-Dt">
+                        <th>Id</th>
+                        <th style="display: none;">IdConfirmation</th>
+                        <th>Reportado por</th>
+                        <th>Fecha</th>
+                        <th>Cantidad</th>
+                        <th>Comentarios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.StockDetails.OrderBy(a => a.StockConfirmationDetailsCreateDate).ToList())
+                    {
+                        <tr class="rows-Dt">
+                            <td>@item.StockConfirmationDetailsId</td>
+                            <td style="display: none;">@item.StockConfirmationId</td>
+                            <td>@item.UserId</td>
+                            <td>@String.Concat(item.StockConfirmationDetailsCreateDate.ToString("dd-MM-yyyy"), " ", @item.StockConfirmationDetailsCreateDate.ToString("HH:mm:ss"))</td>
+                            <td>
+                                @if (string.IsNullOrEmpty(item.StockConfirmationQuantity))
+                                {
+                                    <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                }
+                                else
+                                {
+                                    @if (Convert.ToInt64(item.StockConfirmationQuantity) == 0)
+                                    {
+                                        <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                    }
+                                    else
+                                    {
+                                        @item.StockConfirmationQuantity
+                                    }
+                                }
+                            </td>
+                            <td>
+                                @if (string.IsNullOrEmpty(item.StockConfirmationComments))
+                                {
+                                    <i class="fa fa-close center" style="color: red;" aria-hidden="true"></i>
+                                }
+                                else
+                                {
+                                    @item.StockConfirmationComments
+                                }
+                            </td>
+
+                        </tr>
+                    }
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 25px;">
+    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="pull-right">
+            <button type="button" style="margin-right: 5px !important;" class="btn btn-danger btn-sm" id="btnCloseHistorialComments"><i class="fa fa-close"></i>  Cerrar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $("#StatusId").attr("disabled", true);
+
+    $(document).ready(function () {
+
+        var tableDetailsStock = $('#dtDetailsConfirmaciones').on('page.dt', function () { }).DataTable({
+            //"dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+            //    "<'row'<'col-sm-12'tr>>" +
+            //    "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+            "language": {
+                "lengthMenu": "Mostrando _MENU_ registros por página",
+                "sInfo": "Mostrando de _START_ a _END_  de _TOTAL_ registros",
+                "sInfoEmpty": "",
+                "zeroRecords": "No se encontraron resultados.",
+                /*"info": "Página _PAGE_ de _PAGES_",*/
+                "info": "_TOTAL_ registros dados de alta.",
+                "sSearch": "Buscar: ",
+                "sLengthMenu": "Mostrar _MENU_ resultados por página.",
+                "sinfoEmpty": "No se encontraron resultados.",
+                "sZeroRecords": "No se encontraron resultados.",
+                "sInfoFiltered": "(Filtrado de _MAX_ registros totales)",
+                "paginate": {
+                    "previous": "Anterior",
+                    "next": "Siguiente"
+                }
+            },
+            // Setup for responsive datatables helper.
+            bAutoWidth: false,
+            fixedHeader: "true",
+            responsive: true,
+            orderable: true,
+            "searching": false,
+            "initComplete": function (settings, json) {
+                //$('.dataTables_filter input').on('keypress', function (e) {
+                //    Tooltip();
+                //});
+            },
+            'columns': [
+                { "width": "5%", "targets": 0, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "0%", "targets": 1, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "25%", "targets": 2, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "15%", "targets": 3, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "15%", "targets": 3, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' },
+                { "width": "40%", "targets": 4, 'orderable': false, 'searchable': false, 'className': 'dt-body-center' }
+            ],
+            
+        });
+
+        $("#btnCloseHistorialComments").click(function () {
+
+            $.get('@Url.Action("DetailsReservationServiceOrder", "Devoluciones")' + '?ReturnId=' + idReturn, function (content) {
+
+                $("#divNewProduct").hide();
+                $("#divProductDetails").html(content);
+                $("#divProductDetails").show();
+                $("#tblDetails").show();
+                $("#footerBtns").show();
+            });
+
+        });
+
+    });
+
+</script>

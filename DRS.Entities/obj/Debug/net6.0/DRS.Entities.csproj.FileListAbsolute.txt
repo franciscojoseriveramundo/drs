@@ -1,0 +1,12 @@
+C:\Desarrollo\DRS\DRS\DRS.Entities\bin\Debug\net6.0\DRS.Entities.deps.json
+C:\Desarrollo\DRS\DRS\DRS.Entities\bin\Debug\net6.0\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.Entities\bin\Debug\net6.0\ref\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.Entities\bin\Debug\net6.0\DRS.Entities.pdb
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net6.0\DRS.Entities.csproj.AssemblyReference.cache
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net6.0\DRS.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net6.0\DRS.Entities.AssemblyInfoInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net6.0\DRS.Entities.AssemblyInfo.cs
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net6.0\DRS.Entities.csproj.CoreCompileInputs.cache
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net6.0\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net6.0\ref\DRS.Entities.dll
+C:\Desarrollo\DRS\DRS\DRS.Entities\obj\Debug\net6.0\DRS.Entities.pdb
